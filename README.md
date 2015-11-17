@@ -1,0 +1,1 @@
+Working through [Hacking with Swift](https://www.hackingwithswift.com) projects as part of [Philly CocoaHeads winter 2015 book club](http://www.meetup.com/PhillyCocoaHeads/events/226643132/).
