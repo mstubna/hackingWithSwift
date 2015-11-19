@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     var countries = [String]()
     var score = 0
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
         styleButton(button1)
         styleButton(button2)
         styleButton(button3)
-        
+
         askQuestion()
     }
     
@@ -58,9 +59,10 @@ class ViewController: UIViewController {
             title = "Incorrect"
             --score
         }
-        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: continueHandler))
-        presentViewController(ac, animated: true, completion: nil)
+        
+        label.text = "\(title)! Your score is \(score)."
+
+        askQuestion()
     }
     
     func continueHandler(action: UIAlertAction) {
