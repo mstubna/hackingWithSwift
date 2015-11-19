@@ -51,16 +51,20 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(sender: UIButton) {
         var title: String
+        var color: UIColor
         
         if sender.tag == correctAnswer {
             title = "Correct"
+            color = UIColor.greenColor()
             ++score
         } else {
             title = "Incorrect"
+            color = UIColor.redColor()
             --score
         }
         
         label.text = "\(title)! Your score is \(score)."
+        label.textColor = color
 
         askQuestion()
     }
