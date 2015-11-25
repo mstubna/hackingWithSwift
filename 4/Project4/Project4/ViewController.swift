@@ -22,9 +22,27 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = NSURL(string: "https://www.hackingwithswift.com")!
-        webView.loadRequest(NSURLRequest(URL: url))
-        webView.allowsBackForwardNavigationGestures = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .Plain, target: self, action: "openTapped")
+    }
+
+    func openTapped() {
+        let ac = UIAlertController(title: "Open page…", message: nil, preferredStyle: .ActionSheet)
+        ac.addAction(UIAlertAction(title: "apple.com", style: .Default, handler: openPage))
+        ac.addAction(UIAlertAction(title: "hackingwithswift.com", style: .Default, handler: openPage))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
+    }
+    
+    func openPage(alertAction: UIAlertAction) {
+        if let title = alertAction.title {
+            let url = NSURL(string: "https://www.\(title)")!
+            webView.loadRequest(NSURLRequest(URL: url))
+            webView.allowsBackForwardNavigationGestures = true
+        }
+    }
+    
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        title = webView.title
     }
 
     override func didReceiveMemoryWarning() {
