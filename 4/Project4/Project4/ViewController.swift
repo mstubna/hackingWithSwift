@@ -61,6 +61,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         }
         
         decisionHandler(.Cancel)
+        let ac = UIAlertController(title: "Sorry...", message: "Navigation to this site is not permitted.", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
     }
     
     func openPage(alertAction: UIAlertAction) {
