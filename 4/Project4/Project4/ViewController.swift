@@ -33,6 +33,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
+
         progressView = UIProgressView(progressViewStyle: .Default)
         progressView.sizeToFit()
         let progressButton = UIBarButtonItem(customView: progressView)
@@ -42,8 +44,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         toolbarItems = [progressButton, spacer, refresh]
         navigationController?.toolbarHidden = false
-
-        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
