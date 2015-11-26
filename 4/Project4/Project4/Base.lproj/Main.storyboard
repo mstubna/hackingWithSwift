@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-265" y="-7"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Global Split View Controller-->
         <scene sceneID="88Z-qp-gh2">
             <objects>
-                <splitViewController id="GfR-2u-SPq" sceneMemberID="viewController">
+                <splitViewController id="GfR-2u-SPq" customClass="GlobalSplitViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="fUQ-Kc-DEe" kind="relationship" relationship="masterViewController" id="Udr-1q-Jqp"/>
                         <segue destination="ADx-iW-uyv" kind="relationship" relationship="detailViewController" id="VRb-6O-PuO"/>
@@ -114,6 +114,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bhv-Sj-fIn"/>
+        <segue reference="VRb-6O-PuO"/>
     </inferredMetricsTieBreakers>
 </document>
