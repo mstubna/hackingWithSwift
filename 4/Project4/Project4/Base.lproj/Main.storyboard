@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="541" y="877"/>
         </scene>
-        <!--Master-->
+        <!--My favorite sites-->
         <scene sceneID="7xb-g1-ViJ">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="yMG-0K-BoN" customClass="MasterViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                             <outlet property="delegate" destination="yMG-0K-BoN" id="9U9-n1-gPy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="sBW-XR-zIf"/>
+                    <navigationItem key="navigationItem" title="My favorite sites" id="sBW-XR-zIf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wpx-Cy-bFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +114,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VRb-6O-PuO"/>
+        <segue reference="bhv-Sj-fIn"/>
     </inferredMetricsTieBreakers>
 </document>
