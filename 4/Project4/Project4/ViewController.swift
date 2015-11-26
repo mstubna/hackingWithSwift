@@ -13,18 +13,25 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var detailItem: String?
 
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
+        loadWebsite()
+    }
+    
+    func loadWebsite() {
+        if let detail = self.detailItem {
+            let url = NSURL(string: "https://www.\(detail)")!
+            webView.loadRequest(NSURLRequest(URL: url))
+            webView.allowsBackForwardNavigationGestures = true
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .Plain, target: self, action: "openTapped")
 
         progressView = UIProgressView(progressViewStyle: .Default)
         progressView.sizeToFit()
@@ -38,52 +45,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
     }
-
-    func openTapped() {
-        let ac = UIAlertController(title: "Open page…", message: nil, preferredStyle: .ActionSheet)
-        for website in websites {
-            ac.addAction(UIAlertAction(title: website, style: .Default, handler: openPage))
-        }
-        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(ac, animated: true, completion: nil)
-    }
     
-    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-        let url = navigationAction.request.URL
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        if let host = url!.host {
-            if websitePermitted(host) {
-                decisionHandler(.Allow)
-                return
-            }
-        }
-        
-        decisionHandler(.Cancel)
-        blockOpenPage()
-    }
-    
-    func websitePermitted(website: String) -> Bool {
-        for site in websites {
-            if website.rangeOfString(site) != nil {
-                return true
-            }
-        }
-        return false
-    }
-    
-    func blockOpenPage() {
-        let ac = UIAlertController(title: "Sorry...", message: "Navigation to this site is not permitted.", preferredStyle: .Alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
-        presentViewController(ac, animated: true, completion: nil)
-    }
-    
-    func openPage(alertAction: UIAlertAction) {
-        if let title = alertAction.title {
-            let url = NSURL(string: "https://www.\(title)")!
-            webView.loadRequest(NSURLRequest(URL: url))
-            webView.allowsBackForwardNavigationGestures = true
-        }
-    }
+        webView.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
+    }    
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         if keyPath == "estimatedProgress" {
