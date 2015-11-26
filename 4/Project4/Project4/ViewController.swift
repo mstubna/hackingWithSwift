@@ -79,6 +79,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         title = webView.title
+        progressView.progress = 0
     }
 
     override func didReceiveMemoryWarning() {
