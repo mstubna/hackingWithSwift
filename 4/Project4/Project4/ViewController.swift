@@ -52,15 +52,26 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = navigationAction.request.URL
         
         if let host = url!.host {
-            for website in websites {
-                if host.rangeOfString(website) != nil {
-                    decisionHandler(.Allow)
-                    return
-                }
+            if websitePermitted(host) {
+                decisionHandler(.Allow)
+                return
             }
         }
         
         decisionHandler(.Cancel)
+        blockOpenPage()
+    }
+    
+    func websitePermitted(website: String) -> Bool {
+        for site in websites {
+            if website.rangeOfString(site) != nil {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func blockOpenPage() {
         let ac = UIAlertController(title: "Sorry...", message: "Navigation to this site is not permitted.", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
