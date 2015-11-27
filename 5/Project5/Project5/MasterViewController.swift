@@ -13,6 +13,11 @@ class MasterViewController: UITableViewController {
 
     var objects = [String]()
     var allWords = [String]()
+    
+    struct ErrorFeedback {
+        let errorTitle: String
+        let errorMessage: String
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,62 +57,94 @@ class MasterViewController: UITableViewController {
     }
     
     func submitAnswer(answer: String) {
-        let lowerAnswer = answer.lowercaseString
-        
-        let errorTitle: String
-        let errorMessage: String
-        
-        if wordIsPossible(lowerAnswer) {
-            if wordIsOriginal(lowerAnswer) {
-                if wordIsReal(lowerAnswer) {
-                    objects.insert(answer, atIndex: 0)
-                    
-                    let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-                    tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-                    
-                    return
-                } else {
-                    errorTitle = "Word not recognised"
-                    errorMessage = "You can't just make them up, you know!"
-                }
-            } else {
-                errorTitle = "Word used already"
-                errorMessage = "Be more original!"
-            }
-        } else {
-            errorTitle = "Word not possible"
-            errorMessage = "You can't spell that word from '\(title!.lowercaseString)'!"
+        if let errorFeedback = checkWordValidity(answer) {
+            return showError(errorFeedback)
         }
-        
-        let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .Alert)
+
+        objects.insert(answer, atIndex: 0)
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    }
+    
+    func showError(errorFeedback: ErrorFeedback) {
+        let ac = UIAlertController(title: errorFeedback.errorTitle, message: errorFeedback.errorMessage, preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
     }
     
-    func wordIsPossible(word: String) -> Bool {
+    func checkWordValidity(answer: String) -> ErrorFeedback? {
+        let lowerAnswer = answer.lowercaseString
+        
+        for test in [checkWordLength, checkWordDifferentFromStartWord, checkWordPossibility, checkWordOriginality, checkWordReality] {
+            if let errorFeedback = test(lowerAnswer) {
+                return errorFeedback
+            }
+        }
+
+        return nil
+    }
+    
+    func checkWordLength(word: String) -> ErrorFeedback? {
+        if word.characters.count < 3 {
+            return ErrorFeedback(
+                errorTitle: "Word is not long enough",
+                errorMessage: "Words must be at least three letters long!"
+            )
+        }
+        return nil
+    }
+    
+    func checkWordDifferentFromStartWord(word: String) -> ErrorFeedback? {
+        if word == title!.lowercaseString {
+            return ErrorFeedback(
+                errorTitle: "Word is not new",
+                errorMessage: "Words can't be the original word!"
+            )
+        }
+        return nil
+    }
+    
+    func checkWordPossibility(word: String) -> ErrorFeedback? {
         var tempWord = title!.lowercaseString
         
         for letter in word.characters {
             if let pos = tempWord.rangeOfString(String(letter)) {
                 tempWord.removeAtIndex(pos.startIndex)
             } else {
-                return false
+                return ErrorFeedback(
+                    errorTitle: "Word not possible",
+                    errorMessage: "You can't spell that word from '\(title!.lowercaseString)'!"
+                )
             }
         }
         
-        return true
+        return nil
     }
     
-    func wordIsOriginal(word: String) -> Bool {
-        return !objects.contains(word)
+    func checkWordOriginality(word: String) -> ErrorFeedback? {
+        if objects.contains(word) {
+            return ErrorFeedback(
+                errorTitle: "Word used already",
+                errorMessage: "Be more original!"
+            )
+        }
+
+        return nil
     }
     
-    func wordIsReal(word: String) -> Bool {
+    func checkWordReality(word: String) -> ErrorFeedback? {
         let checker = UITextChecker()
         let range = NSMakeRange(0, word.characters.count)
         let misspelledRange = checker.rangeOfMisspelledWordInString(word, range: range, startingAt: 0, wrap: false, language: "en")
         
-        return misspelledRange.location == NSNotFound
+        if misspelledRange.location == NSNotFound {
+            return nil
+        } else {
+            return ErrorFeedback(
+                errorTitle: "Word not recognized",
+                errorMessage: "You can't just make them up, you know!"
+            )
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
