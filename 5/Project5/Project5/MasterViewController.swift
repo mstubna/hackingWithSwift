@@ -91,6 +91,7 @@ class MasterViewController: UITableViewController {
                 errorMessage: "Words must be at least three letters long!"
             )
         }
+        
         return nil
     }
     
@@ -101,6 +102,7 @@ class MasterViewController: UITableViewController {
                 errorMessage: "Words can't be the original word!"
             )
         }
+        
         return nil
     }
     
