@@ -22,7 +22,10 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "promptForAnswer")
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "promptForAnswer"),
+            UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "startGame")
+        ]
 
         if let startWordsPath = NSBundle.mainBundle().pathForResource("start", ofType: "txt") {
             if let startWords = try? String(contentsOfFile: startWordsPath, usedEncoding: nil) {
