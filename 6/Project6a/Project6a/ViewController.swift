@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         styleButton(button2)
         styleButton(button3)
 
+        label.text = "Click any flag to start!"
+
         askQuestion()
     }
     
