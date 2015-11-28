@@ -53,6 +53,7 @@ class DetailViewController: UIViewController {
         let vc = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
         presentViewController(vc, animated: true, completion: nil)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
