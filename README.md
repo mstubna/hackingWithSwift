@@ -27,3 +27,7 @@ Enhancing Project 2 with additional autolayout constraints so that it works on a
 **Project 6b**
 
 autolayout visual format language
+
+**Project 7**
+
+Reading data from an `json` API and parsing with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
