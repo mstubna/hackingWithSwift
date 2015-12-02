@@ -12,46 +12,38 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [[String: String]]()
-
+    let dataLoader = DataLoader()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let urlString: String
         
-        if navigationController?.tabBarItem.tag == 0 {
-            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-        } else {
-            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
-        }
+        let option = navigationController?.tabBarItem.tag == 0 ? 0 : 1
         
-        if let url = NSURL(string: urlString) {
-            if let data = try? NSData(contentsOfURL: url, options: []) {
-                let json = JSON(data: data)
-                
-                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                    parseJSON(json)
-                } else {
-                    showError()
-                }
-            } else {
-                showError()
-            }
+        guard let json = dataLoader.run(loadLiveData: true, option: option) else { return showError() }
+        if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+            parseJSON(json, option: option)
+            tableView.reloadData()
         } else {
             showError()
         }
     }
     
-    func parseJSON(json: JSON) {
-        for result in json["results"].arrayValue {
-            let title = result["title"].stringValue
-            let body = result["body"].stringValue
-            let sigs = result["signatureCount"].stringValue
-            let obj = ["title": title, "body": body, "sigs": sigs]
-            objects.append(obj)
+    func parseJSON(json: JSON, option: Int) {
+        var results: [JSON]
+        if option == 0 {
+            results = json["results"].arrayValue.sort { $0["created"] > $1["created"] }
+        } else {
+            results = json["results"].arrayValue.sort { $0["signatureCount"] > $1["signatureCount"] }
         }
         
-        tableView.reloadData()
+        for result in results {
+            objects.append([
+                "title": result["title"].stringValue,
+                "body": result["body"].stringValue,
+                "sigs": result["signatureCount"].stringValue,
+                "created": result["created"].stringValue
+            ])
+        }
     }
 
     func showError() {
