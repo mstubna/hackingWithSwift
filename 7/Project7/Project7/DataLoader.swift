@@ -19,8 +19,9 @@ class DataLoader {
         "data1"
     ]
  
-    func run(loadLiveData liveData: Bool, option: Int) -> JSON? {
-        return liveData ? loadLiveData(option) : loadSavedData(option)
+    func run(loadLiveData liveData: Bool, option: Int) -> [JSON]? {
+        guard let json = liveData ? loadLiveData(option) : loadSavedData(option) else { return nil }
+        return sortData(json, option: option)
     }
     
     private func loadSavedData(option: Int) -> JSON? {
@@ -34,9 +35,21 @@ class DataLoader {
         let urlString = urlStrings[option]
         if let url = NSURL(string: urlString) {
             if let data = try? NSData(contentsOfURL: url, options: []) {
-                return JSON(data: data)
+                let json = JSON(data: data)
+                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                    return json
+                } else {
+                    return nil
+                }
             }
         }
         return nil
+    }
+
+    private func sortData(json: JSON, option: Int) -> [JSON] {
+        if option == 0 {
+            return json["results"].arrayValue.sort { $0["created"] > $1["created"] }
+        }
+        return json["results"].arrayValue.sort { $0["signatureCount"] > $1["signatureCount"] }
     }
 }

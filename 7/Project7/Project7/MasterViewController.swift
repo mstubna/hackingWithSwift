@@ -18,24 +18,12 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         let option = navigationController?.tabBarItem.tag == 0 ? 0 : 1
-        
-        guard let json = dataLoader.run(loadLiveData: true, option: option) else { return showError() }
-        if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-            parseJSON(json, option: option)
-            tableView.reloadData()
-        } else {
-            showError()
-        }
+        guard let results = dataLoader.run(loadLiveData: false, option: option) else { return showError() }
+        parseJSON(results)
+        tableView.reloadData()
     }
     
-    func parseJSON(json: JSON, option: Int) {
-        var results: [JSON]
-        if option == 0 {
-            results = json["results"].arrayValue.sort { $0["created"] > $1["created"] }
-        } else {
-            results = json["results"].arrayValue.sort { $0["signatureCount"] > $1["signatureCount"] }
-        }
-        
+    func parseJSON(results: [JSON]) {
         for result in results {
             objects.append([
                 "title": result["title"].stringValue,
