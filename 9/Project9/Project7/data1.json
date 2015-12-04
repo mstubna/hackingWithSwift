@@ -1,0 +1,3114 @@
+{
+    "metadata": {
+        "requestInfo": {
+            "apiVersion": 1,
+            "query": {
+                "body": null,
+                "createdAfter": null,
+                "createdAt": null,
+                "createdBefore": null,
+                "isPublic": 1,
+                "isSignable": null,
+                "limit": "100",
+                "mock": 0,
+                "offset": 0,
+                "petitionsDefaultLimit": 1000,
+                "publicThreshold": 149,
+                "responseId": null,
+                "signatureCount": null,
+                "signatureCountCeiling": null,
+                "signatureCountFloor": "10000",
+                "signatureThreshold": null,
+                "signatureThresholdCeiling": null,
+                "signatureThresholdFloor": null,
+                "status": null,
+                "title": null,
+                "url": null,
+                "websiteUrl": "https://petitions.whitehouse.gov"
+            },
+            "resource": "petitions"
+        },
+        "responseInfo": {
+            "developerMessage": "OK",
+            "errorCode": "",
+            "moreInfo": "",
+            "status": 200,
+            "userMessage": ""
+        },
+        "resultset": {
+            "count": 518,
+            "limit": 100,
+            "offset": 0
+        }
+    },
+    "results": [
+        {
+            "body": "\nEvery year in the United States, an estimated 6 to 8 million lost, abandoned, or unwanted dogs and cats enter animal shelters and nearly half of these animalsxmany of them healthy, young, and adoptablexmust be euthanized because there are too many animals and not enough good homes. \n\nThis tragedy occurs because people don't spay and neuter their animals and because greedy breeders continue to churn out more puppies. Because all dogs and cats are precious and because no more animals need to be bred when so many others go without hope of being adopted, PETA is calling for a mandatory spay-and-neuter law until all dogs and cats in the United States have a home to call their own. \n\nSign the petition calling for a mandatory spay-and-neuter law to help end the animal overpopulation crisis. \n",
+            "created": 1316697523,
+            "deadline": 1319289523,
+            "id": 1301,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 20,
+                    "name": "Environment"
+                }
+            ],
+            "response": {
+                "associationTime": 1325703633,
+                "id": 331,
+                "url": "https://petitions.whitehouse.gov/response/ending-pet-homelessness-through-responsible-pet-ownership"
+            },
+            "signatureCount": 11729,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Stop Animal Homelessness at Its Roots",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-animal-homelessness-its-roots"
+        },
+        {
+            "body": "The elections of 1824, 1876, 1888, and 2000 produced an Electoral College winner who did not receive the plurality of the nationwide popular vote - that is, the American people did not get the President democracy should have selected.\n\nDue to the way electoral votes are allocated, candidates have a strong incentive to focus their campaigns on \"swing\" states with many voters, such as Florida, and neglect states such as Texas which do not swing.   Due to necessary rounding errors when allocating votes, members of a sparsely populated state effectively accrue more voting power than members of a well-populated state.  This increases the electoral power of members of certain states while reducing it for others on an ongoing basis.\n\nWe beg our leaders to dissolve this system and let us vote.",
+            "created": 1316698213,
+            "deadline": 1319290213,
+            "id": 1326,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1338590212,
+                "id": 596,
+                "url": "https://petitions.whitehouse.gov/response/why-electoral-college-important"
+            },
+            "signatureCount": 29297,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Grant voters the ability to vote for the President of the United States by dissolving the electoral college.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/grant-voters-ability-vote-president-united-states-dissolving-electoral-college"
+        },
+        {
+            "body": "\nEvery year in the United States, an estimated 6 to 8 million lost, abandoned, or unwanted dogs and cats enter animal shelters and nearly half of these animalsxmany of them healthy, young, and adoptablexmust be euthanized because there are too many animals and not enough good homes. \n\nThis tragedy occurs because people don't spay and neuter their animals and because greedy breeders continue to churn out more puppies. Because all dogs and cats are precious and because no more animals need to be bred when so many others go without hope of being adopted, PETA is calling for a mandatory spay-and-neuter law until all dogs and cats in the United States have a home to call their own. \n\nSign the petition calling for a mandatory spay-and-neuter law to help end the animal overpopulation crisis. \n",
+            "created": 1316697523,
+            "deadline": 1319289523,
+            "id": 1301,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 20,
+                    "name": "Environment"
+                }
+            ],
+            "response": {
+                "associationTime": 1325703633,
+                "id": 331,
+                "url": "https://petitions.whitehouse.gov/response/ending-pet-homelessness-through-responsible-pet-ownership"
+            },
+            "signatureCount": 11786,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Stop Animal Homelessness at Its Roots",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-animal-homelessness-its-roots"
+        },
+        {
+            "body": "The elections of 1824, 1876, 1888, and 2000 produced an Electoral College winner who did not receive the plurality of the nationwide popular vote - that is, the American people did not get the President democracy should have selected.\n\nDue to the way electoral votes are allocated, candidates have a strong incentive to focus their campaigns on \"swing\" states with many voters, such as Florida, and neglect states such as Texas which do not swing.   Due to necessary rounding errors when allocating votes, members of a sparsely populated state effectively accrue more voting power than members of a well-populated state.  This increases the electoral power of members of certain states while reducing it for others on an ongoing basis.\n\nWe beg our leaders to dissolve this system and let us vote.",
+            "created": 1316698213,
+            "deadline": 1319290213,
+            "id": 1326,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1338590212,
+                "id": 596,
+                "url": "https://petitions.whitehouse.gov/response/why-electoral-college-important"
+            },
+            "signatureCount": 29311,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Grant voters the ability to vote for the President of the United States by dissolving the electoral college.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/grant-voters-ability-vote-president-united-states-dissolving-electoral-college"
+        },
+        {
+            "body": "Only 6 states, Connecticut, Iowa, Massachusetts, New Hampshire, New York and Vermont, plus the District of Columbia, currently legally allow same-sex couples to get married and have the same benefits as heterosexual couples.  And also, though these 6 states, plus D.C., allow same-sex marriage, federally, they are not recognized at all, whatsoever.  The LGBT community is the last group of people to not get  full rights in our nation, the great nation of freedom and opportunity.  We the people need to call on President Barack Obama to take a stand as our country's leader, and fully legalize same-sex marriage across the whole nation.",
+            "created": 1316700777,
+            "deadline": 1319292777,
+            "id": 2126,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                }
+            ],
+            "response": {
+                "associationTime": 1325800857,
+                "id": 349,
+                "url": "https://petitions.whitehouse.gov/response/greater-protections-same-sex-couples"
+            },
+            "signatureCount": 17303,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Fully Legalize Same-Sex Marriage Across The Nation",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/fully-legalize-same-sex-marriage-across-nation"
+        },
+        {
+            "body": "We the people want to know when we can have our \"perfectly legitimate\" discussion on marijuana legalization. Marijuana prohibition has resulted in the arrest of over 20 million Americans since 1965, countless lives ruined and hundreds of billions of tax dollars squandered and yet this policy has still failed to achieve its stated goals of lowering use rates, limiting the drug's access, and creating safer communities.\n\nIsn't it time to legalize and regulate marijuana in a manner similar to alcohol? If not, please explain why you feel that the continued criminalization of cannabis will achieve the results in the future that it has never achieved in the past? ",
+            "created": 1316700184,
+            "deadline": 1319292184,
+            "id": 2141,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831348,
+                "id": 193,
+                "url": "https://petitions.whitehouse.gov/response/what-we-have-say-about-legalizing-marijuana"
+            },
+            "signatureCount": 75057,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Legalize and Regulate Marijuana in a Manner Similar to Alcohol.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/legalize-and-regulate-marijuana-manner-similar-alcohol"
+        },
+        {
+            "body": "There is an overwhelming lack of evidence that marijuana is a dangerous drug that should be classified with heroin or cocaine. Hundreds of thousands of otherwise peaceful, law abiding citizens are arrested each year for simple possession, at enormous cost to our society. Our prisons are too crowded, we need the money, and the regulated sale of marijuana would be safer for everybody. Americans would rather deal with shopkeepers than drug dealers when buying the marijuana they will consume regardless of its legal status. Prohibition failed in the '20s, and is failing us now.",
+            "created": 1316701123,
+            "deadline": 1319293123,
+            "id": 2286,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831348,
+                "id": 193,
+                "url": "https://petitions.whitehouse.gov/response/what-we-have-say-about-legalizing-marijuana"
+            },
+            "signatureCount": 20104,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Legalize, regulate, and tax marijuana.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/legalize-regulate-and-tax-marijuana"
+        },
+        {
+            "body": "Dear President Obama,\n\nWe, your undersigned Americans, knowing you to be committed to fairness and justice, hereby Petition that you direct your Attorney General:\n\n(1) To take prompt and effective steps to correct the gross injustice that has been perpetrated with the federal prosecution of Sholom Rubashkin.\n\n(2) To initiate an investigation into this case as has been requested by 47 Members of the House of Representatives, who have separately and independently written to Attorney General Eric Holder about the prosecution of Sholom Rubashkin.\n\n(3) To respond to the demand made by 75 law professors and former U.S. Attorneys (including three former Deputy Attorneys General) to investigate prosecutorial misconduct in the case of United States vs. Sholom Rubashkin.\n\nwww.justiceforsholom.org",
+            "created": 1316703633,
+            "deadline": 1319295633,
+            "id": 2481,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831025,
+                "id": 187,
+                "url": "https://petitions.whitehouse.gov/response/why-we-can\u2019t-comment"
+            },
+            "signatureCount": 52819,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Call an Investigation into Allegations of Prosecutorial &amp; Judicial Misconduct in the Case of Sholom Rubashkin",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/call-investigation-allegations-prosecutorial-judicial-misconduct-case-sholom-rubashkin"
+        },
+        {
+            "body": "We, the undersigned, hereby declare that anti-terrorism legislation passed by our US Congress since the tragic September 11, 2001 attacks on our nation, seriously damage and infringe upon the constitutional protections that are enshrined in our Bill of Rights.\n\nWe declare that it is not patriotic, but rather Un-American to destroy the very freedoms which cause Americans to love their country. We oppose the xsneak and peekx provision of the PATRIOT Act, which infringes our 4th amendment protections against unreasonable search and seizure by denying citizens their right to be aware that their property is to be searched and their right to protest such search. We oppose the PATRIOT Actxs destruction of e-mail and Internet privacy. \n\n\"Those who sacrifice liberty for security deserve neither\"",
+            "created": 1316709509,
+            "deadline": 1319301509,
+            "id": 2761,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1333738896,
+                "id": 523,
+                "url": "https://petitions.whitehouse.gov/response/ensuring-safety-and-security-nation-while-protecting-constitutional-rights-and-civil"
+            },
+            "signatureCount": 22718,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Repeal the Patriot Act",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/repeal-patriot-act"
+        },
+        {
+            "body": "The xwar on drugsx has yielded predictable suffering and waste, as the prohibition of widely desired substances has never generated positive results - except for the cartels and gangs who control the illegal market. Marijuana prohibition in particular is a colossal waste of resources that could be put to better use. Taking a noncriminal, regulatory approach to marijuana would enable states to pass their own laws, regulations and taxes to control marijuana and would end the Justice Department's intimidation tactics in medical marijuana states. One or more states will likely legalize adult use of marijuana in 2012, and the Obama administration should stop wasting scarce federal resources and uphold the presidentxs campaign pledge to respect statesx rights when it comes to marijuana.",
+            "created": 1316709859,
+            "deadline": 1319301859,
+            "id": 2766,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831348,
+                "id": 193,
+                "url": "https://petitions.whitehouse.gov/response/what-we-have-say-about-legalizing-marijuana"
+            },
+            "signatureCount": 17054,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Stop Interfering With State Marijuana Legalization Efforts",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-interfering-state-marijuana-legalization-efforts"
+        },
+        {
+            "body": "In order to resolve a wealth of inequities, we the people do entreat the white house to dismantle or redirect law enforcement agencies, and the approximately $400 BILLION dollars per year spent on the \"War on Drugs\".\n\nThe U.S. represents 5% of world population, but imprisons 25% of all the worlds inmates.  It is not the U.S. people who are excessively criminal.  It is overzealous policy that destroys the future of America's youth at great expense to the taxpayer.\n\nWhere would you be, Mr. President, had you been convicted and imprisoned because of your admitted Marijuana usage?  What great future leaders, thinkers and innovators are being destroyed today because of this useless policy?\n\nDrug use is a social issue, and should be addressed by health care professionals, not the prison system.",
+            "created": 1316724845,
+            "deadline": 1319316845,
+            "id": 2801,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                }
+            ],
+            "response": {
+                "associationTime": 1335300270,
+                "id": 547,
+                "url": "https://petitions.whitehouse.gov/response/reforming-criminal-justice-system"
+            },
+            "signatureCount": 30018,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "End the destructive, wasteful and counterproductive \"War on Drugs\"",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/end-destructive-wasteful-and-counterproductive-war-drugs"
+        },
+        {
+            "body": "Disclosure Petition - Paradigm Research Group\n\"We, the undersigned, strongly urge the President of the United States to formally acknowledge an extraterrestrial presence engaging the human race and immediately release into the public domain all files from all agencies and military services relevant to this phenomenon.\"\n___\nHundreds of military and government agency witnesses have come forward with testimony confirming this extraterrestrial presence.   Opinion polls now indicate more than 50% of the American people believe there is an extraterrestrial presence and more than 80% believe the government is not telling the truth about this phenomenon.  The people have a right to know. The people can handle the truth.\nRelevant Websites: www.disclosurepetition.info,  www.paradigmresearchgroup.org",
+            "created": 1316714274,
+            "deadline": 1319306274,
+            "id": 2916,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 139,
+                    "name": "Science and Space Policy"
+                }
+            ],
+            "response": {
+                "associationTime": 1320436888,
+                "id": 205,
+                "url": "https://petitions.whitehouse.gov/response/searching-et-no-evidence-yet"
+            },
+            "signatureCount": 12092,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "formally acknowledge an extraterrestrial presence engaging the human race- Disclosure.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/formally-acknowledge-extraterrestrial-presence-engaging-human-race-disclosure"
+        },
+        {
+            "body": "Lost opportunities for farmers and businesses have real consequences. With over $419 million in estimated U.S. retail sales, American companies making hemp products have no choice but to import their raw materials because American farmers continue to fear they will be prosecuted due to an outdated federal policy which confuses non-drug industrial hemp with drug varieties of Cannabis.\n\nSustainable hemp seed, fiber and oil are already used in nutritious food, textiles, body care and even auto-parts. Many American companies are using imported hemp in their products today.\n\nWe urge you to allow U.S. farmers to follow in the footsteps of George Washington, Thomas Jefferson and John Adams, all who were hemp farmers, and once again grow this sustainable and profitable non-drug crop.",
+            "created": 1316717143,
+            "deadline": 1319309143,
+            "id": 3201,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 1,
+                    "name": "Agriculture"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1335305015,
+                "id": 553,
+                "url": "https://petitions.whitehouse.gov/response/what-we-have-say-about-marijuana-and-hemp-production"
+            },
+            "signatureCount": 28888,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Allow Industrial Hemp to be Grown in the U.S. Once Again",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/allow-industrial-hemp-be-grown-us-once-again"
+        },
+        {
+            "body": "The Defense of Marriage Act bypasses the Constitution in making it so states do not need to recognize other state's marriages if those marriages are not between a man and a woman. This results in confusing legal issues when a gay couple moves from one state to another, as well as creating a definition of marriage that is bigoted against homosexual couples.",
+            "created": 1316722370,
+            "deadline": 1319314370,
+            "id": 3486,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831020,
+                "id": 181,
+                "url": "https://petitions.whitehouse.gov/response/repealing-discriminatory-defense-marriage-act"
+            },
+            "signatureCount": 14196,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Repeal the Defense of Marriage Act.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/repeal-defense-marriage-act-0"
+        },
+        {
+            "body": "The Pledge of Allegiance is said every day in schools across America. It is a government sanctioned speech, and should remain neutral in matters of religion. In its current state, it supports the existence of God, which goes against several religions, and supports others. This bias should not be supported by the country according to the Establishment Clause of the First Amendment to the United States Constitution. ",
+            "created": 1316723197,
+            "deadline": 1319315197,
+            "id": 3611,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831708,
+                "id": 199,
+                "url": "https://petitions.whitehouse.gov/response/religion-public-square"
+            },
+            "signatureCount": 20447,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Edit the Pledge of Allegiance to remove the phrase \"Under God\".",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/edit-pledge-allegiance-remove-phrase-under-god"
+        },
+        {
+            "body": "The GlassxSteagall Act kept our country depression free for over 70 years. By maintaining a separation between investment and banking, it allowed banks to effectively serve their clients needs, instead of their own. \n\nIt was not until 1999, and the creation of the GrammxLeachxBliley Act, that the separation was broken. Within those 12 years, our country has experienced a dot-com bubble and a large financial crisis. Both of these situations where created by commercial banks investing their large quantities of consumer money into speculations. I urge you, President Barack Obama, to bring back sound investment to the United States by re-instating a separation between investment banks and banking.\n",
+            "created": 1316724857,
+            "deadline": 1319316857,
+            "id": 3741,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1331062979,
+                "id": 481,
+                "url": "https://petitions.whitehouse.gov/response/comprehensive-approach-wall-street-reform"
+            },
+            "signatureCount": 24547,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Re-establish and maintain the separation between investment banks and commercial banks.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/re-establish-and-maintain-separation-between-investment-banks-and-commercial-banks"
+        },
+        {
+            "body": "This month Palestine will apply to become a UN member. We call upon you not to veto this application in the Security Council. \n\nFor decades Palestinians have been prevented from exercising their rights to freedom &amp; self-determination on even a portion of their historic homeland due to Israelxs policies of ethnic cleansing, apartheid, military occupation &amp; colonization. \n\nPalestinians are seeking UN membership as a way toward establishing a just &amp; lasting peace that must include ending Israelxs occupation of the West Bank, East Jerusalem &amp; the Gaza Strip; equality for Palestinian citizens of Israel; &amp; implementation of Palestinian refugees' right of return.\n\nPalestinians have waited 63 years for their human rights-Don't set a timetable for their freedom by vetoing their UN  membership bid.",
+            "created": 1316728252,
+            "deadline": 1319320252,
+            "id": 4041,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1367014590,
+                "id": 806,
+                "url": "https://petitions.whitehouse.gov/response/committed-just-and-lasting-peace-middle-east"
+            },
+            "signatureCount": 12077,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "not veto Palestine's application to become a member of the United Nations.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/not-veto-palestines-application-become-member-united-nations"
+        },
+        {
+            "body": "The currency of the United States currently contains the phrase \"In God We Trust\" on it. This was added in the 1950's, and is unconstitutional. It supports one religion over another, and should be removed from all currency. It violates the Establishment Clause of the First Amendment to the United States Constitution. This phrase should be removed from created currency.",
+            "created": 1316732557,
+            "deadline": 1319324557,
+            "id": 4666,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831708,
+                "id": 199,
+                "url": "https://petitions.whitehouse.gov/response/religion-public-square"
+            },
+            "signatureCount": 12288,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Remove \"In God We Trust\" from currency.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/remove-god-we-trust-currency"
+        },
+        {
+            "body": "Citizens United dramatically altered the political dynamic of our country. Never before have corporations had so much sway over our country's politics, and as a result our nation looks less and less like a democracy every day. By calling corporations \"people\" and deeming money to be \"free speech,\" we are allowing the richest Americans to influence politics in a way that the vast majority of us can never dream of. By ending corporate personhood we can restore our country's democratic vision and create an America that answers to people rather than to money.\n\nStop the top 1% of Americans from drowning out the voices of the 99%. End corporate personhood and stop giving an unfair advantage to the wealthy few before it's too late.",
+            "created": 1316733148,
+            "deadline": 1319325148,
+            "id": 4716,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1339173474,
+                "id": 607,
+                "url": "https://petitions.whitehouse.gov/response/building-government-serves-ordinary-americans-not-special-interests"
+            },
+            "signatureCount": 26133,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Restore democracy by ending corporate personhood.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/restore-democracy-ending-corporate-personhood"
+        },
+        {
+            "body": "The Transportation Security Administration has been one of the largest, most expensive and most visible blunders of the post-9-11 homeland security reformation. It has violated countless constitutional rights of average Americans, caused miserable and expensive delays in an already-overburdened air travel system, and allowed multiple known instances of harassment, theft, extortion and sexual abuse by its employees. It has failed approximately 70% of undercover efficacy tests, and for all its excesses, has been unable to catch even a single terrorist since its creation. In our current economic situation, we can no longer afford to continue wasting taxpayer dollars on this kafkaesque embarrassment. Let us instead invest in saner, more effective solutions.",
+            "created": 1316740291,
+            "deadline": 1319332291,
+            "id": 5241,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 26,
+                    "name": "Homeland Security and Disaster Relief"
+                }
+            ],
+            "response": {
+                "associationTime": 1323985315,
+                "id": 308,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-abolishment-transportation-security-administration"
+            },
+            "signatureCount": 32824,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Abolish the TSA, and use its monstrous budget to fund more sophisticated, less intrusive counter-terrorism intelligence.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/abolish-tsa-and-use-its-monstrous-budget-fund-more-sophisticated-less-intrusive-counter"
+        },
+        {
+            "body": "Repeal the detrimental law known as the \"Patriot Act\" immediately.  It does not protect us, and it infringes upon our civil rights.  If we exchange our freedoms for safety, are we really beating the terrorists?",
+            "created": 1316747271,
+            "deadline": 1319339271,
+            "id": 6121,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1333738896,
+                "id": 523,
+                "url": "https://petitions.whitehouse.gov/response/ensuring-safety-and-security-nation-while-protecting-constitutional-rights-and-civil"
+            },
+            "signatureCount": 10254,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "End the Patriot Act",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/end-patriot-act"
+        },
+        {
+            "body": "Currently, churches usually receive tax exemptions based of off their specific religion and sect. If a specific sect is not already recognized, they are able to apply to become a recognized religion. This process gives the government the authority to determine which religions should and should not be recognized as 'true' religions in our country, a clear violation of the first amendment.",
+            "created": 1316749276,
+            "deadline": 1319341276,
+            "id": 6256,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1325875922,
+                "id": 361,
+                "url": "https://petitions.whitehouse.gov/response/tax-exemptions-houses-worship-light-constitutional-guarantees"
+            },
+            "signatureCount": 12643,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Remove tax exemption from churches and allow them to apply like a non-profit organization",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/remove-tax-exemption-churches-and-allow-them-apply-non-profit-organization"
+        },
+        {
+            "body": "Mr.Obama, this is a petition for you to publicly recognize, whether in a live speech, or in one of your weekly youtube addresses, the #occupywallstreet movement that is currently taking place in NYC.\n\nThese men and women are trying to send a message to their fellow Americans and to the world- the big banks and the super-rich, who is \"buying out congress\", are the primary drivers of the ongoing recession.\n\nUnfortunately, they are largely being ignored by the media in the United States due to the \"small size\" of the protests. Note that \"small size\" has not deterred Fox, CNN and other US news channels/newspapers from covering, and even putting on the front page, Tea Party and other far right protests, some of which have had as little as 100 people (#occupywallst varies from 500-3000)",
+            "created": 1316752824,
+            "deadline": 1319344824,
+            "id": 6606,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                }
+            ],
+            "response": {
+                "associationTime": 1319667470,
+                "id": 169,
+                "url": "https://petitions.whitehouse.gov/response/changing-how-wall-street-works"
+            },
+            "signatureCount": 12635,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Recognize the men and women who are occupying wall street",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/recognize-men-and-women-who-are-occupying-wall-street"
+        },
+        {
+            "body": "The patent office's original interpretation of software as language and therefor patentable is much closer to reality and more productive for innovation than it's current practice of issuing software patents with no understanding of the patents being issued. \n\nUnder the patent office's current activity, patents have been come a way to stifle innovation and prevent competition rather than supporting innovation and competitive markets.  They've become a tool of antitrust employed by large companies against small ones. \n\nTo return sanity to the software industry - one of the few industries still going strong in America - direct the patent office to cease issuing software patents and to void all previously issued software patents.",
+            "created": 1316756895,
+            "deadline": 1319348895,
+            "id": 6951,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 30,
+                    "name": "Innovation"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                },
+                {
+                    "id": 151,
+                    "name": "Small Business"
+                }
+            ],
+            "response": {
+                "associationTime": 1319825372,
+                "id": 175,
+                "url": "https://petitions.whitehouse.gov/response/promoting-innovation-and-competitive-markets-through-quality-patents"
+            },
+            "signatureCount": 14949,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Direct the Patent Office to Cease Issuing Software Patents",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/direct-patent-office-cease-issuing-software-patents"
+        },
+        {
+            "body": "Billions and Billions of dollars are thrown at the Military while NASA's budget continues to shrink causing them to cut programs which may actually benefit society unlike the wars we are currently involved in. America needs to wind down these wars and reallocate all that money into our space program and make it the inspiration that it was when Americans first landed on the Moon over 40 years ago. America and Humanity require a permanent presence in Space and no amount of telescopes or rovers are going to meet that requirement. Manned Missions are the only answer but NASA does not the have funds to make this vision a reality. Our President needs to see that investment in space is an investment in Americans, Jobs and the Future of Humanity. ",
+            "created": 1316785699,
+            "deadline": 1319377699,
+            "id": 7826,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                },
+                {
+                    "id": 139,
+                    "name": "Science and Space Policy"
+                }
+            ],
+            "response": {
+                "associationTime": 1324048231,
+                "id": 314,
+                "url": "https://petitions.whitehouse.gov/response/new-horizons-space-exploration"
+            },
+            "signatureCount": 11408,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Reallocate Defense funds to NASA.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/reallocate-defense-funds-nasa"
+        },
+        {
+            "body": "Forgiving student loan debt would provide an immediate jolt to the economy by putting hundreds and, in some cases, thousands of extra dollars into the hands of people who WILL spend it - not just once, but each and every month thereafter - freeing them up to invest, buy homes, start businesses and families. This past year, total student loan debt finally surpassed total credit card debt in America, and is on track to exceed $1 TRILLION within the next year. Student loans themselves are responsible for tuition rates that have soared by 439% since 1982 and for saddling entire generations of educated Americans with intractable levels of student loan debt from which there is, seemingly, no escape. Relieve them of this burden and the middle class WILL rebuild this economy from the bottom-up!",
+            "created": 1316788175,
+            "deadline": 1319380175,
+            "id": 7931,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 18,
+                    "name": "Education"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                }
+            ],
+            "response": {
+                "associationTime": 1319577835,
+                "id": 157,
+                "url": "https://petitions.whitehouse.gov/response/taking-action-reduce-burden-student-loan-debt"
+            },
+            "signatureCount": 32866,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Forgive Student Loan Debt to Stimulate the Economy and Usher in a New Era of Innovation, Entrepreneurship and Prosperity",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/forgive-student-loan-debt-stimulate-economy-and-usher-new-era-innovation-entrepreneurship"
+        },
+        {
+            "body": "To prevent the suffering of dogs and puppies in puppy mills, will the President act to close the current regulatory loophole and require large-scale, commercial breeders who sell puppies online and directly to the public to be covered by USDAxs Animal Welfare Act regulations, including minimum standards for humane care and treatment? This will help to protect consumers from unknowingly buying sick puppies from inhumane facilities and help to eliminate the horrible conditions in large-scale puppy mills.",
+            "created": 1316792003,
+            "deadline": 1319384003,
+            "id": 8131,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 20,
+                    "name": "Environment"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1325195081,
+                "id": 319,
+                "url": "https://petitions.whitehouse.gov/response/improving-regulation-and-oversight-commercial-breeders"
+            },
+            "signatureCount": 32807,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "crack down on puppy mills.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/crack-down-puppy-mills"
+        },
+        {
+            "body": "Marijuana prohibition as a policy has failed. We have taken a substance less harmful than alcohol and, through prohibition, have allowed its production and sale to generate massive profits for drug cartels and other criminal actors. Voters and legislators in states across the country are taking steps to reform marijuana laws for both medical and non-medical use so that they serve the best interests of their citizens. These are thoughtful, rational and beneficial reforms.\n\nDo you, as president, trust the people and leaders in the individual states to enact their own marijuana laws or do you feel the federal government should impose prohibition on all 50 states?",
+            "created": 1316803440,
+            "deadline": 1319395440,
+            "id": 8861,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                }
+            ],
+            "response": {
+                "associationTime": 1319831348,
+                "id": 193,
+                "url": "https://petitions.whitehouse.gov/response/what-we-have-say-about-legalizing-marijuana"
+            },
+            "signatureCount": 12470,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Give States the Freedom to Establish Their Own Marijuana Laws.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/give-states-freedom-establish-their-own-marijuana-laws"
+        },
+        {
+            "body": "Every federal election should be a national holiday to increase voter turnout. The 2008 Presidential election holds the record for voter turnout with 63% of eligible voters voting. However good it is that 63% of voters voted, 37% did not express their opinions that day. Imagine if the record score for a math test was 63%. 37% is 78 million people, meaning 78 million people did not vote. Maybe they did not want to, or maybe they were delayed. To make every election day a national holiday (Election Day) would increase voter turnout not only by making that day a reminder to the people of their civic duty, but by giving them the time to vote. To increase voter turnout is to help show the true beliefs and opinions of the people of this great nation, and not just the beliefs and opinions of 63%.",
+            "created": 1316855739,
+            "deadline": 1319447739,
+            "id": 12141,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1337196171,
+                "id": 571,
+                "url": "https://petitions.whitehouse.gov/response/voting-and-federal-elections"
+            },
+            "signatureCount": 13347,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "propose legislation that would make all federal election days national holidays to increase voter turnout.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/propose-legislation-would-make-all-federal-election-days-national-holidays-increase-voter"
+        },
+        {
+            "body": "My name is Alexandra Allred. My son Tommy and I met President Obama in 2007 when we came to Washington to protest air pollution in our hometown of Midlothian, Texas. Pollution caused Tommy to develop chronic asthma, and the President promised us hexd fight for clean air. But the administrationxs recent decision to further delay long overdue smog protections was a very disappointing step backwards.\n\nThatxs why Ixm calling on the President to honor his promise to Tommy and protect the health of Americans by working as hard as he can to keep dangerous pollutants like mercury, carbon and soot out of our air.\n\nWe're depending on President Obama to stand with the children most affected by polluted air, scientists and public health experts and deliver on his promise for clean air.",
+            "created": 1317055754,
+            "deadline": 1319647754,
+            "id": 18931,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 20,
+                    "name": "Environment"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                }
+            ],
+            "response": {
+                "associationTime": 1321478850,
+                "id": 259,
+                "url": "https://petitions.whitehouse.gov/response/protecting-air-we-breathe"
+            },
+            "signatureCount": 14157,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Protect Children from Dangerous Air Pollution",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/protect-children-dangerous-air-pollution"
+        },
+        {
+            "body": "Abstinence-only education is a hazard to our children. Studies have shown that teen pregnancy rates are the highest in states (New Mexico, Nevada, Arizona, Texas, Mississippi, etc) where abstinence-only sex education is taught. And lowest in states where safe-sex education is taught (New Hampshire, Vermont, Maine, Minnesota, North Dakota). Instead of teaching our children to abstain from sex all together and to fear it, the US should encourage safe sexual practices that promote the use of condoms and birth control. Ignoring the fact that our kids will engage in sexual activity regardless of what they are told is not a healthy perspective to maintain. Instead, the US should ban abstinence-only programs in US public schools and reform the sexual education curriculum.",
+            "created": 1317067370,
+            "deadline": 1319659370,
+            "id": 19441,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 18,
+                    "name": "Education"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                }
+            ],
+            "response": {
+                "associationTime": 1333121438,
+                "id": 517,
+                "url": "https://petitions.whitehouse.gov/response/working-communities-prevent-teen-pregnancy"
+            },
+            "signatureCount": 11306,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Abolish Abstinence-Only Education From US Public Schools",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/abolish-abstinence-only-education-us-public-schools"
+        },
+        {
+            "body": "Many workers come to the USA following all laws and regulations. They obtain valid and legal visas and come to work here temporarily.\nMany of these visas, such as the H1B visa (skilled workers such as software engineers), are valid for 2 consecutives periods of 3 years. When it is time to renew, these people have to exit the country to get a stamp. Often getting stuck outside the USA while their work and home is here. Why can't we do the bureaucratic checks here in the USA? They are already in the country? Why do they have to wait a few weeks or months while someone in a consulate or embassy forwards their paper work to someone here in the USA!? Just do that same paperwork, but, from the USA. There are no security reasons; i.e. they are already in the USA.",
+            "created": 1317275068,
+            "deadline": 1319867068,
+            "id": 24481,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 29,
+                    "name": "Immigration"
+                }
+            ],
+            "response": {
+                "associationTime": 1332884078,
+                "id": 493,
+                "url": "https://petitions.whitehouse.gov/response/working-streamline-visa-renewal-process-and-ensuring-our-nations-security"
+            },
+            "signatureCount": 10608,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Holders of valid, legal visas should be able to renew their visa without having to exit the country",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/holders-valid-legal-visas-should-be-able-renew-their-visa-without-having-exit-country"
+        },
+        {
+            "body": "The US military fails to provide Equal Opportunity for non-religious service members. \n\nWe are forced to participate in religious rituals during official ceremonies. This is not free exercise, this is forced exercise. Worship belongs in voluntary services, not in mandatory formations. This is unconstitutional establishment of an official preference for religion over non-religion.\n\nWe are forced to take an unconstitutional religious test for xSpiritual Fitnessx. Those who fail the test are forced to take remedial training instructing them to go to church and pray. This proselytization by the US military is forced onto us against our will.\n\nThese policies create a hostile environment, division, and resentment within the military, destroying morale and threatening national security.",
+            "created": 1317500347,
+            "deadline": 1320092347,
+            "id": 27476,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 181,
+                    "name": "Veterans and Military Families"
+                }
+            ],
+            "response": {
+                "associationTime": 1379688152,
+                "id": 946,
+                "url": "https://petitions.whitehouse.gov/response/protecting-military-servicemembers-religious-discrimination-and-preserving-freedom"
+            },
+            "signatureCount": 24395,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "End the Militaryxs Discrimination against Non-Religious Service Members",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/end-military\u2019s-discrimination-against-non-religious-service-members"
+        },
+        {
+            "body": "\nThe term euthanasia is from the Greek meaning \"good death.\"  Carbon monoxide gas chambers are definitely not a \"good death\", as animals slowly suffocate to death, sometimes taking 45 minutes and multiple gassings in order to die. Animals cry, bite one another, and bleed out of their cavities, all while fully conscious. Although some states have already banned the use of these cruel chambers, this archaic practice should be banned on a national level. It is inhumane, more expensive than Pentobarbital injection and most importantly, dangerous to shelter workers. Companion animals have been bred for the purposes of bringing mankind joy, and they deserve a respectful death. \"The greatness of a nation and its moral progress can be judged by the way its animals are treated\" - Ghandi.\n",
+            "created": 1317581823,
+            "deadline": 1320173823,
+            "id": 28241,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 1,
+                    "name": "Agriculture"
+                },
+                {
+                    "id": 20,
+                    "name": "Environment"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                }
+            ],
+            "response": {
+                "associationTime": 1340392939,
+                "id": 619,
+                "url": "https://petitions.whitehouse.gov/response/humane-euthanasia-shelter-animals"
+            },
+            "signatureCount": 11627,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "ban the use of gas chambers for killing shelter companion animals. They are inhumane, expensive and dangerous to humans.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/ban-use-gas-chambers-killing-shelter-companion-animals-they-are-inhumane-expensive-and"
+        },
+        {
+            "body": "This Petition is for an immediate release of all inmates who are incarcerated for non-violent drug offensives. We need immediate release for all inmates who are incarcerated for cannabis related crimes, even for probation violations. \n\nNO-ONE BELONGS IN JAIL FOR A PLANT!",
+            "created": 1317667924,
+            "deadline": 1320259924,
+            "id": 28951,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1335300270,
+                "id": 547,
+                "url": "https://petitions.whitehouse.gov/response/reforming-criminal-justice-system"
+            },
+            "signatureCount": 10033,
+            "signatureThreshold": 5000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Release all non-violent drug offenders. Release all inmates who are incarcerated for cannabis related crimes.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/release-all-non-violent-drug-offenders-release-all-inmates-who-are-incarcerated-cannabis"
+        },
+        {
+            "body": "As our economy is in turmoil and manufacturing jobs continue to be shipped overseas, it is an accepted fact that technology and innovation will carry our economy into the 21st century.  This innovative, cutting-edge thinking is not being done by bankers, lobbyists, or hedge-fund managers.  Innovating is done in the laboratory by Ph.D. and M.S. students.  To make the long process of getting a professional degree less incentivized does a huge detriment to our countryxs future.  If various efforts are being made to purchase a home by adding tax exemptions or rebates, it seems only fitting to restore the tax exempt status of graduate student stipends to promote this difficult but worthwhile career path.\n\nPlease restore the federal tax exempt status lost in 1986 to graduate student stipends.",
+            "created": 1319207841,
+            "deadline": 1321803441,
+            "id": 39526,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 18,
+                    "name": "Education"
+                },
+                {
+                    "id": 30,
+                    "name": "Innovation"
+                },
+                {
+                    "id": 103,
+                    "name": "Labor"
+                }
+            ],
+            "response": [],
+            "signatureCount": 22012,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 2988,
+            "status": "closed",
+            "title": "Reinstate the tax exempt status of Graduate Student Stipends",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/reinstate-tax-exempt-status-graduate-student-stipends"
+        },
+        {
+            "body": "The rare dunes sagebrush lizard should be protected. It has the second-smallest range of any North American lizard, living only in a small sliver of southeast New Mexico and western Texas on sand dunes covered by shinnery oak.\n\nIn New Mexico, at least 40 percent of its habitat has been wiped out just since 1982. In Texas, it survives in less than 15 percent of its historic range.\n\nIt has been a candidate for protection under the Endangered Species Act for 10 years and is in desperate need of protection. The Fish and Wildlife Service has assigned the second highest listing priority number to the dunes sagebrush lizard x 2 out of 12 x meaning it faces severe and immediate threats.\n\nRefusing protections would be disastrous for the species and weaken the Endangered Species Act.",
+            "created": 1319474076,
+            "deadline": 1322069676,
+            "id": 40776,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 20,
+                    "name": "Environment"
+                }
+            ],
+            "response": [],
+            "signatureCount": 10010,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 14990,
+            "status": "closed",
+            "title": "Protect the dunes sagebrush lizard under the Endangered Species Act",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/protect-dunes-sagebrush-lizard-under-endangered-species-act"
+        },
+        {
+            "body": "Any school receiving Federal funds should be required to have a credentialed School Librarian on staff full time with a library that contains a minimum of 18 books per student.  Failure to have a school library open to all students and/or failure to have a credentialed School Librarian to run that library should be punishable by a immediate withdrawal of all Federal monies.\n \nStudy after study has shown that well-stocked, well-funded, well-organized school libraries staffed by a \"highly qualified\" School Librarian, or other similarly qualified credentialed individual, improve student reading scores, test scores, and literacy rates. All children have the right to read and to have access to materials that will help them grow as learners and as people.  No Library = No Freedom to Learn",
+            "created": 1319776599,
+            "deadline": 1322372199,
+            "id": 49416,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 18,
+                    "name": "Education"
+                }
+            ],
+            "response": [],
+            "signatureCount": 10331,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 14669,
+            "status": "closed",
+            "title": "Ensure all school libraries are properly staffed, open, and available for children every day.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/ensure-all-school-libraries-are-properly-staffed-open-and-available-children-every-day"
+        },
+        {
+            "body": "Although the ability to submit petitions directly to the White House is a noble and welcome new feature of the current administration, the first round of responses makes blatantly clear the White House intends to just support its current stances and explain them with responses everyone who has done any research already knows.\n\nAn online petition is not meant as a replacement for using a search box in a web browser. We the People, those who grant you the power to govern in the first place, are requesting changes in policy directly, circumventing legislators who already do not listen to us. We the People request you govern FOR us, which means actually listening to us and actually acting in our interests instead of special interests.\n\nYou are not above us. You ARE us. Govern accordingly.",
+            "created": 1319860741,
+            "deadline": 1322456341,
+            "id": 50421,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1332442299,
+                "id": 487,
+                "url": "https://petitions.whitehouse.gov/response/were-listening-seriously"
+            },
+            "signatureCount": 37586,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Actually take these petitions seriously instead of just using them as an excuse to pretend you are listening",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/actually-take-these-petitions-seriously-instead-just-using-them-excuse-pretend-you-are"
+        },
+        {
+            "body": "This Bill would allow essentially allow A Great Firewall of America and would be a shameful desecration of free speech and any sort of reasonable copyright law. The new Law would allow copyright holders to force websites which have any copyrighted material to be blocked by ISP companies around the country, without requiring that the websites be given time to take the offending material down. It would also put pressure on ISP companies to monitor their users like never before, a gross invasion of privacy. This bill is a direct assault on a free internet and a shameful attempt by copyright lobbyists to destroy net neutrality. Essentially it's a censorship law that would end the internet as we know it in America.",
+            "created": 1320102140,
+            "deadline": 1322697740,
+            "id": 53291,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1326499493,
+                "id": 385,
+                "url": "https://petitions.whitehouse.gov/response/combating-online-piracy-while-protecting-open-and-innovative-internet"
+            },
+            "signatureCount": 53314,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Stop the E-PARASITE Act.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-e-parasite-act"
+        },
+        {
+            "body": "Since these petitions are ignored apart from an occasional patronizing and inane political statement amounting to nothing more than a condescending pat on the head, we the signers would enjoy having the illusion of success.  Since no other outcome to this process seems possible, we demand that the White House immediately assign a junior staffer to compose a tame and vapid response to this petition, and never attempt to take any meaningful action on this or any other issue.  We would also like a cookie.",
+            "created": 1320385327,
+            "deadline": 1322980927,
+            "id": 55841,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": [],
+            "signatureCount": 15114,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 9886,
+            "status": "closed",
+            "title": "We demand a vapid, condescending, meaningless, politically safe response to this petition.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/we-demand-vapid-condescending-meaningless-politically-safe-response-petition"
+        },
+        {
+            "body": "The Department of Homeland Security spends a shockingly disproportionate amount of its budget not on security initiatives, but on customs seizures. In particular, importers of grey-market vehicles have been targeted by monies taxpayers have intended to be used to secure our country against terrorism and terrorist activity. We call upon the Executive Branch to immediately cease this wasteful activity, and furthermore to change the DOT/EPA exemption time on grey-market vehicles from 25 years to 15 years (to match the vehicle regulations of Canada), recognizing that the 25-year rule was enacted due to support from special interests such as Mercedes Benz North America.",
+            "created": 1320861475,
+            "deadline": 1323453475,
+            "id": 59716,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 26,
+                    "name": "Homeland Security and Disaster Relief"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                },
+                {
+                    "id": 169,
+                    "name": "Transportation and Infrastructure"
+                }
+            ],
+            "response": [],
+            "signatureCount": 12108,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 12892,
+            "status": "closed",
+            "title": "Stop using Homeland Security funds to seize imported vehicles, and change the DOT/EPA exemption to 15 years.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-using-homeland-security-funds-seize-imported-vehicles-and-change-dotepa-exemption-15"
+        },
+        {
+            "body": "The terrible news of the passing of the horse slaughter law has come to my attention. I am livid with the fact that our president, President Obama could pass such a terrible, inhumane, and abusive law. These horses have such big hearts and have the capability to love something as much as humans, yet they now can undergo and awful death. Each horse has the right to a peaceful death and not a slaughtering. It is so offensive to horse owners like me, that other horses out there can be hurt and tortured like that. Please sign this petition to save these innocent animals from a torturous death.",
+            "created": 1321767132,
+            "deadline": 1324359132,
+            "id": 63941,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 20,
+                    "name": "Environment"
+                }
+            ],
+            "response": [],
+            "signatureCount": 13866,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 11134,
+            "status": "closed",
+            "title": "ban horse slaughter",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/ban-horse-slaughter"
+        },
+        {
+            "body": "We feel Gen. (Ret) Sarath Fonsekaxs incarceration is illegal, and goes against all that Sri Lanka should achieve as a democratic nation.\n\nPresident Mahinda Rajapakse over the past 6 years has systematically eroded the democratic fabric of Sri Lanka by usurping the powers of the judiciary, law enforcement branches and other key bodies, through politicizing the organs of a democratic system, and through his refusal to implement the 17th amendment to the Constitution.  \n\nThe manner in which Gen Fonseka was charged and sentenced goes against the norms and previous practices of the law of Sri Lanka. His abduction and incarceration, following his bid for Presidency , perfectly illustrate the erosion of the rule of law, and the systemic and violent silencing of political opposition in Sri Lanka.",
+            "created": 1322028365,
+            "deadline": 1324620365,
+            "id": 63966,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1329946123,
+                "id": 451,
+                "url": "https://petitions.whitehouse.gov/response/protection-human-rights-and-transparent-democratic-processes-sri-lanka"
+            },
+            "signatureCount": 25814,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Urge the release of former commander of the Sri Lankan Army and Presidential candidate General (Ret.) Sarath Fonseka",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/urge-release-former-commander-sri-lankan-army-and-presidential-candidate-general-ret-sarath"
+        },
+        {
+            "body": "We implore the Obama Administration to veto the National Defense Authorization Act for the Fiscal Year 2012 (S. 1867). Several provisions of the bill pose a direct threat to the civil liberties of Americans by authorizing the indefinite detention of American citizens without trial or access to legal counsel, with the mere suspicion of terrorism as justification. These provisions, which undermine several fundamental protections granted by the U.S. Constitution, are applicable to American citizens detained on U.S. soil, essentially redefining America as \"part of the battlefield\" in the war on terror. In light of failure of the Udall Amendment , and the likely passage of the bill in the Senate, we urge the president to exercise his authority to veto the National Defense Authorization Act.",
+            "created": 1322675206,
+            "deadline": 1325267206,
+            "id": 67241,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 12,
+                    "name": "Defense"
+                }
+            ],
+            "response": [],
+            "signatureCount": 19318,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 5682,
+            "status": "closed",
+            "title": "Veto the National Defense Authorization Act of 2012 as several provisions of the bill pose a threat to civil liberties.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/veto-national-defense-authorization-act-2012-several-provisions-bill-pose-threat-civil"
+        },
+        {
+            "body": "In the recent decision memorandum by CMS regarding Intensive Behavioral Therapy for Obesity (CAG-00423N) the agency determined that potentially lifesaving preventive services for Obesity could only be furnished by primary care providers in the primary care setting. As a result, CMS has eliminated the most qualified providers, notably Registered Dietitians (RDs), along with clinical psychologists and other specialists who have been able to produce the best results for patients. The decision prevents this group from directly billing for services and from providing services outside of primary care, and limits access for older patients to qualified professionals that would help manage chronic disease. ",
+            "created": 1323380317,
+            "deadline": 1325972317,
+            "id": 70121,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 25,
+                    "name": "Health Care"
+                }
+            ],
+            "response": {
+                "associationTime": 1332886132,
+                "id": 511,
+                "url": "https://petitions.whitehouse.gov/response/treating-obesity-through-total-health-care"
+            },
+            "signatureCount": 26289,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "urge CMS to reconsider its decision (CAG-00423N) excluding Registered Dietitians from direct billing for Obesity Therapy",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/urge-cms-reconsider-its-decision-cag-00423n-excluding-registered-dietitians-direct-billing"
+        },
+        {
+            "body": "\"the more freely information flows; the stronger that society becomes\" President Obama\u00a0http://tiny.cc/rh5b1\n\nBy allowing free conversation it is so easy to drop a link\n\nhttp://i.imgur.com/TD4Kq.jpg\n\nIt would be ridiculous for an ISP to block the entire whitehouse.gov domain on court order because a single user posted a link. It is difficult for any web administrator to know which links to copyrighted material are done with permission. This will kill the free flow of information and conversation on the internet.\n\nSOPA is too blunt. Please veto.\u00a0",
+            "created": 1324216392,
+            "deadline": 1326808392,
+            "id": 72431,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 30,
+                    "name": "Innovation"
+                },
+                {
+                    "id": 157,
+                    "name": "Technology and Telecommunications"
+                }
+            ],
+            "response": {
+                "associationTime": 1326499493,
+                "id": 385,
+                "url": "https://petitions.whitehouse.gov/response/combating-online-piracy-while-protecting-open-and-innovative-internet"
+            },
+            "signatureCount": 51689,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "VETO the SOPA bill and any other future bills that threaten to diminish the free flow of information",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/veto-sopa-bill-and-any-other-future-bills-threaten-diminish-free-flow-information"
+        },
+        {
+            "body": "Every child in America deserves access to an effective school library program.  We ask that the reauthorization of the Elementary and Secondary Education Act (ESEA) provide dedicated funding to help support effective school library programs.  Such action will ensure more students have access to the resources and tools that constitute a 21st century learning environment.  Reductions in school library programs are creating an xaccess gapx between schools in wealthier communities versus those where there are high levels of poverty.  All students should have an equal opportunity to acquire the skills necessary to learn, to participate, and to compete in todayxs world.",
+            "created": 1325761639,
+            "deadline": 1328353639,
+            "id": 75471,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 18,
+                    "name": "Education"
+                }
+            ],
+            "response": {
+                "associationTime": 1334330688,
+                "id": 529,
+                "url": "https://petitions.whitehouse.gov/response/supporting-school-libraries-and-critical-role-they-play"
+            },
+            "signatureCount": 28619,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Ensure that every child in America has access to an effective school library program.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/ensure-every-child-america-has-access-effective-school-library-program"
+        },
+        {
+            "body": "We expect candidates for federal office to follow our campaign finance laws, but the FEC x the agency charged with enforcing those laws x is completely dysfunctional.\n\nThree of the six commissioners staunchly refuse to enforce the law and five of the six are serving despite expired terms.\n\nPrior to your election, you professed support for campaign finance reform. We agree with you that the Citizens United Supreme Court decision was disastrous and the failure of Congress to require disclosure of campaign-related spending was outrageous.  Nevertheless, you have failed to appoint new commissioners who actually would enforce such laws.\n\nTo restore some faith into the democratic process, we urge you to nominate new commissioners to the FEC prior to the 2012 elections.  \n",
+            "created": 1326297939,
+            "deadline": 1328889939,
+            "id": 76151,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1339788538,
+                "id": 613,
+                "url": "https://petitions.whitehouse.gov/response/fixing-our-broken-campaign-finance-system"
+            },
+            "signatureCount": 27285,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Nominate New Commissioners to the Federal Election Commission (FEC).",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/nominate-new-commissioners-federal-election-commission-fec"
+        },
+        {
+            "body": "Recently on FOX News former Senator Chris Dodd said (as quoted on news site TechDirt), \"Those who count on quote 'Hollywood' for support need to understand that this industry is watching very carefully who's going to stand up for them when their job is at stake. Don't ask me to write a check for you when you think your job is at risk and then don't pay any attention to me when my job is at stake,\" This is an open admission of bribery and a threat designed to provoke a specific policy goal. This is a brazen flouting of the \"above the law\" status people of Dodd's position and wealth enjoy.\n\nWe demand justice. Investigate this blatant bribery and indict every person, especially government officials and lawmakers, who is involved. ",
+            "created": 1327146267,
+            "deadline": 1329738267,
+            "id": 78396,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1327702643,
+                "id": 427,
+                "url": "https://petitions.whitehouse.gov/response/why-we-cant-comment"
+            },
+            "signatureCount": 31034,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Investigate Chris Dodd and the MPAA for bribery after he publicly admited to bribing politicans to pass legislation.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/investigate-chris-dodd-and-mpaa-bribery-after-he-publicly-admited-bribing-politicans-pass"
+        },
+        {
+            "body": "The Anti-Counterfeiting Trade Agreement, or ACTA, is a 'plurilateral' trade agreement, currently being negotiated between the US, Canada, Japan, the European Union, South Korea, Mexico, Switzerland, Australia and New Zealand. It is somewhat similar to SOPA/PIPA, however ACTA is an executive agreement between countries besides the United States, and it can be passed without the approval from Congress and the Supreme Court. It is potentially hazardous to the Internet we know and how it works.\n\nWe need to stop ACTA before it is finally approved by all countries involved. If you value your privacy and you don't want \"Big Brother\" watching over you, sign this petition and spread the word. Research ACTA and see just how dangerous it is to the Internet, our privacy, and our liberties.",
+            "created": 1327202500,
+            "deadline": 1329794500,
+            "id": 78526,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1334960921,
+                "id": 541,
+                "url": "https://petitions.whitehouse.gov/response/role-anti-counterfeiting-trade-agreement-acta"
+            },
+            "signatureCount": 47517,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "End ACTA and Protect our right to privacy on the Internet",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/end-acta-and-protect-our-right-privacy-internet"
+        },
+        {
+            "body": "The Administration has opposed SOPA and PIPA due to the damage these laws could do to the Internet.  But many view the Anti-Counterfeiting Trace Agreement (ACTA) to be far worse.\n\nThis Administration supported the negotiation of ACTA in secret with a selected group of nations and with input from many corporate interests. The public and consumers were excluded from this process. FOIA requests were denied because of \"National Security\" concerns.\n\nWe object to the Administration's negotiation of ACTA in secret, and approval of ACTA by Executive Agreement.   \n\nWe petition the Administration to submit ACTA to the Senate for approval, as dictated by the constitution for the proper ratification of Trade Agreements.",
+            "created": 1327212429,
+            "deadline": 1329804429,
+            "id": 78556,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                },
+                {
+                    "id": 30,
+                    "name": "Innovation"
+                },
+                {
+                    "id": 157,
+                    "name": "Technology and Telecommunications"
+                }
+            ],
+            "response": [],
+            "signatureCount": 12995,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 12005,
+            "status": "closed",
+            "title": "Please Submit ACTA to the Senate for Ratification as Required by the Constitution for Trade Agreements",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/please-submit-acta-senate-ratification-required-constitution-trade-agreements"
+        },
+        {
+            "body": "The present Administration, through the Health and Human Services Department, is mandating that all employer healthcare insurance plans provide coverage for procedures which violate the beliefs of the Catholic Church, and Catholic institutions.\n\nBasically, the new rules require the Catholic Church, and the institutions operating faithfully under the aegis of the Church, to provide coverage for contraceptive drugs and procedures. This requirement violates the beliefs of the Church. \n\nNever before has the United States Government deigned to represent \"transcendental truth\" on matters of conscience for any religion within these United States. That in itself is unprecedented, which is also why it is unconstitutional. \n\nSign to Let the present Administration know that this mandate cannot stand.",
+            "created": 1327789200,
+            "deadline": 1330381200,
+            "id": 80896,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1328910613,
+                "id": 439,
+                "url": "https://petitions.whitehouse.gov/response/protecting-health-women-while-accommodating-religious-liberty"
+            },
+            "signatureCount": 29127,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Rescind the HHS Dept. Mandate Requiring Catholic Employers to Provide Contraceptives/Abortifacients to Their Employees",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/rescind-hhs-dept-mandate-requiring-catholic-employers-provide-contraceptivesabortifacients"
+        },
+        {
+            "body": "Thanks to the Obama administration, nearly all women will soon have access to birth-control coverage at no cost. Itxs a huge victory for our country, where 99 percent of women use birth control at some point in their lives. \n\nIn developing this policy that will significantly improve womenxs health, the Obama administration resisted a pressure campaign from anti-contraception groups. These groups wanted to allowed many employers, including universities and hospitals, to refuse to cover birth control. \n\nUnfortunately, those anti-contraception groups continue to call on the White House to rescind its policy. \n\nItxs up to pro-choice Americans to speak up for birth-control coverage. Sign your name to let the administration know that you are with them 100 percent. \n",
+            "created": 1328311906,
+            "deadline": 1330903906,
+            "id": 82196,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 25,
+                    "name": "Health Care"
+                },
+                {
+                    "id": 187,
+                    "name": "Women's Issues"
+                }
+            ],
+            "response": {
+                "associationTime": 1328910613,
+                "id": 439,
+                "url": "https://petitions.whitehouse.gov/response/protecting-health-women-while-accommodating-religious-liberty"
+            },
+            "signatureCount": 22945,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 2055,
+            "status": "responded",
+            "title": "Stand Strong in Support of New No-Cost Birth Control Policy",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stand-strong-support-new-no-cost-birth-control-policy"
+        },
+        {
+            "body": "Since 2007, the Vietnamese government has continuously waged brutal crackdown against human rights advocates, arresting and/or detaining notables such as: Rev. Nguyen Van Ly, Nobel Peace Prize nominees Ven.Thich Quang Do and Dr.Nguyen Dan Que, blogger Dieu Cay, and most recently songwriter Viet Khang, who merely expressed love for freedom and patriotism through songs he posted online. Congress has responded by introducing the Vietnam Human Rights Act, Vietnam Human Rights Sanctions Act and just last month, H Res 484. We implore you, Mr. President, to leverage Vietnamxs desire for the Trans-Pacific Partnership and Generalized System of Preferences to force the immediate and unconditional release of all detained or imprisoned human rights champions. Show the world America puts freedom first.",
+            "created": 1328602435,
+            "deadline": 1331194435,
+            "id": 82871,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                },
+                {
+                    "id": 163,
+                    "name": "Trade"
+                }
+            ],
+            "response": {
+                "associationTime": 1334946217,
+                "id": 535,
+                "url": "https://petitions.whitehouse.gov/response/pursuing-progress-human-rights-vietnam"
+            },
+            "signatureCount": 150945,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "STOP EXPANDING TRADE WITH VIETNAM AT THE EXPENSE OF HUMAN RIGHTS",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-expanding-trade-vietnam-expense-human-rights-8"
+        },
+        {
+            "body": "Almost 80% of all antibiotics sold in the U.S. are for food animals. Industrial farms routinely feed these drugs to the animals to promote growth and compensate for unsanitary and overcrowded conditions. This overuse creates antibiotic-resistant bacteria that can spread to humans and cause expensive, hard-to-treat illnesses.\n\nIn June 2010, the FDA issued draft recommendations on voluntary limits to this overusexbut we are still waiting for action.  \n\nWith more Americans becoming ill with infections resistant to antibiotics, we must end this practice that threatens the viability of these miracle drugs. \n\nPlease sign this petition urging the Obama Administration to end antibiotic overuse in food animal production.\n",
+            "created": 1329316168,
+            "deadline": 1331904568,
+            "id": 87076,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 1,
+                    "name": "Agriculture"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                },
+                {
+                    "id": 25,
+                    "name": "Health Care"
+                }
+            ],
+            "response": [],
+            "signatureCount": 19399,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 5601,
+            "status": "closed",
+            "title": "Protect our familiesx health by ending the overuse of antibiotics in food producing animals.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/protect-our-families\u2019-health-ending-overuse-antibiotics-food-producing-animals"
+        },
+        {
+            "body": "The end of this year is our best opportunity to secure the revenue and resources we need to reclaim the economy and rebuild the American dream for working people and the middle class. That's when the Bush tax cuts are set to expire. It's also when the massive budget cuts to defense spending and other programs, negotiated last summer, will take effect.\n\nMoveOn.org is calling on President Obama to seize this opportunity today by committing to vetoing any deal Republicans put in front of him that extends the Bush tax cuts for the richest 1%.\n\nThe increased tax revenue from ending these cuts will fix and build infrastructure, fund education, care for the elderly who depend on Medicare, and help grow the innovative energy and information economies of the future.",
+            "created": 1329317372,
+            "deadline": 1331905772,
+            "id": 87081,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                }
+            ],
+            "response": {
+                "associationTime": 1341927024,
+                "id": 643,
+                "url": "https://petitions.whitehouse.gov/response/protecting-middle-class-and-ending-tax-breaks-wealthiest"
+            },
+            "signatureCount": 30915,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Commit to veto any legislation that extends the Bush tax cuts for the 1%.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/commit-veto-any-legislation-extends-bush-tax-cuts-1"
+        },
+        {
+            "body": "Increase NIH spending to $33 billion! The proposed flat NIH budget will close labs nationwide, kill good-paying jobs, damage our worldwide medical research dominance, and hurt state economies. NIH jobs cannot be outsourced. NIH funding created 350,000 jobs and contributed $50 billion to the national economy in 2007! Insource our jobs!!",
+            "created": 1329503685,
+            "deadline": 1332092085,
+            "id": 88166,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 16,
+                    "name": "Economy"
+                }
+            ],
+            "response": [],
+            "signatureCount": 24562,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 438,
+            "status": "closed",
+            "title": "Increase NIH budget to $33 billion dollars next fiscal year! A flat $30.7 billion will kill jobs and hurt research.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/increase-nih-budget-33-billion-dollars-next-fiscal-year-flat-307-billion-will-kill-jobs-and"
+        },
+        {
+            "body": "It is not bad enough that he provides partisan blather, that he demeans our President.\n\nHe has regularly demeaned women.\n\nHis remarks this week were well beyond the pale of what should be broadcast to our military and their families, supported with our tax dollars.\n\nWe have a moral objection to our tax dollars being used for such a purpose.\n\nYou should move immediately to cancel any further broadcast through government facilities of his venom.\n\nThere is no excuse for the US Government, in any capacity, giving this man an audience.\n\nIt is an insult to the honorable men and women who serve this nation.",
+            "created": 1330864372,
+            "deadline": 1333452772,
+            "id": 93121,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 181,
+                    "name": "Veterans and Military Families"
+                }
+            ],
+            "response": {
+                "associationTime": 1342213128,
+                "id": 655,
+                "url": "https://petitions.whitehouse.gov/response/rush-limbaugh-and-armed-forces-radio"
+            },
+            "signatureCount": 29189,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Sec. Panetta, Get Rush Limbaugh Off Armed Forces Radio NOW! No tax money for abusive, divisive, insulting language.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/sec-panetta-get-rush-limbaugh-armed-forces-radio-now-no-tax-money-abusive-divisive"
+        },
+        {
+            "body": "For generations, the Chagossians lived on the Chagos Archipelago in the Indian Ocean. But in the 1960s, the U.S. and U.K. governments expelled the Chagossians from their homes to allow the United States to build a military base on Diego Garcia. Facing social, cultural, and economic despair, the Chagossians now live as a marginalized community in Mauritius and Seychelles and have not been allowed to return home. The recent passing of the oldest member of the exiled population underscores the urgent need to improve the human rights of the Chagossians. We cannot let others die without the opportunity to return home and obtain redress. The United States should provide relief to the Chagossians in the form of resettlement to the outer Chagos islands, employment, and compensation.",
+            "created": 1330924341,
+            "deadline": 1333512741,
+            "id": 93381,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1355511240,
+                "id": 676,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-redressing-wrongs-against-chagossians"
+            },
+            "signatureCount": 30037,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "The U.S. Government Must Redress Wrongs Against the Chagossians",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/us-government-must-redress-wrongs-against-chagossians"
+        },
+        {
+            "body": "In 2010, Dharun Ravi, 18-year-old Rutgers student, secretly recorded his roommate Tyler Clementi with another man and posted it on the internet for everyonexs view. For the next two years this is what was portrayed by media, politicians, activists worldwide and it was believed to be true. He was prejudged and declared guilty (10 yr prison.)\nIn 2012, we know none of this is true: nothing was ever recorded/broadcasted; every single witness testified that Ravi had NO hatred towards gays; however muddled law led to Guilty Verdict. Ravi was robbed of one of the most fundamental rights guaranteed by the United States Constitution: xpresumption of innocence.x\nYour signature will guarantee equality/tolerance achieved through open/honest dialog and not through a vicious and vengeful prosecution",
+            "created": 1331943132,
+            "deadline": 1334535132,
+            "id": 97031,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": [],
+            "signatureCount": 13792,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 11208,
+            "status": "closed",
+            "title": "Address the fact that media is driving Justice Systemxs decisions: 18 year old Rutgers student Dharun Ravi is NOT Biased",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/address-fact-media-driving-justice-system\u2019s-decisions-18-year-old-rutgers-student-dharun"
+        },
+        {
+            "body": "Funding for the National Institutes of Health (NIH) supports a massive, vital engine driving our economy, improving our nation's health, generating1,000,000 jobs, generating small businesses, advancing research, promoting medical education, and buttressing employment in all 50 states as well as non-state territories. It has been funded at decreasing, flat or sub-inflationary rates since 2003. Thousands of promising careers, research projects, and laboratories have been aborted or closed down because of this funding crisis. Please tell our President that the proposed flat $30.7 billion budget will bring this crisis to a boiling point. Tell him to instead propose a $33 billion NIH budget for fiscal year 2013!",
+            "created": 1332094631,
+            "deadline": 1334686631,
+            "id": 97326,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 16,
+                    "name": "Economy"
+                }
+            ],
+            "response": [],
+            "signatureCount": 20795,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 4205,
+            "status": "closed",
+            "title": "Increase NIH funding to $33 billion! The proposed flat $30.7 billion dollars will hurt the econmy and medical research!",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/increase-nih-funding-33-billion-proposed-flat-307-billion-dollars-will-hurt-econmy-and"
+        },
+        {
+            "body": "On behalf of Penny4NASA.net:\n\nCurrently, NASAxs budget barely surpasses 0.5 percent of the Federal budget, and has seen a steady decline in the proportions of its funding, now reaching all-time lows.  The cultural mindset brought on by NASA has allowed us to reap the benefits of economic growth, creating an influx of people wanting to become scientists and engineers.\nThere is no question that the government has money to fund NASA: $850 billion was spent on the bank bailout, several hundred billion dollars more than the 53 year running budget of NASA.  If we want to invest in our future, we must fund NASA at higher levels.\n\nTomorrow is gone without NASA.  Please at least double NASAxs annual budget, and continue to support the most inspirational program in the country.\n \n",
+            "created": 1332383014,
+            "deadline": 1334975014,
+            "id": 97876,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 139,
+                    "name": "Science and Space Policy"
+                },
+                {
+                    "id": 157,
+                    "name": "Technology and Telecommunications"
+                }
+            ],
+            "response": {
+                "associationTime": 1340835054,
+                "id": 625,
+                "url": "https://petitions.whitehouse.gov/response/doubling-and-tripling-what-we-can-accomplish-space"
+            },
+            "signatureCount": 27334,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "At least double NASAxs annual budget to one penny for every government dollar spent.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/least-double-nasa\u2019s-annual-budget-one-penny-every-government-dollar-spent"
+        },
+        {
+            "body": "   We are teaching our children a FALSE history in classrooms:\n\nx\t1. As a result of gruesome military expansionism, Japan changed xEast Seax (the original name of sea bordered by Korea, Russia, and Japan) to xSea of Japanx in 1928\n\nx\t2. Korea was liberated in 1945, but Japan still refuses to return xEast Seax to its original identity. \n\nx\t3. Our veterans were the major force defeating Japan in World War II. We helped Korea to regain its freedom.\n\nx\t4. However, we are still teaching our children a FALSE history that was manipulated by the invader who attacked xPearl Harborx.\n\n   Please join us and sign this petition to correct a FALSE history in our textbooks.  Our children have right to learn a TRUE history!\n",
+            "created": 1332426417,
+            "deadline": 1335018417,
+            "id": 97936,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 18,
+                    "name": "Education"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 181,
+                    "name": "Veterans and Military Families"
+                }
+            ],
+            "response": {
+                "associationTime": 1340991462,
+                "id": 631,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-sea-japan-naming-issue"
+            },
+            "signatureCount": 102043,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "The East Sea- a FALSE history in our textbooks!",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/east-sea-false-history-our-textbooks"
+        },
+        {
+            "body": "A new report has revealed that Fannie Mae and Freddie Mac are finally admitting that principal reductions for homeowners who are underwater actually work. Leading economists, government agencies, and leaders have been saying it all along: reducing the principal on homes that are worth less than their mortgages produces a positive financial benefit for homeowners, taxpayers, and the country as a whole. Ed DeMarco, head of the Federal Housing Finance Agency -- which oversees Fannie and Freddie -- has stood in the way of reductions and he's claimed the support of Fannie and Freddie. But that's no longer the case. Even Fannie and Freddie now support principal reductions. It's time for Ed DeMarco to step aside, and time for President Obama to step in and act on behalf of struggling Americans.",
+            "created": 1332557055,
+            "deadline": 1335149055,
+            "id": 98531,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 27,
+                    "name": "Housing"
+                }
+            ],
+            "response": {
+                "associationTime": 1337365812,
+                "id": 589,
+                "url": "https://petitions.whitehouse.gov/response/helping-homeowners-stay-their-homes"
+            },
+            "signatureCount": 27868,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Push Fannie Mae and Freddie Mac to issue principal reductions for underwater homeowners",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/push-fannie-mae-and-freddie-mac-issue-principal-reductions-underwater-homeowners"
+        },
+        {
+            "body": "Dear Mr. President:\n\nThe FDA is considering the creation of regulations for the premium cigar industry. These regulations will jeopardize over 85,000 American jobs, destroy Americaxs xmom &amp; popx premium cigar retailers &amp; manufacturers, and risk over 250,000 jobs in Latin American that produce cigars, impacting the economic/political stability in the region. \n\nWe hope you will stand up for small businesses that dot Main Street America &amp; recognize that premium cigars are enjoyed by adults, are not addictive and therefore do not conform to the Congressional intent of the Family Smoking Prevention &amp; Tobacco Control Act.\n\nTell the FDA to leave our premium cigars alone. With this nation's more pressing issues, harming my simple ability to enjoy a cigar should not be a priority of the government.",
+            "created": 1334171949,
+            "deadline": 1336763949,
+            "id": 103136,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                },
+                {
+                    "id": 151,
+                    "name": "Small Business"
+                },
+                {
+                    "id": 163,
+                    "name": "Trade"
+                }
+            ],
+            "response": {
+                "associationTime": 1399575690,
+                "id": 1071,
+                "url": "https://petitions.whitehouse.gov/response/regulation-certain-tobacco-products-fda"
+            },
+            "signatureCount": 40694,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Not Allow The FDA To Regulate Premium Cigars",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/not-allow-fda-regulate-premium-cigars"
+        },
+        {
+            "body": "We should definitely keep the Sea of Japan as it is now.\n\nx\t1. Contrary to the Korean claim that Japan changed xEast Seax to xSea of Japanx in 1928, the Sea of Japan has always been the Sea of Japan, since the beginning of time.\n\nx\t2. South Koreans are under heavy communism influence because of communist North Korea, and have forgotten about the massive American blood spilled to defend them from the North Korean invasion aided by Russians and Communist Chinese during the Korean War in the '50s. Now they want the American forces out. Their extreme ethnocentricity blinds them and they want to rewrite history per their stories. That is plain wrong.\n\nPlease join us and sign this petition to stop FALSIFYING history in our textbooks. Our children have right to keep learning a TRUE history!",
+            "created": 1334330001,
+            "deadline": 1336922001,
+            "id": 103591,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 18,
+                    "name": "Education"
+                }
+            ],
+            "response": {
+                "associationTime": 1340991462,
+                "id": 631,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-sea-japan-naming-issue"
+            },
+            "signatureCount": 29160,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Sea of Japan-the authentic history in our textbooks! We are teaching our children the authentic history, so why change?",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/sea-japan-authentic-history-our-textbooks-we-are-teaching-our-children-authentic-history-so"
+        },
+        {
+            "body": "We believe this proposed rule should be withdrawn because:\n(1) Poultry inspection should be performed by trained USDA inspectors, not company employees. (2) The proposal to increase inspection line speeds up to the point where the remaining USDA inspectors must inspect three chickens per second is absurd. Such increased line speeds would only benefit the chicken slaughter industry, not American consumers. (3) USDA's claim that the new poultry inspection system will improve food safety is untrue. Food &amp; Water Watch's analysis of USDA's HIMP pilot project - the pilot project upon which the proposed new inspection system is based - revealed that large numbers of food safety defects are routinely missed when inspection tasks are performed by company employees instead of USDA inspectors.",
+            "created": 1335973417,
+            "deadline": 1338565417,
+            "id": 111876,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 1,
+                    "name": "Agriculture"
+                },
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 103,
+                    "name": "Labor"
+                }
+            ],
+            "response": [],
+            "signatureCount": 17562,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 7438,
+            "status": "closed",
+            "title": "Withdraw USDA's proposed rule, Modernization of Poultry Slaughter Inspection (Docket #FSIS-2011-0012).",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/withdraw-usdas-proposed-rule-modernization-poultry-slaughter-inspection-docket-fsis-2011"
+        },
+        {
+            "body": "Jacob Ostreicher, an American, has been suffering in a Bolivian prison for more than 11 months. He is being held without a shred of evidence. \n\nOn 09/23/2011, the judge ordered his release based on evidence submitted by the defense, just days later the same judge reversed his decision and was promoted. A new judge resigned after 5 scheduled hearings.\n\nWe expect that in times of need, our government will be serious about, adamant enough, and powerful enough, to provide its citizens protection and asylum. \n\nIn your capacity as President of the U.S., we urge you to exercise the powers vested in you, to see to it that Jacob does not spend another day in this anarchic prison\n\nWith all avenues having been exhausted, it is up to you, Mr. President to make sure an innocent man walks free.",
+            "created": 1336075103,
+            "deadline": 1338667103,
+            "id": 112136,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1342210370,
+                "id": 649,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-jacob-ostreicher"
+            },
+            "signatureCount": 35958,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Exercise the powers vested in you to see to it that Jacob Ostreicher, a US citizen, is freed from Bolivia.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/exercise-powers-vested-you-see-it-jacob-ostreicher-us-citizen-freed-bolivia"
+        },
+        {
+            "body": "False accusations regarding the South Korean comfort women issue have disgraced the people of Japan for decades. Over the past few years it has come to light that many of the original charges were false or completely fabricated.\n\nYet despite this new information, the United States continues to lend credence to the original false charges by memorializing the comfort women in a monument in New Jersey and a street name in New York. Not only is this perpetrating historical untruths, but it also leads unnecessary racial conflict and suffering of people of Japanese ancestry.\n\nWe strongly request President Obama to remove the monument and not to support any international harassment related to this issue against the people of Japan.\n\t\t\t\t",
+            "created": 1336686824,
+            "deadline": 1339278824,
+            "id": 113141,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                }
+            ],
+            "response": {
+                "associationTime": 1416592175,
+                "id": 1241,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-memorials-and-street-names-new-york-and-new-jersey"
+            },
+            "signatureCount": 47525,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Remove the monument and not to support any international harassment related to this issue against the people of Japan.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/remove-monument-and-not-support-any-international-harassment-related-issue-against-people"
+        },
+        {
+            "body": "We believe in the power of the Internet to foster innovation, research, and education.  Requiring the published results of taxpayer-funded research to be posted on the Internet in human and machine readable form would provide access to patients and caregivers, students and their teachers, researchers, entrepreneurs, and other taxpayers who paid for the research. Expanding access would speed the research process and increase the return on our investment in scientific research.\n\nThe highly successful Public Access Policy of the National Institutes of Health proves that this can be done without disrupting the research process, and we urge President Obama to act now to implement open access policies for all federal agencies that fund scientific research.\n",
+            "created": 1337558932,
+            "deadline": 1340150932,
+            "id": 113476,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 18,
+                    "name": "Education"
+                },
+                {
+                    "id": 139,
+                    "name": "Science and Space Policy"
+                }
+            ],
+            "response": {
+                "associationTime": 1361555993,
+                "id": 761,
+                "url": "https://petitions.whitehouse.gov/response/increasing-public-access-results-scientific-research"
+            },
+            "signatureCount": 65704,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Require free access over the Internet to scientific journal articles arising from taxpayer-funded research.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/require-free-access-over-internet-scientific-journal-articles-arising-taxpayer-funded"
+        },
+        {
+            "body": "On 10th of April, 2010, Polish President, First Lady and 94 top government officials died in a plane crash in Smolensk, Russia.\nRussia is the Judge in their own case. Investigation is carried by Russian Interstate Aviation Committee (MAK). Although flight was military, MAK carries investigation according to App.13 of Chicago Convention, which refers only to civil accidents. All the evidence-wreck, black boxes are in Russia and access to them is strictly limited. Wreck has been damaged by Russians after the crash.\nMAKxs final report which blames pilots, tree and whether for accident, has been questioned by many scientists and scientifically been proved false. Moreover the main conclusion of scientists is that the cause of accident was two explosions. We have the right to know the truth!\n",
+            "created": 1338937357,
+            "deadline": 1341529357,
+            "id": 116401,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                }
+            ],
+            "response": {
+                "associationTime": 1354912556,
+                "id": 666,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-smolensk-air-crash"
+            },
+            "signatureCount": 31317,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "support the Polish Nation appeal for an international investigation of the Smolensk 2010 air crash",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/support-polish-nation-appeal-international-investigation-smolensk-2010-air-crash-0"
+        },
+        {
+            "body": "During Japanese colonization, approximately 50,000~200,000 Korean women, according to most scholars, have been tricked, kidnapped, and were forced to leave their country to become military sexual slaves by Japan. In many cases, women were lured with promises of work in factories. Only 68 of the women managed to return to Korea.\n\n\nFrom 1992 until now, every Wednesday, the comfort women of Korea are holding a demonstration in front of the Japanese embassy for governmental reparations, formal and individual apologies, yet Japan replies with silence, ignorance and distortion of their brutal history.\n\n\nWe strongly urge President Obama not to remove the monument, and let Japanxs crime be the lesson of the history not only to the international society but also to the people of Japanese posterity.",
+            "created": 1339540467,
+            "deadline": 1342218867,
+            "id": 117026,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                }
+            ],
+            "response": [],
+            "signatureCount": 14864,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 10136,
+            "status": "closed",
+            "title": "Preserve comfort women monument as a symbol of bloody history of Korea during Japanese colonization",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/preserve-comfort-women-monument-symbol-bloody-history-korea-during-japanese-colonization"
+        },
+        {
+            "body": "In \"Discount Japan\" campaign, using holocaust  image conveniently, South Korea takes advantage of  Seiji Yoshida's creation  \"comfort women\" which later he confessed a fiction.\nOral testimonies are not evidence of coercing or abduction!\n\nThe House Resolution 121 in 2007 is based on fabrication. It gives South Korea a path to accuse Japan for its deed during WWII therefore to justify their murder, abduction, and invasion of Takeshima islands which has abundant of methane hydrate.\n\nIf US-Japan alliance is truly the cornerstone of US security interests in Asia and the Pacific and is fundamental to regional stability and prosperity, do NOT allow Koreans to deteriorate it. We strongly request US government to act only based on truth and justice!\n\nhttp://bit.ly/Repeal121",
+            "created": 1340337181,
+            "deadline": 1343101981,
+            "id": 118056,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                },
+                {
+                    "id": 109,
+                    "name": "Natural Resources"
+                }
+            ],
+            "response": {
+                "associationTime": 1416589577,
+                "id": 1221,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-house-representatives-resolution-121"
+            },
+            "signatureCount": 46547,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Repeal the House of Representatives Resolution 121 to stop aggravating int'l harassment by Korean propaganda &amp; lies!",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/repeal-house-representatives-resolution-121-stop-aggravating-intl-harassment-korean"
+        },
+        {
+            "body": "This petition is so it can be brought to the attention of the white house that one of our citizens is in need of help. His name is D. Randall Blythe. He was doing what he loves to do bring his music along with the rest of the band LAMB OF GOD. During one of the dates he was taken into custody in Prague and was extorted for money after posting bail he was not released which is a direct violation of his civil rights. This petition will show that the people of the united states will not stand for this outrage and hope you and the us state department will do something about this travesty.",
+            "created": 1341428883,
+            "deadline": 1344107283,
+            "id": 120091,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1354915488,
+                "id": 671,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-d-randall-blythe"
+            },
+            "signatureCount": 29009,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Help Free D. Randall Blythe From Prage, Czech Republic. Where he is falsely accused of commiting Manslaughter.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/help-free-d-randall-blythe-prage-czech-republic-where-he-falsely-accused-commiting"
+        },
+        {
+            "body": "In July 2011, a federal appeals court ruled that the Transportation Security Administration had to conduct a notice-and-comment rulemaking on its policy of using \"Advanced Imaging Technology\" for primary screening at airports. TSA was supposed to publish the policy in the Federal Register, take comments from the public, and justify its policy based on public input. The court told TSA to do all this \"promptly.\" A year later, TSA has not even started that public process. Defying the court, the TSA has not satisfied public concerns about privacy, about costs and delays, security weaknesses, and the potential health effects of these machines. If the government is going to \"body-scan\" Americans at U.S. airports, President Obama should force the TSA to begin the public process the court ordered.",
+            "created": 1341846276,
+            "deadline": 1344524676,
+            "id": 121001,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 26,
+                    "name": "Homeland Security and Disaster Relief"
+                },
+                {
+                    "id": 169,
+                    "name": "Transportation and Infrastructure"
+                }
+            ],
+            "response": [],
+            "signatureCount": 22274,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 2726,
+            "status": "closed",
+            "title": "Require the Transportation Security Administration to Follow the Law!",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/require-transportation-security-administration-follow-law"
+        },
+        {
+            "body": "Following in the footsteps of great men like George Washington, Thomas Jefferson, and Benjamin Franklin, Barack Obama has reportedly been enjoying the rewards of home brewed beer. Recent reports from news outlets like the Washington Post (August 15th, 2012) have stated that Obama has been drinking a White House home brew Honey Ale while on the campaign trail. \n\nIn keeping with the brewing traditions of the founding fathers, homebrewers across America call on the Obama Administration to release the recipe for the White House home brew so that it may be enjoyed by all. \n\n\"I think itxs time for beerx -Franklin D. Roosevelt (March 12, 1933)",
+            "created": 1345299416,
+            "deadline": 1347977816,
+            "id": 126446,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 1,
+                    "name": "Agriculture"
+                },
+                {
+                    "id": 2,
+                    "name": "Arts and Humanities"
+                },
+                {
+                    "id": 30,
+                    "name": "Innovation"
+                }
+            ],
+            "response": {
+                "associationTime": 1346445704,
+                "id": 656,
+                "url": "https://petitions.whitehouse.gov/response/ale-chief-white-house-beer-recipe"
+            },
+            "signatureCount": 12240,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 12760,
+            "status": "responded",
+            "title": "Release the recipe for the Honey Ale home brewed at the White House.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/release-recipe-honey-ale-home-brewed-white-house"
+        },
+        {
+            "body": "Greetings, \n\nKeep Zeek Rewards Open For Business\n\nZeek Rewards.com/Zeekler.com has helped and maybe even saved lives financially. Zeek is a truly great penny auction.\n",
+            "created": 1345316729,
+            "deadline": 1347995129,
+            "id": 126501,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                }
+            ],
+            "response": {
+                "associationTime": 1347038353,
+                "id": 661,
+                "url": "https://petitions.whitehouse.gov/response/why-we-can\u2019t-comment-zeek-rewards"
+            },
+            "signatureCount": 25138,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Support Keeping Zeek Rewards Open: Stop The SEC And Attorney General From Stealing Our Business.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/support-keeping-zeek-rewards-open-stop-sec-and-attorney-general-stealing-our-business"
+        },
+        {
+            "body": "Zeekrewards.com &amp; Zeekler has changed thousands of lives financially. \n\nThe SEC &amp; AG Office in North Carolina allegedly claims that Zeekler/Zeek Rewards is a ponzi scheme.\n\nIn no way that this company defrauded anyone. We believe that Zeekler/Zeek Rewards has given us the leadership and the freedom to support our families.\n\nThousands and maybe millions of people are suffering by this and we are taken a stand of what's right.\n\nPaul Burks, the CEO of Rex Venture Group wanted was a system that the average person can do.\n\nFor it to be taken away from us is devastating. So we are behind Paul Burks, Rex Venture Group, Zeekler/Zeek Rewards and it's affiliates 100%!!  We don't want to be silent to these allegations that the SEC &amp; AG office is making.\n\nSo with that, we are taking a STAND! ",
+            "created": 1345325511,
+            "deadline": 1347917511,
+            "id": 126521,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 97,
+                    "name": "Job Creation"
+                }
+            ],
+            "response": {
+                "associationTime": 1347038353,
+                "id": 661,
+                "url": "https://petitions.whitehouse.gov/response/why-we-can\u2019t-comment-zeek-rewards"
+            },
+            "signatureCount": 33869,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Support Keeping Zeek Rewards Open: Stop The SEC And Attorney General From Stealing Our Business.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/support-keeping-zeek-rewards-open-stop-sec-and-attorney-general-stealing-our-business-0"
+        },
+        {
+            "body": "Vietnam's Land Laws of 1993 and 2003 nationalized land and houses seized from Vietnamese who had fled communism, including as many as 500,000 Vietnamese who had already become naturalized US citizens. This makes the Vietnamese government ineligible for the Generalized System of Preferences (GSP) and for US foreign assistance under the Hickenlooper Amendment.  Our President should demonstrate his commitment to defending the rights and interests of US citizens by applying the prohibition clause of the Foreign Assistance Act (22 USC 2370(e)) to Vietnam, calling on its government to freeze further expropriations of US properties, and conditioning GSP or any further trade benefits on the return of all properties that belong to US citizens or payment of fair compensation.",
+            "created": 1345350656,
+            "deadline": 1348029056,
+            "id": 126556,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 163,
+                    "name": "Trade"
+                }
+            ],
+            "response": {
+                "associationTime": 1391805966,
+                "id": 996,
+                "url": "https://petitions.whitehouse.gov/response/what-we-have-say-about-your-petition-and-vietnams-land-laws"
+            },
+            "signatureCount": 27729,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "vigorously enforce US laws to seek the return of US citizens' properties expropriated by the Vietnamese government.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/vigorously-enforce-us-laws-seek-return-us-citizens-properties-expropriated-vietnamese"
+        },
+        {
+            "body": "The ROK is illegally occupying Japanese Territory Takeshima. The ROK calls it Dokdo.\nAlthough Japan proposed to the ROK that the dispute be referred to the International Court of Justice, the ROK rejected this proposal.\n\nIn the drafting process of The San Francisco Peace Treaty, United States Assistant Secretary of State for Far Eastern Affairs Dean Rusk rejected the request by the ROK that Takeshima be added to the relevant article of the Treaty as one of the areas Japan would renounce.\n\nThis is not just bilateral issue between Japan and the ROK but deeply involves the United States and your inescapable responsibilities in Northeast Asia.\n\nGoing to the ICJ is a peaceful and fair manner to settle the dispute.",
+            "created": 1346560982,
+            "deadline": 1349152982,
+            "id": 130166,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                }
+            ],
+            "response": {
+                "associationTime": 1416589994,
+                "id": 1226,
+                "url": "https://petitions.whitehouse.gov/response/response-we-people-petition-liancourt-rocks"
+            },
+            "signatureCount": 42049,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Persuade South Korea (the ROK) to accept Japan's proposal on territorial dispute over islets.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/persuade-south-korea-rok-accept-japans-proposal-territorial-dispute-over-islets"
+        },
+        {
+            "body": "To enact a law that prohibits any action or literature that offend prophets of major religions:\n- Moses\n- Jesus\n- Mohammad\n\nSuch acts offend billions of people, and cause unrest in the world. Furthermore, acts like this contradict the essence of coexistence and peace among humans. Labeling these acts as freedom of speech is similar to labeling murder as freedom of expression!\n\nWe all know the chaos such acts can cause, but it's difficult to answer the question: What do they contribute to our nation, or humanity in general?",
+            "created": 1347926431,
+            "deadline": 1350518431,
+            "id": 136536,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                }
+            ],
+            "response": {
+                "associationTime": 1358555409,
+                "id": 741,
+                "url": "https://petitions.whitehouse.gov/response/addressing-freedoms-speech-and-religion"
+            },
+            "signatureCount": 38023,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "outlaw offending prophets of major religions",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/outlaw-offending-prophets-major-religions"
+        },
+        {
+            "body": "The Food Allergen Labeling and Consumer Protection Act required Health and Human Services to set a gluten-free labeling rule by 2008 to aid people with celiac disease, a life-threatening autoimmune condition. The only known treatment is a strict gluten-free diet. \n\nAn estimated 3 million Americans have celiac and even more may have non-celiac gluten sensitivity. Without adequate labeling, those on a medically prescribed gluten-free diet struggle to make safe food choices and stay well.\n\nChildren with celiac cannot participate in the National School Lunch Program when food service staff cannot determine if products are gluten-free. \n\nCongress did its part by passing the law. It is up to the White House to protect the health of millions of adults and children by finalizing the rule NOW. ",
+            "created": 1349223982,
+            "deadline": 1351988782,
+            "id": 139561,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 9,
+                    "name": "Consumer Protections"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                },
+                {
+                    "id": 25,
+                    "name": "Health Care"
+                }
+            ],
+            "response": {
+                "associationTime": 1383340367,
+                "id": 956,
+                "url": "https://petitions.whitehouse.gov/response/gluten-free-should-mean-gluten-free"
+            },
+            "signatureCount": 40639,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Finalize Standards for GLUTEN-FREE Labeling",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/finalize-standards-gluten-free-labeling"
+        },
+        {
+            "body": "This is to ask imperial Japan to abandon its nonsensical territorial claim for the long-held Korean Dok-do island in the East Sea. Also, it is to ask Japanese people to repent of their past horrific crimes against humanity in the neighboring countries.",
+            "created": 1349877191,
+            "deadline": 1352645591,
+            "id": 140421,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                },
+                {
+                    "id": 163,
+                    "name": "Trade"
+                }
+            ],
+            "response": [],
+            "signatureCount": 11507,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 13493,
+            "status": "closed",
+            "title": "Persuade imperial Japan to abandon its nonsensical territorial claim for the Korean Dok-do island in the East Sea.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/persuade-imperial-japan-abandon-its-nonsensical-territorial-claim-korean-dok-do-island-east"
+        },
+        {
+            "body": "The volunteers and supporters of the March of Dimes ask the President to light the White House in purple on January 3, 2013, to honor the 75th anniversary of the founding of the March of Dimes by President Franklin Roosevelt, and as a symbol of hope for families whose children have been born too soon.  Just as the March of Dimes galvanized America to defeat polio, today millions of March of Dimes volunteers are working to support research and programs to identify the causes of premature birth.  Help to honor babies born prematurely by lighting in purple the birthplace of the March of Dimes:  the White House.",
+            "created": 1350481591,
+            "deadline": 1353249991,
+            "id": 143386,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 21,
+                    "name": "Family"
+                },
+                {
+                    "id": 25,
+                    "name": "Health Care"
+                }
+            ],
+            "response": {
+                "associationTime": 1357165256,
+                "id": 696,
+                "url": "https://petitions.whitehouse.gov/response/celebrating-75th-anniversary-march-dimes"
+            },
+            "signatureCount": 26653,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Light the White House Purple to Celebrate 75th Anniversary of March of Dimes and as Symbol of Hope to Preemie Families",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/light-white-house-purple-celebrate-75th-anniversary-march-dimes-and-symbol-hope-preemie"
+        },
+        {
+            "body": "This a petition for the Obama administration (including CIA, State Dept., DOD, and whoever else involoved) to come clean about the terrorist attack and murder of American Heroes in Benghazi on September 11, 2012.  We want answers.  The American people, and especially the families of the dead, deserve the truth about what happened leading up to, during and after the attack.  If there is nothing to hide, then just give us the truth.  Stop the blame games and take responsibility for once.  What happened to transparency? What did you know? When did you know it? Who made what decisions and why? ",
+            "created": 1351315862,
+            "deadline": 1354084262,
+            "id": 145041,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 181,
+                    "name": "Veterans and Military Families"
+                }
+            ],
+            "response": [],
+            "signatureCount": 19468,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 5532,
+            "status": "closed",
+            "title": "Come clean about the radical Islamist terrorist attack and murder of four Americans in Benghazi. Stop dodging questions.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/come-clean-about-radical-islamist-terrorist-attack-and-murder-four-americans-benghazi-stop"
+        },
+        {
+            "body": "As the founding fathers of the United States of America made clear in the Declaration of Independence in 1776:\n\n\"When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.\"\n\n\"...Governments are instituted among Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or abolish it, and institute new Government...\"",
+            "created": 1352311625,
+            "deadline": 1354903625,
+            "id": 146636,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1357945935,
+                "id": 726,
+                "url": "https://petitions.whitehouse.gov/response/our-states-remain-united"
+            },
+            "signatureCount": 38991,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Peacefully grant the State of Louisiana to withdraw from the United States of America and create its own NEW government.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/peacefully-grant-state-louisiana-withdraw-united-states-america-and-create-its-own-new"
+        },
+        {
+            "body": "Religious institutions across our great nation serve an important role in community building &amp; out reach, helping the poor &amp; disenfranchised, among many other noble actions. \n\nOur forefathers had the foresight to see that for our nation to succeed, we would need to enforce an unparalleled freedom of religion.  However, they also understood the imperative need for a legal separation between church &amp; state.  \n\nIn recent years, the IRS has turned a blind eye to offending Religious institutions that mix religion with politics.  By not enforcing the qualifications &amp; disqualification's of 26 U.S.C. \u00a7 501(c) of the United States tax code, the IRS is doing a diservice to both the American people &amp; the vision of our forefathers.  \n\nWe ask that you enforce the letter of the law.",
+            "created": 1352318344,
+            "deadline": 1354910344,
+            "id": 146736,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 3,
+                    "name": "Budget and Taxes"
+                },
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                }
+            ],
+            "response": {
+                "associationTime": 1364596884,
+                "id": 801,
+                "url": "https://petitions.whitehouse.gov/response/why-we-cant-comment-your-petition-regarding-501c-statuses"
+            },
+            "signatureCount": 34878,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Enforce the tax code, and strip violating Religious institutions of their tax exempt 501(c) status.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/enforce-tax-code-and-strip-violating-religious-institutions-their-tax-exempt-501c-status"
+        },
+        {
+            "body": "Licensed naturopathic physicians should play an integral part in patient access to alternative medicine within the Federal Healthcare Law (Obamacare) as they serve as primary care physicians within the complementary health care field. \n\nWith Americans spending over $34 billion dollars spent annually on alternative medicine, the inclusion of licensed Naturopathic physicians would offer patients the option of seeking alternative medicine care covered by insurance AND provide access for those currently unable to afford care. \n\nLicensed Naturopathic physicians are able to diagnose and treat both acute and chronic disease and are experts in nutrition, herbs, and other holistic therapies. Learn more about licensed Naturopathic physicians at http://www.naturopathic.org.",
+            "created": 1352320800,
+            "deadline": 1354912800,
+            "id": 146776,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 25,
+                    "name": "Health Care"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1389983413,
+                "id": 986,
+                "url": "https://petitions.whitehouse.gov/response/naturopathic-physicians-and-affordable-care-act"
+            },
+            "signatureCount": 31627,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Include Licensed Naturopathic Physicians as primary care providers in the Federal Healthcare Law (Obamacare).",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/include-licensed-naturopathic-physicians-primary-care-providers-federal-healthcare-law"
+        },
+        {
+            "body": "Some states have clearly indicated that they wish determine how to regulate marijuana at the state level through medical marijuana programs or by legalizing personal use.  Please remove federal implications by removing marijuana from the Controlled Substance Act.  ",
+            "created": 1352329180,
+            "deadline": 1354921180,
+            "id": 146886,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1357336763,
+                "id": 706,
+                "url": "https://petitions.whitehouse.gov/response/addressing-legalization-marijuana"
+            },
+            "signatureCount": 83684,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Remove marijuana from the federal Controlled Substance Act and allow the states to decide how they want to regulate it.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/remove-marijuana-federal-controlled-substance-act-and-allow-states-decide-how-they-want"
+        },
+        {
+            "body": "The purpose of this petition is to ask the United States Government to repeal the Defense of Marriage (DOMA) as it is unconstitutional. \n\nIt does not allow everyone in the United States to be treated as equals. Sign here to have DOMA repealed.\n\nThe ability to love is in a human being's very DNA. It shouldn't matter if we want to be with someone of a different race, religion or nationality. It should definitely not matter if its even someone of the same gender.\n\nSign for the freedom to love!",
+            "created": 1352336388,
+            "deadline": 1354928388,
+            "id": 147001,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 21,
+                    "name": "Family"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": {
+                "associationTime": 1369419922,
+                "id": 856,
+                "url": "https://petitions.whitehouse.gov/response/youre-right-its-past-time-doma-expire"
+            },
+            "signatureCount": 52139,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Repeal the Defense of Marriage Act (DOMA)",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/repeal-defense-marriage-act-doma-0"
+        },
+        {
+            "body": "Corporations have Patented our Food with GMO's and now Control of our food supply.  What happens if they decide there is a shortage, raise prices and sue your only local farmer.  They have injected and altered are food.  They have won the right to lie in advertisements and food corporatioins have won the right to lie about what is in our food.  What's next.  \n\nWe are going up against food corporations powerful enough to sue whole Nations, infiltrate the FDA, our court systems and dictate Government policy. ",
+            "created": 1352372480,
+            "deadline": 1354964480,
+            "id": 147226,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": [],
+            "signatureCount": 21703,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 3297,
+            "status": "closed",
+            "title": "require the FDA to require Labeling of food that contains Genetically Modified Organisms (GMO's)",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/require-fda-require-labeling-food-contains-genetically-modified-organisms-gmos"
+        },
+        {
+            "body": "In a referendum on 6 November 2012, 53.9% of Puerto Rican voters voted against maintaining the territory's political status, and 61.15% opted for U.S. statehood if the territory's status were to be changed.\n\nWe ask our President to take the require action in congress to help Puerto Rico this is a historic moment for the first time Puerto Rican voted against maintaining the territory's political status.\n\nWe want Action\n\n",
+            "created": 1352379878,
+            "deadline": 1354971878,
+            "id": 147241,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": [],
+            "signatureCount": 15694,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 9306,
+            "status": "closed",
+            "title": "To act on the Puerto Rican referendum of November 6, 2012",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/act-puerto-rican-referendum-november-6-2012"
+        },
+        {
+            "body": "For any Florida resident conscious of the current marijuana laws knows that they are among the steepest in the country. Cannabis annually takes zero lives, yet it imprisons a person every 42 seconds. It's just senseless to put harmless people behind bars for smoking a harmless flower. Amendment 64 needs to be brought to Florida, and soon. Legalize it. Legalize it, and tax it. It's no secret that Florida is not only an awful state for a smoker, but an awful state for a student. Reinvest the taxes collected from the the selling of a harmless plant into education and give stoners and children alike a better tomorrow. ",
+            "created": 1352426198,
+            "deadline": 1355018198,
+            "id": 147661,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                }
+            ],
+            "response": [],
+            "signatureCount": 10526,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 14474,
+            "status": "closed",
+            "title": "To enact a policy exactly like or resembling Amendment 64 for the recreational use of marijuana in the state of Florida.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/enact-policy-exactly-or-resembling-amendment-64-recreational-use-marijuana-state-florida"
+        },
+        {
+            "body": "Colorado's amendment 64 just passed, as did Initiative 502 in Washington.  Marijuana prohibition is gradually becoming a thing of the past, and simply needs one final push. Alcohol prohibition turned out to be more harm than good  in the early 1900's, and marijuana prohibition is recreating the same situation. The bottom line is that marijuana prohibition enforcement costs the government 13.7 billion dollars annually, and puts well over 500,000 people in jail every year (sources cited below). \n\nhttp://www.cnbc.com/id/36600923/The_Cost_and_Benefit_Arguments_Around_Enforcement\n\nhttp://www.huffingtonpost.com/2012/09/26/marijuana-legalization-in_n_1915649.html",
+            "created": 1352432249,
+            "deadline": 1355024249,
+            "id": 147761,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 10,
+                    "name": "Criminal Justice and Law Enforcement"
+                },
+                {
+                    "id": 127,
+                    "name": "Regulatory Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1357336763,
+                "id": 706,
+                "url": "https://petitions.whitehouse.gov/response/addressing-legalization-marijuana"
+            },
+            "signatureCount": 44049,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Federally Legalize Marijuana",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/federally-legalize-marijuana"
+        },
+        {
+            "body": "Stop the authorization of the drone strikes in the Middle East that kill nearly fifty civilians for every terrorist suspect. Stop making America an assassin of innocent children. End the practice of counting every adult male in the area as an enemy combatant.",
+            "created": 1352480943,
+            "deadline": 1355072943,
+            "id": 148071,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 12,
+                    "name": "Defense"
+                },
+                {
+                    "id": 24,
+                    "name": "Foreign Policy"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": [],
+            "signatureCount": 11309,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 13691,
+            "status": "closed",
+            "title": "Stop the drone strikes.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/stop-drone-strikes-0"
+        },
+        {
+            "body": "The US continues to suffer economic difficulties stemming from the federal government's neglect to reform domestic and foreign spending. The citizens of the US suffer from blatant abuses of their rights such as the NDAA, the TSA, etc. Given that the state of Texas maintains a balanced budget and is the 15th largest economy in the world, it is practically feasible for Texas to withdraw from the union, and to do so would protect it's citizens' standard of living and re-secure their rights and liberties in accordance with the original ideas and beliefs of our founding fathers which are no longer being reflected by the federal government.",
+            "created": 1352489312,
+            "deadline": 1355081312,
+            "id": 148186,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 16,
+                    "name": "Economy"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1357945935,
+                "id": 726,
+                "url": "https://petitions.whitehouse.gov/response/our-states-remain-united"
+            },
+            "signatureCount": 125746,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Peacefully grant the State of Texas to withdraw from the United States of America and create its own NEW government.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/peacefully-grant-state-texas-withdraw-united-states-america-and-create-its-own-new"
+        },
+        {
+            "body": "Peacefully grant the State of Alabama to withdraw from the United States of America and create its own NEW government.\nAs the founding fathers of the United States of America made clear in the Declaration of Independence in 1776:\n\n\"When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.\"\n\n\"Governments are instituted among Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive.\"",
+            "created": 1352494504,
+            "deadline": 1355086504,
+            "id": 148231,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1357945935,
+                "id": 726,
+                "url": "https://petitions.whitehouse.gov/response/our-states-remain-united"
+            },
+            "signatureCount": 31597,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Peacefully grant the State of Alabama to withdraw from the United States of America and create its own NEW government.",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/peacefully-grant-state-alabama-withdraw-united-states-america-and-create-its-own-new"
+        },
+        {
+            "body": "As the founding fathers of the United States of America made clear in the Declaration of Independence in 1776:\n\n\"When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.\"\n\n\"...Governments are instituted among Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or abolish it, and institute new Government...\"\n",
+            "created": 1352512741,
+            "deadline": 1355104741,
+            "id": 148546,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                }
+            ],
+            "response": {
+                "associationTime": 1357945935,
+                "id": 726,
+                "url": "https://petitions.whitehouse.gov/response/our-states-remain-united"
+            },
+            "signatureCount": 31835,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 0,
+            "status": "responded",
+            "title": "Peacefully grant the State of North Carolina to withdraw from the United States and create its own NEW government",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/peacefully-grant-state-north-carolina-withdraw-united-states-and-create-its-own-new"
+        },
+        {
+            "body": "As the founding fathers of the United States of America made clear in the Declaration of Independence in 1776:\n\n\"When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.\"\n\n\"...Governments are instituted among Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or abolish it, and institute new Government...\"",
+            "created": 1352523028,
+            "deadline": 1355115028,
+            "id": 148781,
+            "isPublic": true,
+            "isSignable": false,
+            "issues": [
+                {
+                    "id": 4,
+                    "name": "Civil Rights and Liberties"
+                },
+                {
+                    "id": 193,
+                    "name": "Government Reform"
+                },
+                {
+                    "id": 28,
+                    "name": "Human Rights"
+                }
+            ],
+            "response": [],
+            "signatureCount": 18914,
+            "signatureThreshold": 25000,
+            "signaturesNeeded": 6086,
+            "status": "closed",
+            "title": "Peacefully grant the State of Mississippi to withdraw from the United States of America and create its own NEW governmen",
+            "type": "petition",
+            "url": "https://petitions.whitehouse.gov/petition/peacefully-grant-state-mississippi-withdraw-united-states-america-and-create-its-own-new"
+        }
+    ]
+}
