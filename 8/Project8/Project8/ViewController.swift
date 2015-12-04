@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var cluesLabel: UILabel!
+    @IBOutlet var answersLabel: UILabel!
+    @IBOutlet var currentAnswer: UITextField!
+    @IBOutlet var scoreLabel: UILabel!
+    @IBAction func submitTapped(sender: UIButton) {
+    }
+    @IBAction func clearTapped(sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
