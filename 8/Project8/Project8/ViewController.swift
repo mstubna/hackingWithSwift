@@ -38,11 +38,9 @@ class ViewController: UIViewController {
     @IBAction func clearTapped(sender: UIButton) {
         currentAnswer.text = ""
         
-        for btn in activatedButtons {
+        while let btn = activatedButtons.popLast() {
             btn.hidden = false
         }
-        
-        activatedButtons.removeAll()
     }
     
     var letterButtons = [UIButton]()
