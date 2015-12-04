@@ -36,11 +36,8 @@ class DataLoader {
         if let url = NSURL(string: urlString) {
             if let data = try? NSData(contentsOfURL: url, options: []) {
                 let json = JSON(data: data)
-                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                    return json
-                } else {
-                    return nil
-                }
+                guard json["metadata"]["responseInfo"]["status"].intValue == 200 else { return nil }
+                return json
             }
         }
         return nil
