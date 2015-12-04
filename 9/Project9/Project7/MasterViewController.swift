@@ -18,9 +18,15 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         let option = navigationController?.tabBarItem.tag == 0 ? 0 : 1
-        guard let results = dataLoader.run(loadLiveData: true, option: option) else { return showError() }
-        parseJSON(results)
-        tableView.reloadData()
+        
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { [unowned self] in
+            if let results = self.dataLoader.run(loadLiveData: true, option: option) {
+                self.parseJSON(results)
+                dispatch_async(dispatch_get_main_queue()) { [unowned self] in self.tableView.reloadData() }
+            } else {
+                dispatch_async(dispatch_get_main_queue()) { [unowned self] in self.showError() }
+            }
+        }
     }
     
     func parseJSON(results: [JSON]) {
