@@ -18,7 +18,7 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         let option = navigationController?.tabBarItem.tag == 0 ? 0 : 1
-        guard let results = dataLoader.run(loadLiveData: false, option: option) else { return showError() }
+        guard let results = dataLoader.run(loadLiveData: true, option: option) else { return showError() }
         parseJSON(results)
         tableView.reloadData()
     }
