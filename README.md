@@ -26,8 +26,16 @@ Enhancing Project 2 with additional autolayout constraints so that it works on a
 
 **Project 6b**
 
-autolayout visual format language
+Autolayout visual format language.
 
 **Project 7**
 
-Reading data from an `json` API and parsing with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
+Petition viewer - programmatically create multiple copies of a single view controller, reading data from an `json` API, and parsing with [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON).
+
+**Project 8**
+
+Word game - loading game data from files, string manipulation, and displaying text in button controls.
+
+**Project 9**
+
+Enhancing Project 7 with background data fetch
