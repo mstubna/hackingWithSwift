@@ -61,15 +61,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .Alert)
         ac.addTextFieldWithConfigurationHandler(nil)
         
-        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        ac.addAction(UIAlertAction(title: "Delete", style: .Destructive) {
+            [unowned self] _ in
+            self.people.removeAtIndex(indexPath.item)
+            self.collectionView.reloadData()
+            
+        })
         
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+
         ac.addAction(UIAlertAction(title: "OK", style: .Default) { [unowned self, ac] _ in
             let newName = ac.textFields![0]
             person.name = newName.text!
             
             self.collectionView.reloadData()
             })
-        
+
         presentViewController(ac, animated: true, completion: nil)
     }
     
