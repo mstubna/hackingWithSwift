@@ -42,6 +42,7 @@
 		277163641C1CDE200089F302 /* slotGlowGood.png in Resources */ = {isa = PBXBuildFile; fileRef = 277163481C1CDE200089F302 /* slotGlowGood.png */; };
 		277163651C1CDE200089F302 /* slotGlowGood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 277163491C1CDE200089F302 /* slotGlowGood@2x.png */; };
 		277163661C1CDE200089F302 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2771634A1C1CDE200089F302 /* spark.png */; };
+		277163681C1DB3910089F302 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277163671C1DB3910089F302 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		277163481C1CDE200089F302 /* slotGlowGood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slotGlowGood.png; sourceTree = "<group>"; };
 		277163491C1CDE200089F302 /* slotGlowGood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slotGlowGood@2x.png"; sourceTree = "<group>"; };
 		2771634A1C1CDE200089F302 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		277163671C1DB3910089F302 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		277163171C1CD2720089F302 /* Project11 */ = {
 			isa = PBXGroup;
 			children = (
+				277163671C1DB3910089F302 /* Helper.swift */,
 				2771632E1C1CDE200089F302 /* Content */,
 				277163181C1CD2720089F302 /* AppDelegate.swift */,
 				2771631A1C1CD2720089F302 /* GameScene.sks */,
@@ -266,6 +269,7 @@
 				2771631D1C1CD2720089F302 /* GameScene.swift in Sources */,
 				2771631F1C1CD2720089F302 /* GameViewController.swift in Sources */,
 				277163191C1CD2720089F302 /* AppDelegate.swift in Sources */,
+				277163681C1DB3910089F302 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 				2771632D1C1CD2720089F302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
