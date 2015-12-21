@@ -38,4 +38,16 @@ Word game - loading game data from files, string manipulation, and displaying te
 
 **Project 9**
 
-Enhancing Project 7 with background data fetch
+Enhancing Project 7 with background data fetch.
+
+**Project 10**
+
+Using UICollectionView and Photo picker to create a contacts-like application.
+
+**Project 11**
+
+Using SpriteKit to create a game.
+
+**Project 12**
+
+Using NSUserDefaults to store user data.
