@@ -16,6 +16,8 @@ UINavigationControllerDelegate {
     @IBOutlet var intensity: UISlider!
     @IBOutlet var scaleView: UIView!
     @IBOutlet var scale: UISlider!
+    @IBOutlet var radiusView: UIView!
+    @IBOutlet var radius: UISlider!
 
     var currentImage: UIImage!
     var context: CIContext!
@@ -53,6 +55,10 @@ UINavigationControllerDelegate {
     }
 
     @IBAction func scaleChanged(sender: UISlider) {
+        applyProcessing()
+    }
+
+    @IBAction func radius(sender: UISlider) {
         applyProcessing()
     }
 
@@ -103,10 +109,11 @@ UINavigationControllerDelegate {
     }
 
     func applyProcessing() {
-        let inputKeys = currentFilter.inputKeys
-
         updateControls()
+
         guard currentImage != nil else { return }
+
+        let inputKeys = currentFilter.inputKeys
 
         if inputKeys.contains(kCIInputIntensityKey) {
             currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
@@ -115,7 +122,7 @@ UINavigationControllerDelegate {
             currentFilter.setValue(scale.value * 10, forKey: kCIInputScaleKey)
         }
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(scale.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
         }
 
         if inputKeys.contains(kCIInputCenterKey) {
@@ -146,9 +153,8 @@ UINavigationControllerDelegate {
         let inputKeys = currentFilter.inputKeys
 
         intensityView.hidden = !inputKeys.contains(kCIInputIntensityKey)
-
-        scaleView.hidden = !(inputKeys.contains(kCIInputScaleKey) ||
-            inputKeys.contains(kCIInputRadiusKey))
+        scaleView.hidden = !inputKeys.contains(kCIInputScaleKey)
+        radiusView.hidden = !inputKeys.contains(kCIInputRadiusKey)
     }
 
     func image(
