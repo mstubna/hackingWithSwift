@@ -162,6 +162,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="93j-r6-fDF"/>
                     <connections>
+                        <outlet property="changeFilterButton" destination="NuF-KK-HJR" id="5Pa-ot-cde"/>
                         <outlet property="imageView" destination="rI5-Xt-otY" id="NSB-Iz-lnc"/>
                         <outlet property="intensity" destination="2Lm-9f-8Fh" id="iwZ-3h-hUZ"/>
                         <outlet property="intensityView" destination="RbP-t8-RV6" id="GEA-Ev-xtt"/>

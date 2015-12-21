@@ -18,10 +18,15 @@ UINavigationControllerDelegate {
     @IBOutlet var scale: UISlider!
     @IBOutlet var radiusView: UIView!
     @IBOutlet var radius: UISlider!
+    @IBOutlet var changeFilterButton: UIButton!
 
     var currentImage: UIImage!
     var context: CIContext!
-    var currentFilter: CIFilter!
+    var currentFilter: CIFilter! {
+        didSet {
+            changeFilterButton.setTitle(currentFilter.name, forState: UIControlState.Normal)
+        }
+    }
 
     @IBAction func changeFilter(sender: UIButton) {
         let ac = UIAlertController(
@@ -71,6 +76,7 @@ UINavigationControllerDelegate {
 
         context = CIContext(options: nil)
         currentFilter = CIFilter(name: "CISepiaTone")
+        updateControls()
     }
 
     func importPicture() {
@@ -142,9 +148,10 @@ UINavigationControllerDelegate {
     func setFilter(action: UIAlertAction!) {
         currentFilter = CIFilter(name: action.title!)
 
-        guard currentImage != nil else { return }
-        let beginImage = CIImage(image: currentImage)
-        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        if currentImage != nil {
+            let beginImage = CIImage(image: currentImage)
+            currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        }
 
         applyProcessing()
     }
