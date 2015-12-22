@@ -51,3 +51,11 @@ Using SpriteKit to create a game.
 **Project 12**
 
 Using NSUserDefaults to store user data.
+
+**Project 13**
+
+Instafilter project: Using CoreImage filters, hiding/showing view controls, StackView.
+
+**Project 14**
+
+SpriteKit whack-a-mole game.
