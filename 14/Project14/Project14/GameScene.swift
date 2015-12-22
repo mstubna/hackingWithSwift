@@ -89,33 +89,32 @@ class GameScene: SKScene {
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
-            let location = touch.locationInNode(self)
-            let nodes = nodesAtPoint(location)
+        guard let touch = touches.first else { return }
+        let location = touch.locationInNode(self)
+        let nodes = nodesAtPoint(location)
 
-            for node in nodes {
-                if node.name == "charFriend" {
-                    guard let whackSlot = node.parent!.parent as? WhackSlot else { return }
-                    if !whackSlot.visible { continue }
-                    if whackSlot.isHit { continue }
+        for node in nodes {
+            if node.name == "charFriend" {
+                guard let whackSlot = node.parent!.parent as? WhackSlot else { return }
+                if !whackSlot.visible { continue }
+                if whackSlot.isHit { continue }
 
-                    whackSlot.hit()
-                    score -= 5
+                whackSlot.hit()
+                score -= 5
 
-                    runAction(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion:false))
+                runAction(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion:false))
 
-                } else if node.name == "charEnemy" {
-                    guard let whackSlot = node.parent!.parent as? WhackSlot else { return }
-                    if !whackSlot.visible { continue }
-                    if whackSlot.isHit { continue }
-                    whackSlot.charNode.xScale = 0.85
-                    whackSlot.charNode.yScale = 0.85
+            } else if node.name == "charEnemy" {
+                guard let whackSlot = node.parent!.parent as? WhackSlot else { return }
+                if !whackSlot.visible { continue }
+                if whackSlot.isHit { continue }
+                whackSlot.charNode.xScale = 0.85
+                whackSlot.charNode.yScale = 0.85
 
-                    whackSlot.hit()
-                    ++score
+                whackSlot.hit()
+                ++score
 
-                    runAction(SKAction.playSoundFileNamed("whack.caf", waitForCompletion:false))
-                }
+                runAction(SKAction.playSoundFileNamed("whack.caf", waitForCompletion:false))
             }
         }
     }
