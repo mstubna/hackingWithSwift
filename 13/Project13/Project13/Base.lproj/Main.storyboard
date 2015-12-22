@@ -125,15 +125,21 @@
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Twv-O4-bTz" userLabel="ButtonView">
                                         <rect key="frame" x="0.0" y="486" width="600" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqp-b9-tLX">
-                                                <rect key="frame" x="546" y="10" width="34" height="30"/>
-                                                <state key="normal" title="Save"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqp-b9-tLX" customClass="RoundRectButton" customModule="Project13" customModuleProvider="target">
+                                                <rect key="frame" x="470" y="10" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="Sgh-9B-elB"/>
+                                                </constraints>
+                                                <state key="normal" title="Save image"/>
                                                 <connections>
                                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ojb-B6-tBw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuF-KK-HJR">
-                                                <rect key="frame" x="20" y="10" width="89" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuF-KK-HJR" customClass="RoundRectButton" customModule="Project13" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="10" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="NKr-58-UJz"/>
+                                                </constraints>
                                                 <state key="normal" title="Change filter"/>
                                                 <connections>
                                                     <action selector="changeFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcG-0L-w2X"/>
@@ -143,9 +149,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4rO-Q4-Lfc"/>
-                                            <constraint firstItem="hqp-b9-tLX" firstAttribute="trailing" secondItem="Twv-O4-bTz" secondAttribute="trailing" constant="-20" id="PCp-VH-30a"/>
+                                            <constraint firstItem="hqp-b9-tLX" firstAttribute="trailing" secondItem="Twv-O4-bTz" secondAttribute="trailing" constant="-10" id="PCp-VH-30a"/>
                                             <constraint firstItem="NuF-KK-HJR" firstAttribute="top" secondItem="Twv-O4-bTz" secondAttribute="top" constant="10" id="VHm-7h-8cy"/>
-                                            <constraint firstItem="NuF-KK-HJR" firstAttribute="leading" secondItem="Twv-O4-bTz" secondAttribute="leading" constant="20" id="Ytd-uf-NbT"/>
+                                            <constraint firstItem="NuF-KK-HJR" firstAttribute="leading" secondItem="Twv-O4-bTz" secondAttribute="leading" constant="10" id="Ytd-uf-NbT"/>
                                             <constraint firstItem="hqp-b9-tLX" firstAttribute="top" secondItem="Twv-O4-bTz" secondAttribute="top" constant="10" id="kag-mA-i9I"/>
                                         </constraints>
                                     </view>
