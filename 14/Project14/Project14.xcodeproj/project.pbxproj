@@ -29,6 +29,7 @@
 		27DFF09C1C2999F20057D317 /* whackMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DFF08E1C2999F20057D317 /* whackMask.png */; };
 		27DFF09D1C2999F20057D317 /* whackMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DFF08F1C2999F20057D317 /* whackMask@2x.png */; };
 		27DFF09F1C299A070057D317 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFF09E1C299A070057D317 /* Helper.swift */; };
+		27DFF0A11C299BF00057D317 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFF0A01C299BF00057D317 /* WhackSlot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		27DFF08E1C2999F20057D317 /* whackMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whackMask.png; sourceTree = "<group>"; };
 		27DFF08F1C2999F20057D317 /* whackMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whackMask@2x.png"; sourceTree = "<group>"; };
 		27DFF09E1C299A070057D317 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		27DFF0A01C299BF00057D317 /* WhackSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		27DFF0631C2995ED0057D317 /* Project14 */ = {
 			isa = PBXGroup;
 			children = (
+				27DFF0811C2999F20057D317 /* Content */,
 				27DFF0641C2995ED0057D317 /* AppDelegate.swift */,
 				27DFF0661C2995ED0057D317 /* GameScene.sks */,
 				27DFF0681C2995ED0057D317 /* GameScene.swift */,
@@ -97,7 +100,7 @@
 				27DFF0711C2995ED0057D317 /* LaunchScreen.storyboard */,
 				27DFF0741C2995ED0057D317 /* Info.plist */,
 				27DFF09E1C299A070057D317 /* Helper.swift */,
-				27DFF0811C2999F20057D317 /* Content */,
+				27DFF0A01C299BF00057D317 /* WhackSlot.swift */,
 			);
 			path = Project14;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DFF0691C2995ED0057D317 /* GameScene.swift in Sources */,
+				27DFF0A11C299BF00057D317 /* WhackSlot.swift in Sources */,
 				27DFF06B1C2995ED0057D317 /* GameViewController.swift in Sources */,
 				27DFF0651C2995ED0057D317 /* AppDelegate.swift in Sources */,
 				27DFF09F1C299A070057D317 /* Helper.swift in Sources */,
