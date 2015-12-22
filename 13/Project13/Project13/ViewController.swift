@@ -22,9 +22,17 @@ UINavigationControllerDelegate {
 
     var currentImage: UIImage!
     var context: CIContext!
+
+    let filters = ["CIBumpDistortion": "Bump", "CIGaussianBlur": "Blur",
+    "CIPixellate": "Pixellate", "CISepiaTone": "Sepia", "CITwirlDistortion": "Swirl",
+    "CIUnsharpMask": "Unsharp", "CIVignette": "Vignette"]
+
     var currentFilter: CIFilter! {
         didSet {
-            changeFilterButton.setTitle(currentFilter.name, forState: UIControlState.Normal)
+            changeFilterButton.setTitle(
+                filters[currentFilter.name],
+                forState: UIControlState.Normal
+            )
         }
     }
 
@@ -34,13 +42,15 @@ UINavigationControllerDelegate {
             message: nil,
             preferredStyle: .ActionSheet
         )
-        ac.addAction(UIAlertAction(title: "CIBumpDistortion", style: .Default, handler: setFilter))
-        ac.addAction(UIAlertAction(title: "CIGaussianBlur", style: .Default, handler: setFilter))
-        ac.addAction(UIAlertAction(title: "CIPixellate", style: .Default, handler: setFilter))
-        ac.addAction(UIAlertAction(title: "CISepiaTone", style: .Default, handler: setFilter))
-        ac.addAction(UIAlertAction(title: "CITwirlDistortion", style: .Default, handler: setFilter))
-        ac.addAction(UIAlertAction(title: "CIUnsharpMask", style: .Default, handler: setFilter))
-        ac.addAction(UIAlertAction(title: "CIVignette", style: .Default, handler: setFilter))
+        for (name, title) in filters {
+            ac.addAction(UIAlertAction(
+                title: title,
+                style: .Default,
+                handler: { [unowned self] (action: UIAlertAction) in
+                    self.setFilter(name)
+                }
+            ))
+        }
         ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
     }
@@ -145,8 +155,8 @@ UINavigationControllerDelegate {
         self.imageView.image = UIImage(CGImage: cgimg)
     }
 
-    func setFilter(action: UIAlertAction!) {
-        currentFilter = CIFilter(name: action.title!)
+    func setFilter(name: String) {
+        currentFilter = CIFilter(name: name)
 
         if currentImage != nil {
             let beginImage = CIImage(image: currentImage)
