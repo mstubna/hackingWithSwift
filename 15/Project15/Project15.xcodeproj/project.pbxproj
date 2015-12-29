@@ -12,6 +12,8 @@
 		278E49801C32CB7F006EBA00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278E497E1C32CB7F006EBA00 /* Main.storyboard */; };
 		278E49821C32CB7F006EBA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E49811C32CB7F006EBA00 /* Assets.xcassets */; };
 		278E49851C32CB7F006EBA00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278E49831C32CB7F006EBA00 /* LaunchScreen.storyboard */; };
+		278E498F1C32CC1C006EBA00 /* penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = 278E498D1C32CC1C006EBA00 /* penguin.png */; };
+		278E49901C32CC1C006EBA00 /* penguin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 278E498E1C32CC1C006EBA00 /* penguin@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		278E49811C32CB7F006EBA00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278E49841C32CB7F006EBA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278E49861C32CB7F006EBA00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278E498D1C32CC1C006EBA00 /* penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penguin.png; sourceTree = "<group>"; };
+		278E498E1C32CC1C006EBA00 /* penguin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "penguin@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		278E49791C32CB7F006EBA00 /* Project15 */ = {
 			isa = PBXGroup;
 			children = (
+				278E498C1C32CC1C006EBA00 /* Content */,
 				278E497A1C32CB7F006EBA00 /* AppDelegate.swift */,
 				278E497C1C32CB7F006EBA00 /* ViewController.swift */,
 				278E497E1C32CB7F006EBA00 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				278E49861C32CB7F006EBA00 /* Info.plist */,
 			);
 			path = Project15;
+			sourceTree = "<group>";
+		};
+		278E498C1C32CC1C006EBA00 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				278E498D1C32CC1C006EBA00 /* penguin.png */,
+				278E498E1C32CC1C006EBA00 /* penguin@2x.png */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278E498F1C32CC1C006EBA00 /* penguin.png in Resources */,
 				278E49851C32CB7F006EBA00 /* LaunchScreen.storyboard in Resources */,
 				278E49821C32CB7F006EBA00 /* Assets.xcassets in Resources */,
 				278E49801C32CB7F006EBA00 /* Main.storyboard in Resources */,
+				278E49901C32CC1C006EBA00 /* penguin@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
