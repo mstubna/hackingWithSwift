@@ -185,6 +185,7 @@ class GameScene: SKScene {
         addChild(enemy)
         activeEnemies.append(enemy)
     }
+
     func tossEnemies() {
         popupTime *= 0.991
         chainDelay *= 0.99
