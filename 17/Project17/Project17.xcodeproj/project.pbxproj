@@ -36,6 +36,7 @@
 		272F1D151C43C3190006F1D3 /* swoosh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 272F1CFF1C43C3190006F1D3 /* swoosh3.caf */; };
 		272F1D161C43C3190006F1D3 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 272F1D001C43C3190006F1D3 /* whack.caf */; };
 		272F1D171C43C3190006F1D3 /* wrong.caf in Resources */ = {isa = PBXBuildFile; fileRef = 272F1D011C43C3190006F1D3 /* wrong.caf */; };
+		272F1D191C43CEE40006F1D3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D181C43CEE40006F1D3 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		272F1CFF1C43C3190006F1D3 /* swoosh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh3.caf; sourceTree = "<group>"; };
 		272F1D001C43C3190006F1D3 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		272F1D011C43C3190006F1D3 /* wrong.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.caf; sourceTree = "<group>"; };
+		272F1D181C43CEE40006F1D3 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				272F1CDF1C43BF870006F1D3 /* Assets.xcassets */,
 				272F1CE11C43BF870006F1D3 /* LaunchScreen.storyboard */,
 				272F1CE41C43BF870006F1D3 /* Info.plist */,
+				272F1D181C43CEE40006F1D3 /* Helper.swift */,
 			);
 			path = Project17;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				272F1CD91C43BF870006F1D3 /* GameScene.swift in Sources */,
 				272F1CDB1C43BF870006F1D3 /* GameViewController.swift in Sources */,
 				272F1CD51C43BF870006F1D3 /* AppDelegate.swift in Sources */,
+				272F1D191C43CEE40006F1D3 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
