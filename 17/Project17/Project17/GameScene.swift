@@ -45,6 +45,8 @@ class GameScene: SKScene {
     var chainDelay = 3.0
     var nextSequenceQueued = true
 
+    var gameEnded = false
+
     override func didMoveToView(view: SKView) {
         let background = SKSpriteNode(imageNamed: "sliceBackground")
         background.position = CGPoint(x: 512, y: 384)
@@ -266,6 +268,62 @@ class GameScene: SKScene {
         if !swooshSoundActive {
             playSwooshSound()
         }
+
+        let nodes = nodesAtPoint(location)
+
+        for node in nodes {
+            if node.name == "enemy" {
+                // destroy penguin
+
+                let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy.sks")!
+                emitter.position = node.position
+                addChild(emitter)
+
+                node.name = ""
+
+                node.physicsBody!.dynamic = false
+
+                let scaleOut = SKAction.scaleTo(0.001, duration:0.2)
+                let fadeOut = SKAction.fadeOutWithDuration(0.2)
+                let group = SKAction.group([scaleOut, fadeOut])
+
+                let seq = SKAction.sequence([group, SKAction.removeFromParent()])
+                node.runAction(seq)
+
+                score += 1
+
+                guard let activeEnemy = node as? SKSpriteNode else { return }
+                guard let index = activeEnemies.indexOf(activeEnemy) else { return }
+                activeEnemies.removeAtIndex(index)
+
+                runAction(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
+
+            } else if node.name == "bomb" {
+                // destroy bomb
+
+                let emitter = SKEmitterNode(fileNamed: "sliceHitBomb.sks")!
+                emitter.position = node.parent!.position
+                addChild(emitter)
+
+                node.name = ""
+                node.parent!.physicsBody!.dynamic = false
+
+                let scaleOut = SKAction.scaleTo(0.001, duration:0.2)
+                let fadeOut = SKAction.fadeOutWithDuration(0.2)
+                let group = SKAction.group([scaleOut, fadeOut])
+
+                let seq = SKAction.sequence([group, SKAction.removeFromParent()])
+
+                guard let parent = node.parent as? SKSpriteNode else { return }
+                parent.runAction(seq)
+                guard let index = activeEnemies.indexOf(parent) else { return }
+
+                activeEnemies.removeAtIndex(index)
+
+                runAction(SKAction.playSoundFileNamed("explosion.caf", waitForCompletion: false))
+                endGame(triggeredByBomb: true)
+            }
+        }
     }
 
     override func touchesEnded(touches: Set<UITouch>?, withEvent event: UIEvent?) {
@@ -316,6 +374,48 @@ class GameScene: SKScene {
         }
     }
 
+    func subtractLife() {
+        lives -= 1
+
+        runAction(SKAction.playSoundFileNamed("wrong.caf", waitForCompletion: false))
+
+        var life: SKSpriteNode
+
+        if lives == 2 {
+            life = livesImages[0]
+        } else if lives == 1 {
+            life = livesImages[1]
+        } else {
+            life = livesImages[2]
+            endGame(triggeredByBomb: false)
+        }
+
+        life.texture = SKTexture(imageNamed: "sliceLifeGone")
+
+        life.xScale = 1.3
+        life.yScale = 1.3
+        life.runAction(SKAction.scaleTo(1, duration:0.1))
+    }
+
+    func endGame(triggeredByBomb triggeredByBomb: Bool) {
+        if gameEnded { return }
+
+        gameEnded = true
+        physicsWorld.speed = 0
+        userInteractionEnabled = false
+
+        if bombSoundEffect != nil {
+            bombSoundEffect.stop()
+            bombSoundEffect = nil
+        }
+
+        if triggeredByBomb {
+            livesImages[0].texture = SKTexture(imageNamed: "sliceLifeGone")
+            livesImages[1].texture = SKTexture(imageNamed: "sliceLifeGone")
+            livesImages[2].texture = SKTexture(imageNamed: "sliceLifeGone")
+        }
+    }
+
     override func update(currentTime: CFTimeInterval) {
         var bombCount = 0
 
@@ -337,10 +437,23 @@ class GameScene: SKScene {
         if activeEnemies.count > 0 {
             for node in activeEnemies {
                 if node.position.y < -140 {
-                    node.removeFromParent()
+                    node.removeAllActions()
+                    if node.name == "enemy" {
+                        node.name = ""
+                        subtractLife()
 
-                    if let index = activeEnemies.indexOf(node) {
-                        activeEnemies.removeAtIndex(index)
+                        node.removeFromParent()
+
+                        if let index = activeEnemies.indexOf(node) {
+                            activeEnemies.removeAtIndex(index)
+                        }
+                    } else if node.name == "bombContainer" {
+                        node.name = ""
+                        node.removeFromParent()
+
+                        if let index = activeEnemies.indexOf(node) {
+                            activeEnemies.removeAtIndex(index)
+                        }
                     }
                 }
             }
