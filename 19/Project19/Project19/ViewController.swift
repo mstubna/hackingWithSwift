@@ -9,12 +9,14 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
+
         let london = Capital(
             title: "London",
             coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
@@ -42,6 +44,55 @@ class ViewController: UIViewController {
         )
 
         mapView.addAnnotations([london, oslo, paris, rome, washington])
+    }
+
+    func mapView(
+        mapView: MKMapView,
+        viewForAnnotation annotation: MKAnnotation
+    ) -> MKAnnotationView? {
+        // 1
+        let identifier = "Capital"
+
+        // 2
+        if annotation.isKindOfClass(Capital.self) {
+            // 3
+            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+
+            if annotationView == nil {
+                //4
+                annotationView = MKPinAnnotationView(
+                    annotation: annotation,
+                    reuseIdentifier: identifier
+                )
+                annotationView!.canShowCallout = true
+
+                // 5
+                let btn = UIButton(type: .DetailDisclosure)
+                annotationView!.rightCalloutAccessoryView = btn
+            } else {
+                // 6
+                annotationView!.annotation = annotation
+            }
+
+            return annotationView
+        }
+
+        // 7
+        return nil
+    }
+
+    func mapView(
+        mapView: MKMapView,
+        annotationView view: MKAnnotationView,
+        calloutAccessoryControlTapped control: UIControl
+    ) {
+        guard let capital = view.annotation as? Capital else { return }
+        let placeName = capital.title
+        let placeInfo = capital.info
+
+        let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
