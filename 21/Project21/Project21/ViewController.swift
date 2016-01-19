@@ -38,23 +38,17 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     func createLocalNotification() -> UILocalNotification {
         let notification = UILocalNotification()
-        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
         notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
         notification.alertAction = "be awesome!"
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["CustomField1": "w00t"]
         return notification
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
