@@ -88,6 +88,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             location.y = 668
         }
 
+        if !player.containsPoint(location) { return }
         player.position = location
     }
 
