@@ -174,6 +174,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.text = "Score: 0"
         scoreLabel.horizontalAlignmentMode = .Left
         scoreLabel.position = CGPoint(x: 16, y: 16)
+        scoreLabel.zPosition = 1
         addChild(scoreLabel)
     }
 
