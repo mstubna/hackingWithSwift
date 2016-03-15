@@ -15,6 +15,7 @@
 		2772F23F1C98850A004236F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2772F23E1C98850A004236F3 /* Assets.xcassets */; };
 		2772F2421C98850A004236F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2772F2401C98850A004236F3 /* LaunchScreen.storyboard */; };
 		2772F24D1C98861C004236F3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772F24C1C98861C004236F3 /* Helper.swift */; };
+		2772F24F1C98959A004236F3 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772F24E1C98959A004236F3 /* BuildingNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2772F2411C98850A004236F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2772F2431C98850A004236F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2772F24C1C98861C004236F3 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2772F24E1C98959A004236F3 /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				2772F2351C988509004236F3 /* GameScene.sks */,
 				2772F2371C988509004236F3 /* GameScene.swift */,
 				2772F2391C98850A004236F3 /* GameViewController.swift */,
+				2772F24E1C98959A004236F3 /* BuildingNode.swift */,
 				2772F23B1C98850A004236F3 /* Main.storyboard */,
 				2772F23E1C98850A004236F3 /* Assets.xcassets */,
 				2772F2401C98850A004236F3 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2772F2381C988509004236F3 /* GameScene.swift in Sources */,
+				2772F24F1C98959A004236F3 /* BuildingNode.swift in Sources */,
 				2772F23A1C98850A004236F3 /* GameViewController.swift in Sources */,
 				2772F2341C988509004236F3 /* AppDelegate.swift in Sources */,
 				2772F24D1C98861C004236F3 /* Helper.swift in Sources */,
