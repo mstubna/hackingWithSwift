@@ -16,6 +16,7 @@ enum CollisionTypes: UInt32 {
 
 class GameScene: SKScene {
 
+    weak var viewController: GameViewController!
     var buildings = [BuildingNode]()
 
     override func didMoveToView(view: SKView) {
@@ -41,6 +42,9 @@ class GameScene: SKScene {
 
             buildings.append(building)
         }
+    }
+
+    func launch(angle angle: Int, velocity: Int) {
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
