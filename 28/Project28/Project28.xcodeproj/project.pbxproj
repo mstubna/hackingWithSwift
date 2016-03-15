@@ -12,6 +12,7 @@
 		2772F2181C9876C1004236F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2772F2161C9876C1004236F3 /* Main.storyboard */; };
 		2772F21A1C9876C1004236F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2772F2191C9876C1004236F3 /* Assets.xcassets */; };
 		2772F21D1C9876C1004236F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2772F21B1C9876C1004236F3 /* LaunchScreen.storyboard */; };
+		2772F2261C987C15004236F3 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772F2251C987C15004236F3 /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2772F2191C9876C1004236F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2772F21C1C9876C1004236F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2772F21E1C9876C1004236F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2772F2251C987C15004236F3 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				2772F2191C9876C1004236F3 /* Assets.xcassets */,
 				2772F21B1C9876C1004236F3 /* LaunchScreen.storyboard */,
 				2772F21E1C9876C1004236F3 /* Info.plist */,
+				2772F2251C987C15004236F3 /* KeychainWrapper.swift */,
 			);
 			path = Project28;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2772F2261C987C15004236F3 /* KeychainWrapper.swift in Sources */,
 				2772F2151C9876C1004236F3 /* ViewController.swift in Sources */,
 				2772F2131C9876C1004236F3 /* AppDelegate.swift in Sources */,
 			);
