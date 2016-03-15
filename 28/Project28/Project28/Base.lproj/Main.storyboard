@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -28,24 +29,30 @@
                                     <action selector="authenticateUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMh-Nw-E5p"/>
                                 </connections>
                             </button>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xsj-JC-83f">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xsj-JC-83f">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="rz9-6L-8Bz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xsj-JC-83f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C8p-aa-llm"/>
                             <constraint firstItem="dST-dE-Z1K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H6d-4z-yGk"/>
                             <constraint firstItem="dST-dE-Z1K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ihi-KA-w0p"/>
                             <constraint firstItem="Xsj-JC-83f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="LSs-bo-XTp"/>
+                            <constraint firstItem="Xsj-JC-83f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QU4-LM-wwt"/>
                             <constraint firstItem="Xsj-JC-83f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TjO-pN-t22"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xsj-JC-83f" secondAttribute="trailing" id="d3B-eC-6e7"/>
                             <constraint firstItem="Xsj-JC-83f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hH4-YJ-g7M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xsj-JC-83f" secondAttribute="bottom" id="ll4-KQ-lh0"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LSs-bo-XTp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dwC-Le-xCb"/>
                     <connections>
