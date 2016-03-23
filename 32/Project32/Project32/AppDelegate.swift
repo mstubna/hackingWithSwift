@@ -43,14 +43,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func applicationWillTerminate(application: UIApplication) {
     }
-
-    // MARK: - Split view
-
-    func splitViewController(
-        splitViewController: UISplitViewController,
-        collapseSecondaryViewController secondaryViewController: UIViewController,
-        ontoPrimaryViewController primaryViewController: UIViewController
-    ) -> Bool {
-        return true
-    }
 }
