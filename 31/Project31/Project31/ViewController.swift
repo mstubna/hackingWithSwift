@@ -64,6 +64,8 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate,
 
         activeWebView = webView
         webView.layer.borderWidth = 3
+
+        updateUIUsingWebView(webView)
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -117,6 +119,17 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate,
             if let newSelectedWebView = stackView.arrangedSubviews[currentIndex] as? UIWebView {
                 selectWebView(newSelectedWebView)
             }
+        }
+    }
+
+    func updateUIUsingWebView(webView: UIWebView) {
+        title = webView.stringByEvaluatingJavaScriptFromString("document.title")
+        addressBar.text = webView.request?.URL?.absoluteString ?? ""
+    }
+
+    func webViewDidFinishLoad(webView: UIWebView) {
+        if webView == activeWebView {
+            updateUIUsingWebView(webView)
         }
     }
 
