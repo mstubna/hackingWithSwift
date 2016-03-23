@@ -6,6 +6,8 @@
 //  Copyright © 2016 Mike. All rights reserved.
 //
 
+import CoreSpotlight
+import MobileCoreServices
 import SafariServices
 import UIKit
 
@@ -139,11 +141,39 @@ class MasterViewController: UITableViewController {
     }
 
     func indexItem(which: Int) {
+        let project = projects[which]
+
+        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+        attributeSet.title = project[0]
+        attributeSet.contentDescription = project[1]
+
+        let item = CSSearchableItem(
+            uniqueIdentifier: "\(which)",
+            domainIdentifier: "com.hackingwithswift",
+            attributeSet: attributeSet
+        )
+        CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) {
+            (error: NSError?) -> Void in
+                if let error = error {
+                    print("Indexing error: \(error.localizedDescription)")
+                } else {
+                    print("Search item successfully indexed!")
+                }
+        }
     }
 
     func deindexItem(which: Int) {
+        CSSearchableIndex.defaultSearchableIndex().deleteSearchableItemsWithIdentifiers(
+            ["\(which)"]
+        ) {
+            (error: NSError?) -> Void in
+                if let error = error {
+                    print("Deindexing error: \(error.localizedDescription)")
+                } else {
+                    print("Search item successfully removed!")
+                }
+        }
     }
-
     func makeAttributedString(title title: String, subtitle: String) -> NSAttributedString {
         let titleAttributes =
             [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline),
