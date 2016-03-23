@@ -6,11 +6,13 @@
 //  Copyright © 2016 Mike. All rights reserved.
 //
 
+import SafariServices
 import UIKit
 
 class MasterViewController: UITableViewController {
 
     var projects = [[String]]()
+    var favorites = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,14 @@ class MasterViewController: UITableViewController {
             "addTarget(), enumerate(), countElements(), find(), join(), property observers, " +
             "range operators."]
         )
+
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let savedFavorites = defaults.objectForKey("favorites") as? [Int] {
+            favorites = savedFavorites
+        }
+
+        tableView.editing = true
+        tableView.allowsSelectionDuringEditing = true
     }
 
     override func tableView(
@@ -92,7 +102,46 @@ class MasterViewController: UITableViewController {
         let project = projects[indexPath.row]
         cell.textLabel?.attributedText =
             makeAttributedString(title: project[0], subtitle: project[1])
+
+        if favorites.contains(indexPath.row) {
+            cell.editingAccessoryType = .Checkmark
+        } else {
+            cell.editingAccessoryType = .None
+        }
+
         return cell
+    }
+
+    override func tableView(
+        tableView: UITableView,
+        editingStyleForRowAtIndexPath indexPath: NSIndexPath
+    ) -> UITableViewCellEditingStyle {
+        return favorites.contains(indexPath.row) ? .Delete : .Insert
+    }
+
+    override func tableView(
+        tableView: UITableView,
+        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath
+    ) {
+        if editingStyle == .Insert {
+            favorites.append(indexPath.row)
+            indexItem(indexPath.row)
+        } else if let index = favorites.indexOf(indexPath.row) {
+            favorites.removeAtIndex(index)
+            deindexItem(indexPath.row)
+        }
+
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(favorites, forKey: "favorites")
+
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+    }
+
+    func indexItem(which: Int) {
+    }
+
+    func deindexItem(which: Int) {
     }
 
     func makeAttributedString(title title: String, subtitle: String) -> NSAttributedString {
@@ -116,10 +165,15 @@ class MasterViewController: UITableViewController {
 
     override func tableView(
         tableView: UITableView,
-        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-        forRowAtIndexPath indexPath: NSIndexPath
+        didSelectRowAtIndexPath indexPath: NSIndexPath
     ) {
+        showTutorial(indexPath.row)
     }
 
-
+    func showTutorial(which: Int) {
+        if let url = NSURL(string: "https://www.hackingwithswift.com/read/\(which + 1)") {
+            let vc = SFSafariViewController(URL: url, entersReaderIfAvailable: true)
+            presentViewController(vc, animated: true, completion: nil)
+        }
+    }
 }
