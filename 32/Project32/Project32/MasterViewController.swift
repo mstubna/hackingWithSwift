@@ -53,6 +53,20 @@ class MasterViewController: UITableViewController {
         )
     }
 
+    override func tableView(
+        tableView: UITableView,
+        heightForRowAtIndexPath indexPath: NSIndexPath
+    ) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
+    override func tableView(
+        tableView: UITableView,
+        estimatedHeightForRowAtIndexPath indexPath: NSIndexPath
+    ) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -76,9 +90,28 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let project = projects[indexPath.row]
-        cell.textLabel?.text = "\(project[0]): \(project[1])"
-
+        cell.textLabel?.attributedText =
+            makeAttributedString(title: project[0], subtitle: project[1])
         return cell
+    }
+
+    func makeAttributedString(title title: String, subtitle: String) -> NSAttributedString {
+        let titleAttributes =
+            [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline),
+             NSForegroundColorAttributeName: UIColor.purpleColor()]
+        let subtitleAttributes =
+            [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)]
+
+        let titleString = NSMutableAttributedString(
+            string: "\(title)\n",
+            attributes: titleAttributes
+        )
+        let subtitleString = NSAttributedString(
+            string: subtitle,
+            attributes: subtitleAttributes
+        )
+        titleString.appendAttributedString(subtitleString)
+        return titleString
     }
 
     override func tableView(
