@@ -12,6 +12,7 @@
 		276F7CBC1CA56158001EFF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBA1CA56158001EFF96 /* Main.storyboard */; };
 		276F7CBE1CA56158001EFF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBD1CA56158001EFF96 /* Assets.xcassets */; };
 		276F7CC11CA56158001EFF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBF1CA56158001EFF96 /* LaunchScreen.storyboard */; };
+		276F7CCA1CA5634C001EFF96 /* RecordWhistleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		276F7CBD1CA56158001EFF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276F7CC01CA56158001EFF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276F7CC21CA56158001EFF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				276F7CB61CA56158001EFF96 /* AppDelegate.swift */,
 				276F7CB81CA56158001EFF96 /* ViewController.swift */,
+				276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */,
 				276F7CBA1CA56158001EFF96 /* Main.storyboard */,
 				276F7CBD1CA56158001EFF96 /* Assets.xcassets */,
 				276F7CBF1CA56158001EFF96 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			files = (
 				276F7CB91CA56158001EFF96 /* ViewController.swift in Sources */,
 				276F7CB71CA56158001EFF96 /* AppDelegate.swift in Sources */,
+				276F7CCA1CA5634C001EFF96 /* RecordWhistleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
