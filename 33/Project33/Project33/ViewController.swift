@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    static var dirty = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

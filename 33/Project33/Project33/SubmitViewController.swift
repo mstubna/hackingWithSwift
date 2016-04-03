@@ -81,7 +81,33 @@ class SubmitViewController: UIViewController {
     }
 
     func doSubmission() {
+        let whistleRecord = CKRecord(recordType: "Whistles")
+        whistleRecord["genre"] = genre
+        whistleRecord["comments"] = comments
 
+        let audioURL = RecordWhistleViewController.getWhistleURL()
+        let whistleAsset = CKAsset(fileURL: audioURL)
+        whistleRecord["audio"] = whistleAsset
+
+        CKContainer.defaultContainer().publicCloudDatabase.saveRecord(
+            whistleRecord) { [unowned self] (record, error) -> Void in
+            dispatch_async(dispatch_get_main_queue()) {
+                if error == nil {
+                    self.view.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0, alpha: 1)
+                    self.status.text = "Done!"
+                    ViewController.dirty = true
+                } else {
+                    self.status.text = "Error: \(error!.localizedDescription)"
+                }
+                self.spinner.stopAnimating()
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+                    title: "Done",
+                    style: .Plain,
+                    target: self,
+                    action: #selector(SubmitViewController.doneTapped)
+                )
+            }
+        }
     }
 
     func doneTapped() {
