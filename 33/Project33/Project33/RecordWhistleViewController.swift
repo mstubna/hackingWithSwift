@@ -6,11 +6,15 @@
 //  Copyright © 2016 Mike. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
-class RecordWhistleViewController: UIViewController {
+class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
 
     var stackView: UIStackView!
+    var recordButton: UIButton!
+    var recordingSession: AVAudioSession!
+    var whistleRecorder: AVAudioRecorder!
 
     override func loadView() {
         super.loadView()
@@ -44,6 +48,127 @@ class RecordWhistleViewController: UIViewController {
                 constant:0
             )
         )
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        title = "Record your whistle"
+        recordingSession = AVAudioSession.sharedInstance()
+
+        do {
+            try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() {
+                [unowned self] (allowed: Bool) -> Void in
+                    dispatch_async(dispatch_get_main_queue()) {
+                        allowed ? self.loadRecordingUI() : self.loadFailUI()
+                    }
+            }
+        } catch {
+            self.loadFailUI()
+        }
+    }
+
+    func loadRecordingUI() {
+        recordButton = UIButton()
+        recordButton.translatesAutoresizingMaskIntoConstraints = false
+        recordButton.setTitle("Tap to Record", forState: .Normal)
+        recordButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleTitle1)
+        recordButton.addTarget(
+            self,
+            action: #selector(RecordWhistleViewController.recordTapped),
+            forControlEvents: .TouchUpInside
+        )
+        stackView.addArrangedSubview(recordButton)
+    }
+
+    func loadFailUI() {
+        let failLabel = UILabel()
+        failLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        failLabel.text = "Recording failed: please ensure the app has access to your microphone."
+        failLabel.numberOfLines = 0
+
+        stackView.addArrangedSubview(failLabel)
+    }
+
+    func startRecording() {
+        // change the state to indicate recording
+        view.backgroundColor = UIColor(red: 0.6, green: 0, blue: 0, alpha: 1)
+        recordButton.setTitle("Tap to Stop", forState: .Normal)
+
+        // get audio file url
+        let audioURL = RecordWhistleViewController.getWhistleURL()
+        print(audioURL.absoluteString)
+
+        // create recording settings
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000.0,
+            AVNumberOfChannelsKey: 1 as NSNumber,
+            AVEncoderAudioQualityKey: AVAudioQuality.High.rawValue
+        ]
+
+        do {
+            // record
+            whistleRecorder = try AVAudioRecorder(URL: audioURL, settings: settings)
+            whistleRecorder.delegate = self
+            whistleRecorder.record()
+        } catch {
+            finishRecording(success: false)
+        }
+    }
+
+    func finishRecording(success success: Bool) {
+        view.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0, alpha: 1)
+
+        whistleRecorder.stop()
+        whistleRecorder = nil
+
+        if success {
+            recordButton.setTitle("Tap to Re-record", forState: .Normal)
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                title: "Next", style: .Plain, target: self, action: "nextTapped"
+            )
+        } else {
+            recordButton.setTitle("Tap to Record", forState: .Normal)
+
+            let ac = UIAlertController(
+                title: "Record failed",
+                message: "There was a problem recording your whistle; please try again.",
+                preferredStyle: .Alert
+            )
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        }
+    }
+
+    func recordTapped() {
+        if whistleRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
+    }
+
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
+
+    class func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(
+            .DocumentDirectory,
+            .UserDomainMask,
+            true
+        ) as [String]
+        return paths[0]
+    }
+
+    class func getWhistleURL() -> NSURL {
+        let audioFilename = getDocumentsDirectory().stringByAppendingPathComponent("whistle.m4a")
+        return NSURL(fileURLWithPath: audioFilename)
     }
 
     override func didReceiveMemoryWarning() {
