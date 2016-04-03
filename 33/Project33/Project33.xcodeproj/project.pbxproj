@@ -13,6 +13,7 @@
 		276F7CBE1CA56158001EFF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBD1CA56158001EFF96 /* Assets.xcassets */; };
 		276F7CC11CA56158001EFF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBF1CA56158001EFF96 /* LaunchScreen.storyboard */; };
 		276F7CCA1CA5634C001EFF96 /* RecordWhistleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */; };
+		27AF427B1CB195D000239C07 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AF427A1CB195D000239C07 /* CloudKit.framework */; };
 		27C3089C1CB18EAF004B42F1 /* SelectGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3089B1CB18EAF004B42F1 /* SelectGenreViewController.swift */; };
 		27C3089E1CB19005004B42F1 /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3089D1CB19005004B42F1 /* AddCommentsViewController.swift */; };
 		27C308A01CB191B0004B42F1 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3089F1CB191B0004B42F1 /* SubmitViewController.swift */; };
@@ -27,6 +28,8 @@
 		276F7CC01CA56158001EFF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276F7CC21CA56158001EFF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
+		27AF42791CB195C100239C07 /* Project33.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Project33.entitlements; sourceTree = "<group>"; };
+		27AF427A1CB195D000239C07 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		27C3089B1CB18EAF004B42F1 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
 		27C3089D1CB19005004B42F1 /* AddCommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
 		27C3089F1CB191B0004B42F1 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AF427B1CB195D000239C07 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 		276F7CAA1CA56158001EFF96 = {
 			isa = PBXGroup;
 			children = (
+				27AF427A1CB195D000239C07 /* CloudKit.framework */,
 				276F7CB51CA56158001EFF96 /* Project33 */,
 				276F7CB41CA56158001EFF96 /* Products */,
 			);
@@ -62,6 +67,7 @@
 		276F7CB51CA56158001EFF96 /* Project33 */ = {
 			isa = PBXGroup;
 			children = (
+				27AF42791CB195C100239C07 /* Project33.entitlements */,
 				276F7CB61CA56158001EFF96 /* AppDelegate.swift */,
 				276F7CB81CA56158001EFF96 /* ViewController.swift */,
 				276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */,
@@ -110,6 +116,11 @@
 					276F7CB21CA56158001EFF96 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 4GWKTXTE7P;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -284,6 +295,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Project33/Project33.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Project33/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mountaintrackapps.Project33;
@@ -295,6 +308,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Project33/Project33.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Project33/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mountaintrackapps.Project33;
