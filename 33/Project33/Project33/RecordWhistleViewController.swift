@@ -144,7 +144,9 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
             togglePlayButton(show: true)
             recordButton.setTitle("Tap to Re-record", forState: .Normal)
             navigationItem.rightBarButtonItem = UIBarButtonItem(
-                title: "Next", style: .Plain, target: self, action: "nextTapped"
+                title: "Next",
+                style: .Plain,
+                target: self, action: #selector(RecordWhistleViewController.nextTapped)
             )
         } else {
             recordButton.setTitle("Tap to Record", forState: .Normal)
@@ -203,6 +205,11 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
                 self.playButton.alpha = 0
             }
         }
+    }
+
+    func nextTapped() {
+        let vc = SelectGenreViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     class func getDocumentsDirectory() -> NSString {

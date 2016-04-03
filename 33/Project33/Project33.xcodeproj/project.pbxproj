@@ -13,6 +13,9 @@
 		276F7CBE1CA56158001EFF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBD1CA56158001EFF96 /* Assets.xcassets */; };
 		276F7CC11CA56158001EFF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F7CBF1CA56158001EFF96 /* LaunchScreen.storyboard */; };
 		276F7CCA1CA5634C001EFF96 /* RecordWhistleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */; };
+		27C3089C1CB18EAF004B42F1 /* SelectGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3089B1CB18EAF004B42F1 /* SelectGenreViewController.swift */; };
+		27C3089E1CB19005004B42F1 /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3089D1CB19005004B42F1 /* AddCommentsViewController.swift */; };
+		27C308A01CB191B0004B42F1 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3089F1CB191B0004B42F1 /* SubmitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		276F7CC01CA56158001EFF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276F7CC21CA56158001EFF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276F7CC91CA5634C001EFF96 /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
+		27C3089B1CB18EAF004B42F1 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
+		27C3089D1CB19005004B42F1 /* AddCommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
+		27C3089F1CB191B0004B42F1 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				276F7CBD1CA56158001EFF96 /* Assets.xcassets */,
 				276F7CBF1CA56158001EFF96 /* LaunchScreen.storyboard */,
 				276F7CC21CA56158001EFF96 /* Info.plist */,
+				27C3089B1CB18EAF004B42F1 /* SelectGenreViewController.swift */,
+				27C3089D1CB19005004B42F1 /* AddCommentsViewController.swift */,
+				27C3089F1CB191B0004B42F1 /* SubmitViewController.swift */,
 			);
 			path = Project33;
 			sourceTree = "<group>";
@@ -158,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				276F7CB91CA56158001EFF96 /* ViewController.swift in Sources */,
+				27C3089E1CB19005004B42F1 /* AddCommentsViewController.swift in Sources */,
 				276F7CB71CA56158001EFF96 /* AppDelegate.swift in Sources */,
+				27C3089C1CB18EAF004B42F1 /* SelectGenreViewController.swift in Sources */,
+				27C308A01CB191B0004B42F1 /* SubmitViewController.swift in Sources */,
 				276F7CCA1CA5634C001EFF96 /* RecordWhistleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +321,7 @@
 				276F7CC71CA56158001EFF96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
