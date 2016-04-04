@@ -13,6 +13,7 @@
 		27AF42961CB2ABFA00239C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AF42951CB2ABFA00239C07 /* Assets.xcassets */; };
 		27AF42991CB2ABFA00239C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AF42971CB2ABFA00239C07 /* LaunchScreen.storyboard */; };
 		27AF42A21CB2B2F600239C07 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42A11CB2B2F600239C07 /* Board.swift */; };
+		27AF42A41CB2BA3800239C07 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42A31CB2BA3800239C07 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		27AF42981CB2ABFA00239C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AF429A1CB2ABFA00239C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AF42A11CB2B2F600239C07 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		27AF42A31CB2BA3800239C07 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				27AF42971CB2ABFA00239C07 /* LaunchScreen.storyboard */,
 				27AF429A1CB2ABFA00239C07 /* Info.plist */,
 				27AF42A11CB2B2F600239C07 /* Board.swift */,
+				27AF42A31CB2BA3800239C07 /* Player.swift */,
 			);
 			path = Project34;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AF42A41CB2BA3800239C07 /* Player.swift in Sources */,
 				27AF42911CB2ABFA00239C07 /* ViewController.swift in Sources */,
 				27AF428F1CB2ABFA00239C07 /* AppDelegate.swift in Sources */,
 				27AF42A21CB2B2F600239C07 /* Board.swift in Sources */,
