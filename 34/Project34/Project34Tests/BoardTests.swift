@@ -45,7 +45,25 @@ class BoardTests: XCTestCase {
         XCTAssert(board.isFull(), "isFull should return true for a board a chip in every spot")
     }
 
-    func testExample() {
-        XCTAssert(true)
+    func testIsWinForPlayerWithEmptyBoard() {
+        for player in players {
+            XCTAssert(
+                !board.isWinForPlayer(player),
+                "isWinForPlayer should be false with empty board"
+            )
+        }
+    }
+
+    func testIsWinForPlayerWithFourBlackChipsAcross() {
+        for i in 0 ..< 4 {
+            board.addChip(players[0].chipColor, column: i)
+        }
+        XCTAssert(board.isWinForPlayer(players[0]),
+            "isWinForPlayer(Black) should be true with 4 Black across"
+        )
+        XCTAssert(
+            !board.isWinForPlayer(players[1]),
+            "isWinForPlayer(Red) should be false with 4 Black across"
+        )
     }
 }
