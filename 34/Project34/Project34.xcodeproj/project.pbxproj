@@ -14,7 +14,18 @@
 		27AF42991CB2ABFA00239C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AF42971CB2ABFA00239C07 /* LaunchScreen.storyboard */; };
 		27AF42A21CB2B2F600239C07 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42A11CB2B2F600239C07 /* Board.swift */; };
 		27AF42A41CB2BA3800239C07 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42A31CB2BA3800239C07 /* Player.swift */; };
+		27AF42B71CB2C9B200239C07 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42B61CB2C9B200239C07 /* BoardTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27AF42B11CB2C97A00239C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27AF42831CB2ABFA00239C07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27AF428A1CB2ABFA00239C07;
+			remoteInfo = Project34;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		27AF428B1CB2ABFA00239C07 /* Project34.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project34.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,20 @@
 		27AF429A1CB2ABFA00239C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AF42A11CB2B2F600239C07 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		27AF42A31CB2BA3800239C07 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		27AF42AC1CB2C97A00239C07 /* Project34Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project34Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27AF42B01CB2C97A00239C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AF42B61CB2C9B200239C07 /* BoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		27AF42881CB2ABFA00239C07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27AF42A91CB2C97A00239C07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				27AF428D1CB2ABFA00239C07 /* Project34 */,
+				27AF42AD1CB2C97A00239C07 /* Project34Tests */,
 				27AF428C1CB2ABFA00239C07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				27AF428B1CB2ABFA00239C07 /* Project34.app */,
+				27AF42AC1CB2C97A00239C07 /* Project34Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +91,15 @@
 				27AF42A31CB2BA3800239C07 /* Player.swift */,
 			);
 			path = Project34;
+			sourceTree = "<group>";
+		};
+		27AF42AD1CB2C97A00239C07 /* Project34Tests */ = {
+			isa = PBXGroup;
+			children = (
+				27AF42B01CB2C97A00239C07 /* Info.plist */,
+				27AF42B61CB2C9B200239C07 /* BoardTests.swift */,
+			);
+			path = Project34Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +123,25 @@
 			productReference = 27AF428B1CB2ABFA00239C07 /* Project34.app */;
 			productType = "com.apple.product-type.application";
 		};
+		27AF42AB1CB2C97A00239C07 /* Project34Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27AF42B31CB2C97A00239C07 /* Build configuration list for PBXNativeTarget "Project34Tests" */;
+			buildPhases = (
+				27AF42A81CB2C97A00239C07 /* Sources */,
+				27AF42A91CB2C97A00239C07 /* Frameworks */,
+				27AF42AA1CB2C97A00239C07 /* Resources */,
+				27AF42B81CB2CD0D00239C07 /* Code Lint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27AF42B21CB2C97A00239C07 /* PBXTargetDependency */,
+			);
+			name = Project34Tests;
+			productName = Project34Tests;
+			productReference = 27AF42AC1CB2C97A00239C07 /* Project34Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +155,10 @@
 					27AF428A1CB2ABFA00239C07 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 4GWKTXTE7P;
+					};
+					27AF42AB1CB2C97A00239C07 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 27AF428A1CB2ABFA00239C07;
 					};
 				};
 			};
@@ -121,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				27AF428A1CB2ABFA00239C07 /* Project34 */,
+				27AF42AB1CB2C97A00239C07 /* Project34Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -136,10 +192,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27AF42AA1CB2C97A00239C07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		27AF42A01CB2AC1B00239C07 /* Code Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Code Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		27AF42B81CB2CD0D00239C07 /* Code Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -167,7 +244,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27AF42A81CB2C97A00239C07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27AF42B71CB2C9B200239C07 /* BoardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27AF42B21CB2C97A00239C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27AF428A1CB2ABFA00239C07 /* Project34 */;
+			targetProxy = 27AF42B11CB2C97A00239C07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		27AF42921CB2ABFA00239C07 /* Main.storyboard */ = {
@@ -296,6 +389,30 @@
 			};
 			name = Release;
 		};
+		27AF42B41CB2C97A00239C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Project34Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mountaintrackapps.Project34Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project34.app/Project34";
+			};
+			name = Debug;
+		};
+		27AF42B51CB2C97A00239C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Project34Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mountaintrackapps.Project34Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project34.app/Project34";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -313,6 +430,14 @@
 			buildConfigurations = (
 				27AF429E1CB2ABFA00239C07 /* Debug */,
 				27AF429F1CB2ABFA00239C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27AF42B31CB2C97A00239C07 /* Build configuration list for PBXNativeTarget "Project34Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27AF42B41CB2C97A00239C07 /* Debug */,
+				27AF42B51CB2C97A00239C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
