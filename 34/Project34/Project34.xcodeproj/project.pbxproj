@@ -16,6 +16,7 @@
 		27AF42A41CB2BA3800239C07 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42A31CB2BA3800239C07 /* Player.swift */; };
 		27AF42B71CB2C9B200239C07 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42B61CB2C9B200239C07 /* BoardTests.swift */; };
 		27AF42BA1CB2F3A500239C07 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42B91CB2F3A500239C07 /* PlayerTests.swift */; };
+		27AF42BC1CB2F78600239C07 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42BB1CB2F78600239C07 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		27AF42B01CB2C97A00239C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AF42B61CB2C9B200239C07 /* BoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		27AF42B91CB2F3A500239C07 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		27AF42BB1CB2F78600239C07 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				27AF429A1CB2ABFA00239C07 /* Info.plist */,
 				27AF42A11CB2B2F600239C07 /* Board.swift */,
 				27AF42A31CB2BA3800239C07 /* Player.swift */,
+				27AF42BB1CB2F78600239C07 /* Move.swift */,
 			);
 			path = Project34;
 			sourceTree = "<group>";
@@ -133,7 +136,6 @@
 				27AF42A81CB2C97A00239C07 /* Sources */,
 				27AF42A91CB2C97A00239C07 /* Frameworks */,
 				27AF42AA1CB2C97A00239C07 /* Resources */,
-				27AF42B81CB2CD0D00239C07 /* Code Lint */,
 			);
 			buildRules = (
 			);
@@ -219,20 +221,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		27AF42B81CB2CD0D00239C07 /* Code Lint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Code Lint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -240,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AF42BC1CB2F78600239C07 /* Move.swift in Sources */,
 				27AF42A41CB2BA3800239C07 /* Player.swift in Sources */,
 				27AF42911CB2ABFA00239C07 /* ViewController.swift in Sources */,
 				27AF428F1CB2ABFA00239C07 /* AppDelegate.swift in Sources */,
@@ -436,6 +425,7 @@
 				27AF429F1CB2ABFA00239C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27AF42B31CB2C97A00239C07 /* Build configuration list for PBXNativeTarget "Project34Tests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +434,7 @@
 				27AF42B51CB2C97A00239C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

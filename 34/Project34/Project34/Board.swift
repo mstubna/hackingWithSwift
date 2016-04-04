@@ -15,17 +15,15 @@ enum ChipColor: Int {
     case Black
 }
 
-class Board: NSObject {
+class Board: NSObject, GKGameModel {
 
     static var width = 7
     static var height = 6
 
     var slots = [ChipColor]()
-    var currentPlayer: Player
+    var currentPlayer: Player!
 
-    init(currentPlayer player: Player) {
-        currentPlayer = player
-
+    override init() {
         for _ in 0 ..< Board.width * Board.height {
             slots.append(.None)
         }
@@ -108,5 +106,64 @@ class Board: NSObject {
 
     private func setChip(chip: ChipColor, column: NSInteger, row: NSInteger) {
         slots[row + column * Board.height] = chip
+    }
+
+    // MARK: NSCopying required Methods
+
+    func copyWithZone(zone: NSZone) -> AnyObject {
+        let copy = Board()
+        copy.setGameModel(self)
+        return copy
+    }
+
+    // MARK: GKGameModel required Methods
+
+    func setGameModel(gameModel: GKGameModel) {
+        if let board = gameModel as? Board {
+            slots = board.slots
+            currentPlayer = board.currentPlayer
+        }
+    }
+
+    func gameModelUpdatesForPlayer(player: GKGameModelPlayer) -> [GKGameModelUpdate]? {
+        guard let playerObject = player as? Player else { return nil }
+
+        if isWinForPlayer(playerObject) || isWinForPlayer(playerObject.opponent) {
+            return nil
+        }
+
+        var moves = [Move]()
+        for column in 0 ..< Board.width {
+            if canMoveInColumn(column) {
+                moves.append(Move(column: column))
+            }
+        }
+        return moves
+    }
+
+    func applyGameModelUpdate(gameModelUpdate: GKGameModelUpdate) {
+        if let move = gameModelUpdate as? Move {
+            addChip(currentPlayer.chipColor, column: move.column)
+            currentPlayer = currentPlayer.opponent
+        }
+    }
+
+    func scoreForPlayer(player: GKGameModelPlayer) -> Int {
+        if let playerObject = player as? Player {
+            if isWinForPlayer(playerObject) {
+                return 1000
+            } else if isWinForPlayer(playerObject.opponent) {
+                return -1000
+            }
+        }
+        return 0
+    }
+
+    var players: [GKGameModelPlayer]? {
+        return [currentPlayer, currentPlayer.opponent]
+    }
+
+    var activePlayer: GKGameModelPlayer? {
+        return currentPlayer
     }
 }

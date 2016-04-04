@@ -25,7 +25,8 @@ class BoardTests: XCTestCase {
         players[0].opponent = players[1]
         players[1].opponent = players[0]
 
-        board = Board(currentPlayer: players[0])
+        board = Board()
+        board.currentPlayer = players[0]
     }
 
     override func tearDown() {

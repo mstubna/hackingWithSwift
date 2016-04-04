@@ -6,6 +6,7 @@
 //  Copyright © 2016 Mike. All rights reserved.
 //
 
+import GameplayKit
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,9 +16,14 @@ class ViewController: UIViewController {
     var placedChips = [[UIView]]()
     var players = [Player]()
     var board: Board!
+    var strategist: GKMinmaxStrategist!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        strategist = GKMinmaxStrategist()
+        strategist.maxLookAheadDepth = 7
+        strategist.randomSource = nil
 
         for _ in 0 ..< Board.width {
             placedChips.append([UIView]())
@@ -35,7 +41,9 @@ class ViewController: UIViewController {
         players[0].opponent = players[1]
         players[1].opponent = players[0]
 
-        board = Board(currentPlayer: players[0])
+        board = Board()
+        board.currentPlayer = players[0]
+        strategist.gameModel = board
         updateUI()
 
         for i in 0 ..< placedChips.count {
@@ -49,6 +57,10 @@ class ViewController: UIViewController {
 
     func updateUI() {
         title = "\(board.currentPlayer.name)'s Turn"
+
+        if board.currentPlayer.chipColor == .Black {
+            startAIMove()
+        }
     }
 
     func continueGame() {
@@ -121,6 +133,48 @@ class ViewController: UIViewController {
         return CGPoint(x: xOffset, y: yOffset)
     }
 
+    func startAIMove() {
+        columnButtons.forEach { $0.enabled = false }
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        spinner.startAnimating()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: spinner)
+
+        dispatch_async(
+            dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        ) { [unowned self] in
+            let strategistTime = CFAbsoluteTimeGetCurrent()
+            let column = self.columnForAIMove()!
+            let delta = CFAbsoluteTimeGetCurrent() - strategistTime
+
+            let aiTimeCeiling = 1.0
+            let delay = min(aiTimeCeiling - delta, aiTimeCeiling)
+
+            self.runAfterDelay(delay) {
+                self.makeAIMoveInColumn(column)
+            }
+        }
+    }
+
+    func makeAIMoveInColumn(column: Int) {
+        columnButtons.forEach { $0.enabled = true }
+        navigationItem.leftBarButtonItem = nil
+
+        if let row = board.nextEmptySlotInColumn(column) {
+            board.addChip(board.currentPlayer.chipColor, column: column)
+            addChipAtColumn(column, row:row, color: board.currentPlayer.color)
+
+            continueGame()
+        }
+    }
+
+    func columnForAIMove() -> Int? {
+        if let aiMove = strategist.bestMoveForPlayer(board.currentPlayer) as? Move {
+            return aiMove.column
+        }
+
+        return nil
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -134,5 +188,10 @@ class ViewController: UIViewController {
             addChipAtColumn(column, row: row, color: board.currentPlayer.color)
             continueGame()
         }
+    }
+
+    func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue(), block)
     }
 }
