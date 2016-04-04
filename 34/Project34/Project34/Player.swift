@@ -15,20 +15,7 @@ class Player: NSObject, GKGameModelPlayer {
     var color: UIColor
     var name: String
     var playerId: Int
-
-    static var allPlayers = [
-        Player(chipColor: .Red),
-        Player(chipColor: .Black)
-    ]
-
-    // computed property that returns this player's opponent
-    var opponent: Player {
-        if chipColor == .Red {
-            return Player.allPlayers[1]
-        } else {
-            return Player.allPlayers[0]
-        }
-    }
+    var opponent: Player!
 
     init(chipColor: ChipColor) {
         self.chipColor = chipColor

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var columnButtons: [UIButton]!
 
     var placedChips = [[UIView]]()
+    var players = [Player]()
     var board: Board!
 
     override func viewDidLoad() {
@@ -22,11 +23,19 @@ class ViewController: UIViewController {
             placedChips.append([UIView]())
         }
 
-        resetBoard()
+        resetGame()
     }
 
-    func resetBoard() {
-        board = Board()
+    func resetGame() {
+        players = [
+            Player(chipColor: .Red),
+            Player(chipColor: .Black)
+        ]
+
+        players[0].opponent = players[1]
+        players[1].opponent = players[0]
+
+        board = Board(currentPlayer: players[0])
         updateUI()
 
         for i in 0 ..< placedChips.count {
@@ -60,7 +69,7 @@ class ViewController: UIViewController {
                 title: "Play Again",
                 style: .Default
             ) { [unowned self] (action) in
-                self.resetBoard()
+                self.resetGame()
             }
 
             alert.addAction(alertAction)

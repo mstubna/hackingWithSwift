@@ -18,11 +18,12 @@ class Board: NSObject {
 
     static var width = 7
     static var height = 6
+
     var slots = [ChipColor]()
     var currentPlayer: Player
 
-    override init() {
-        currentPlayer = Player.allPlayers[0]
+    init(currentPlayer player: Player) {
+        currentPlayer = player
 
         for _ in 0 ..< Board.width * Board.height {
             slots.append(.None)
