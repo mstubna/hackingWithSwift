@@ -59,11 +59,11 @@ class BoardTests: XCTestCase {
             board.addChip(players[0].chipColor, column: i)
         }
         XCTAssert(board.isWinForPlayer(players[0]),
-            "isWinForPlayer(Black) should be true with 4 Black across"
+            "isWinForPlayer(0) should be true with 4 across"
         )
         XCTAssert(
             !board.isWinForPlayer(players[1]),
-            "isWinForPlayer(Red) should be false with 4 Black across"
+            "isWinForPlayer(1) should be false"
         )
     }
 
@@ -73,11 +73,36 @@ class BoardTests: XCTestCase {
         }
         XCTAssert(
             board.isWinForPlayer(players[1]),
-            "isWinForPlayer(Black) should be true with 4 Red down"
+            "isWinForPlayer(1) should be true with 4 down"
         )
         XCTAssert(
             !board.isWinForPlayer(players[0]),
-            "isWinForPlayer(Red) should be false with 4 Red down"
+            "isWinForPlayer(0) should be false"
+        )
+    }
+
+    func testIsWinForPlayerWithFourRedChipsDiagonally() {
+        board.addChip(players[1].chipColor, column: 0)
+
+        board.addChip(players[0].chipColor, column: 1)
+        board.addChip(players[1].chipColor, column: 1)
+
+        board.addChip(players[0].chipColor, column: 2)
+        board.addChip(players[0].chipColor, column: 2)
+        board.addChip(players[1].chipColor, column: 2)
+
+        board.addChip(players[0].chipColor, column: 3)
+        board.addChip(players[0].chipColor, column: 3)
+        board.addChip(players[0].chipColor, column: 3)
+        board.addChip(players[1].chipColor, column: 3)
+
+        XCTAssert(
+            board.isWinForPlayer(players[1]),
+            "isWinForPlayer(1) should be true with 4 diagonally"
+        )
+        XCTAssert(
+            !board.isWinForPlayer(players[0]),
+            "isWinForPlayer(0) should be false"
         )
     }
 }
