@@ -19,8 +19,11 @@ class Board: NSObject {
     static var width = 7
     static var height = 6
     var slots = [ChipColor]()
+    var currentPlayer: Player
 
     override init() {
+        currentPlayer = Player.allPlayers[0]
+
         for _ in 0 ..< Board.width * Board.height {
             slots.append(.None)
         }
@@ -46,6 +49,14 @@ class Board: NSObject {
         }
 
         return nil
+    }
+
+    func isFull() -> Bool {
+        return false
+    }
+
+    func isWinForPlayer(player: Player) -> Bool {
+        return false
     }
 
     private func chipInColumn(column: Int, row: Int) -> ChipColor {
