@@ -6,6 +6,7 @@
 //  Copyright © 2016 Mike. All rights reserved.
 //
 
+import GameplayKit
 import UIKit
 
 enum ChipColor: Int {
@@ -59,8 +60,46 @@ class Board: NSObject {
         return true
     }
 
-    func isWinForPlayer(player: Player) -> Bool {
+    func isWinForPlayer(player: GKGameModelPlayer) -> Bool {
+        guard let chipColor = (player as? Player)?.chipColor else { return false }
+
+        for row in 0 ..< Board.height {
+            for col in 0 ..< Board.width {
+                if squaresMatchChip(chipColor, row: row, col: col, moveX: 1, moveY: 0) {
+                    return true
+                } else if squaresMatchChip(chipColor, row: row, col: col, moveX: 0, moveY: 1) {
+                    return true
+                } else if squaresMatchChip(chipColor, row: row, col: col, moveX: 1, moveY: 1) {
+                    return true
+                } else if squaresMatchChip(chipColor, row: row, col: col, moveX: 1, moveY: -1) {
+                    return true
+                }
+            }
+        }
+
         return false
+    }
+
+    private func squaresMatchChip(
+        chipColor: ChipColor,
+        row: Int,
+        col: Int,
+        moveX: Int,
+        moveY: Int
+    ) -> Bool {
+        // bail out early if we can't win from here
+        if row + (moveY * 3) < 0 { return false }
+        if row + (moveY * 3) >= Board.height { return false }
+        if col + (moveX * 3) < 0 { return false }
+        if col + (moveX * 3) >= Board.width { return false }
+
+        // still here? Check every square
+        if chipInColumn(col, row: row) != chipColor { return false }
+        if chipInColumn(col + moveX, row: row + moveY) != chipColor { return false }
+        if chipInColumn(col + (moveX * 2), row: row + (moveY * 2)) != chipColor { return false }
+        if chipInColumn(col + (moveX * 3), row: row + (moveY * 3)) != chipColor { return false }
+
+        return true
     }
 
     private func chipInColumn(column: Int, row: Int) -> ChipColor {

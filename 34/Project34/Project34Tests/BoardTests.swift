@@ -66,4 +66,18 @@ class BoardTests: XCTestCase {
             "isWinForPlayer(Red) should be false with 4 Black across"
         )
     }
+
+    func testIsWinForPlayerWithFourRedChipsDown() {
+        for _ in 0 ..< 4 {
+            board.addChip(players[1].chipColor, column: 0)
+        }
+        XCTAssert(
+            board.isWinForPlayer(players[1]),
+            "isWinForPlayer(Black) should be true with 4 Red down"
+        )
+        XCTAssert(
+            !board.isWinForPlayer(players[0]),
+            "isWinForPlayer(Red) should be false with 4 Red down"
+        )
+    }
 }
