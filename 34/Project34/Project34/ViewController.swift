@@ -43,16 +43,20 @@ class ViewController: UIViewController {
     }
 
     func userSettingsChanged() {
-        if twoPlayerMode != sharedUserSettings.twoPlayerMode {
-            twoPlayerMode = sharedUserSettings.twoPlayerMode
-            resetGame()
-        }
+        twoPlayerMode = sharedUserSettings.twoPlayerMode
+        players[0].updateColor(sharedUserSettings.player1Color)
+        players[1].updateColor(sharedUserSettings.player2Color)
+        resetGame()
     }
 
     func resetGame() {
         players = [
-            Player(chipColor: .Red),
-            Player(chipColor: .Black)
+            Player(
+                chipColor: ChipColor(rawValue: sharedUserSettings.player1Color) ?? ChipColor.Red
+            ),
+            Player(
+                chipColor: ChipColor(rawValue: sharedUserSettings.player2Color) ?? ChipColor.Black
+            )
         ]
 
         players[0].opponent = players[1]
@@ -75,7 +79,7 @@ class ViewController: UIViewController {
     func updateUI() {
         title = "\(board.currentPlayer.name)'s Turn"
 
-        if !twoPlayerMode && board.currentPlayer.chipColor == .Black {
+        if !twoPlayerMode && board.currentPlayer.chipColor == players[1].chipColor {
             startAIMove()
         }
     }

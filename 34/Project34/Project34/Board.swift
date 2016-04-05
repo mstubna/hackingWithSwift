@@ -10,9 +10,13 @@ import GameplayKit
 import UIKit
 
 enum ChipColor: Int {
-    case None = 0
-    case Red
+    case Red = 0
     case Black
+    case Blue
+    case Green
+    case Yellow
+    case Purple
+    case None
 }
 
 class Board: NSObject, GKGameModel {

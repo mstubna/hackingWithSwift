@@ -128,6 +128,36 @@
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NZ-6V-5nP">
                                 <rect key="frame" x="149" y="44" width="83" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A2Q-AY-V2c"/>
+                                    <constraint firstAttribute="width" constant="83" id="PuK-zp-rRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYT-ek-OUn">
+                                <rect key="frame" x="151" y="127" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waB-Gt-T4A">
+                                <rect key="frame" x="0.0" y="88" width="143" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sZ1-LG-Wjy"/>
+                                    <constraint firstAttribute="width" constant="143" id="zSR-q8-MKa"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ci9-nl-unj">
+                                <rect key="frame" x="0.0" y="206" width="143" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="0RJ-Cs-nVp"/>
+                                    <constraint firstAttribute="height" constant="100" id="BPU-yi-KrG"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-1o-tmC">
+                                <rect key="frame" x="151" y="246" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -136,12 +166,58 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="17a-vS-2dA" firstAttribute="leading" secondItem="7Gr-1c-hzn" secondAttribute="leadingMargin" constant="56" id="4Ie-BF-1kJ"/>
+                            <constraint firstItem="Ci9-nl-unj" firstAttribute="centerY" secondItem="fJc-1o-tmC" secondAttribute="centerY" id="99n-3E-kkW"/>
+                            <constraint firstItem="Ci9-nl-unj" firstAttribute="top" secondItem="waB-Gt-T4A" secondAttribute="bottom" constant="10" id="9D0-fQ-RF7"/>
+                            <constraint firstItem="MYT-ek-OUn" firstAttribute="centerY" secondItem="waB-Gt-T4A" secondAttribute="centerY" id="E99-34-G1a"/>
                             <constraint firstItem="9NZ-6V-5nP" firstAttribute="leading" secondItem="17a-vS-2dA" secondAttribute="trailing" constant="24" id="Eu6-Hb-zin"/>
+                            <constraint firstItem="Ci9-nl-unj" firstAttribute="top" secondItem="waB-Gt-T4A" secondAttribute="bottom" constant="18" id="HG2-jp-DKD"/>
+                            <constraint firstItem="MYT-ek-OUn" firstAttribute="leading" secondItem="waB-Gt-T4A" secondAttribute="trailing" constant="8" symbolic="YES" id="HaS-LG-jat"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="leading" secondItem="7Gr-1c-hzn" secondAttribute="leading" id="Ifv-et-sqH"/>
+                            <constraint firstItem="fJc-1o-tmC" firstAttribute="leading" secondItem="Ci9-nl-unj" secondAttribute="trailing" constant="8" id="KEa-ko-GJx"/>
+                            <constraint firstItem="17a-vS-2dA" firstAttribute="centerY" secondItem="9NZ-6V-5nP" secondAttribute="centerY" id="NdK-yX-5iR"/>
+                            <constraint firstItem="yHZ-uO-hyC" firstAttribute="top" secondItem="waB-Gt-T4A" secondAttribute="bottom" constant="348" id="PGR-Nq-Cbp"/>
                             <constraint firstItem="17a-vS-2dA" firstAttribute="top" secondItem="kaF-kQ-3Hi" secondAttribute="bottom" constant="39" id="Pjb-Yg-48f"/>
+                            <constraint firstItem="Ci9-nl-unj" firstAttribute="leading" secondItem="7Gr-1c-hzn" secondAttribute="leadingMargin" constant="-20" id="T1F-IJ-hN3"/>
                             <constraint firstItem="17a-vS-2dA" firstAttribute="centerY" secondItem="9NZ-6V-5nP" secondAttribute="centerY" id="VCV-Zm-CDO"/>
+                            <constraint firstItem="Ci9-nl-unj" firstAttribute="leading" secondItem="waB-Gt-T4A" secondAttribute="leading" id="X9A-gt-Zsf"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="centerY" secondItem="MYT-ek-OUn" secondAttribute="centerY" id="XlT-q8-Jqr"/>
+                            <constraint firstItem="yHZ-uO-hyC" firstAttribute="top" secondItem="Ci9-nl-unj" secondAttribute="bottom" constant="238" id="Zt3-CL-Hoy"/>
+                            <constraint firstItem="fJc-1o-tmC" firstAttribute="leading" secondItem="MYT-ek-OUn" secondAttribute="leading" id="auB-rk-sRs"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="top" secondItem="17a-vS-2dA" secondAttribute="bottom" constant="18" id="cEa-J8-7lG"/>
+                            <constraint firstItem="9NZ-6V-5nP" firstAttribute="leading" secondItem="17a-vS-2dA" secondAttribute="trailing" constant="24" id="e6H-M3-grI"/>
+                            <constraint firstItem="MYT-ek-OUn" firstAttribute="centerY" secondItem="waB-Gt-T4A" secondAttribute="centerY" id="eb7-ET-p9C"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="leading" secondItem="7Gr-1c-hzn" secondAttribute="leadingMargin" id="g6M-0h-fAG"/>
+                            <constraint firstItem="fJc-1o-tmC" firstAttribute="centerY" secondItem="Ci9-nl-unj" secondAttribute="centerY" id="ghi-SN-NHC"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="top" secondItem="17a-vS-2dA" secondAttribute="bottom" constant="18" id="hFA-GW-FFr"/>
+                            <constraint firstItem="9NZ-6V-5nP" firstAttribute="top" secondItem="kaF-kQ-3Hi" secondAttribute="bottom" constant="44" id="irk-DA-OiV"/>
+                            <constraint firstItem="yHZ-uO-hyC" firstAttribute="top" secondItem="MYT-ek-OUn" secondAttribute="bottom" constant="388" id="jeO-wS-JvP"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="top" secondItem="17a-vS-2dA" secondAttribute="bottom" constant="18" id="lgW-bq-DU3"/>
+                            <constraint firstItem="MYT-ek-OUn" firstAttribute="leading" secondItem="waB-Gt-T4A" secondAttribute="trailing" constant="8" symbolic="YES" id="uA4-4S-jCk"/>
+                            <constraint firstItem="waB-Gt-T4A" firstAttribute="leading" secondItem="7Gr-1c-hzn" secondAttribute="leadingMargin" constant="-20" id="yFF-6f-ZLk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VCV-Zm-CDO"/>
+                                <exclude reference="Ifv-et-sqH"/>
+                                <exclude reference="XlT-q8-Jqr"/>
+                                <exclude reference="g6M-0h-fAG"/>
+                                <exclude reference="lgW-bq-DU3"/>
+                                <exclude reference="Eu6-Hb-zin"/>
+                                <exclude reference="E99-34-G1a"/>
+                                <exclude reference="HaS-LG-jat"/>
+                                <exclude reference="99n-3E-kkW"/>
+                                <exclude reference="9D0-fQ-RF7"/>
+                                <exclude reference="X9A-gt-Zsf"/>
+                                <exclude reference="auB-rk-sRs"/>
+                                <exclude reference="PGR-Nq-Cbp"/>
+                                <exclude reference="Zt3-CL-Hoy"/>
+                                <exclude reference="jeO-wS-JvP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="player1Picker" destination="waB-Gt-T4A" id="ApG-so-YZg"/>
+                        <outlet property="player2Picker" destination="Ci9-nl-unj" id="d0G-wG-IQt"/>
                         <outlet property="playerModeButton" destination="17a-vS-2dA" id="5V1-zZ-q3I"/>
                     </connections>
                 </viewController>
