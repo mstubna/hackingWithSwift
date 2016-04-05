@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var columnButtons: [UIButton]!
 
+    var twoPlayerMode: Bool!
     var placedChips = [[UIView]]()
     var players = [Player]()
     var board: Board!
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        twoPlayerMode = sharedUserSettings.twoPlayerMode
 
         strategist = GKMinmaxStrategist()
         strategist.maxLookAheadDepth = 7
@@ -29,7 +32,21 @@ class ViewController: UIViewController {
             placedChips.append([UIView]())
         }
 
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(ViewController.userSettingsChanged),
+            name: "settingsChanged",
+            object: nil
+        )
+
         resetGame()
+    }
+
+    func userSettingsChanged() {
+        if twoPlayerMode != sharedUserSettings.twoPlayerMode {
+            twoPlayerMode = sharedUserSettings.twoPlayerMode
+            resetGame()
+        }
     }
 
     func resetGame() {
@@ -58,7 +75,7 @@ class ViewController: UIViewController {
     func updateUI() {
         title = "\(board.currentPlayer.name)'s Turn"
 
-        if board.currentPlayer.chipColor == .Black {
+        if !twoPlayerMode && board.currentPlayer.chipColor == .Black {
             startAIMove()
         }
     }

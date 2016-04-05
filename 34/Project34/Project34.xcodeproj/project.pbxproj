@@ -17,6 +17,8 @@
 		27AF42B71CB2C9B200239C07 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42B61CB2C9B200239C07 /* BoardTests.swift */; };
 		27AF42BA1CB2F3A500239C07 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42B91CB2F3A500239C07 /* PlayerTests.swift */; };
 		27AF42BC1CB2F78600239C07 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42BB1CB2F78600239C07 /* Move.swift */; };
+		27AF42BE1CB441AE00239C07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42BD1CB441AE00239C07 /* SettingsViewController.swift */; };
+		27AF42C01CB4456E00239C07 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AF42BF1CB4456E00239C07 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		27AF42B61CB2C9B200239C07 /* BoardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		27AF42B91CB2F3A500239C07 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		27AF42BB1CB2F78600239C07 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		27AF42BD1CB441AE00239C07 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		27AF42BF1CB4456E00239C07 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				27AF42A11CB2B2F600239C07 /* Board.swift */,
 				27AF42A31CB2BA3800239C07 /* Player.swift */,
 				27AF42BB1CB2F78600239C07 /* Move.swift */,
+				27AF42BD1CB441AE00239C07 /* SettingsViewController.swift */,
+				27AF42BF1CB4456E00239C07 /* UserSettings.swift */,
 			);
 			path = Project34;
 			sourceTree = "<group>";
@@ -232,7 +238,9 @@
 				27AF42A41CB2BA3800239C07 /* Player.swift in Sources */,
 				27AF42911CB2ABFA00239C07 /* ViewController.swift in Sources */,
 				27AF428F1CB2ABFA00239C07 /* AppDelegate.swift in Sources */,
+				27AF42C01CB4456E00239C07 /* UserSettings.swift in Sources */,
 				27AF42A21CB2B2F600239C07 /* Board.swift in Sources */,
+				27AF42BE1CB441AE00239C07 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
