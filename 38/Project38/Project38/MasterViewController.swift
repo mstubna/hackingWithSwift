@@ -6,13 +6,14 @@
 //  Copyright © 2016 Mike. All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
-
+    var managedObjectContext: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class MasterViewController: UITableViewController {
             self.detailViewController = navigationController.topViewController as?
                 DetailViewController
         }
+
+        startCoreData()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +39,57 @@ class MasterViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - Core Data
+
+    // initialize core data functionality
+    func startCoreData() {
+        // load the data model
+        let modelURL = NSBundle.mainBundle().URLForResource("Project38", withExtension: "momd")!
+        let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
+
+        // create the persistent store coordinator
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+
+        // fetch location of db
+        let url = getDocumentsDirectory().URLByAppendingPathComponent("Project38.sqlite")
+
+        do {
+            // load db into persistent store coordinator
+            try coordinator.addPersistentStoreWithType(
+                NSSQLiteStoreType, configuration: nil, URL: url, options: nil
+            )
+
+            // create managed object context
+            managedObjectContext = NSManagedObjectContext(
+                concurrencyType: .MainQueueConcurrencyType
+            )
+            managedObjectContext.persistentStoreCoordinator = coordinator
+
+        } catch {
+            print("Failed to initialize the application's saved data")
+            return
+        }
+    }
+
+    // attempt to persist changed data
+    func saveContext() {
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print("An error occurred while saving: \(error)")
+            }
+        }
+    }
+
+    // helper function to find the user's documents directory
+    func getDocumentsDirectory() -> NSURL {
+        let urls = NSFileManager.defaultManager().URLsForDirectory(
+            .DocumentDirectory, inDomains: .UserDomainMask
+        )
+        return urls[0]
     }
 
     // MARK: - Segues
