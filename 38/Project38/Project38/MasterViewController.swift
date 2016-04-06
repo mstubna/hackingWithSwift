@@ -15,15 +15,13 @@ class MasterViewController: UITableViewController {
     var objects = [Commit]()
     var managedObjectContext: NSManagedObjectContext!
 
-    var commitPredicate: NSPredicate?
-
     let dataURL = "https://api.github.com/repos/apple/swift/commits?per_page=100"
     let dateFormatISO8601 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     let dateFormatter = NSDateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         if let split = self.splitViewController {
@@ -58,7 +56,7 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func loadSavedDataIntoView() {
+    func loadSavedDataIntoView(commitPredicate: NSPredicate? = nil) {
         let fetch = NSFetchRequest(entityName: "Commit")
         let sort = NSSortDescriptor(key: "date", ascending: false)
         fetch.sortDescriptors = [sort]
@@ -85,18 +83,16 @@ class MasterViewController: UITableViewController {
             title: "Show only fixes",
             style: .Default,
             handler: { [unowned self] _ in
-                self.commitPredicate = NSPredicate(format: "message CONTAINS[c] 'fix'")
-                self.loadSavedDataIntoView()
+                self.loadSavedDataIntoView(NSPredicate(format: "message CONTAINS[c] 'fix'"))
         }))
 
         ac.addAction(UIAlertAction(
             title: "Ignore Pull Requests",
             style: .Default,
             handler: { [unowned self] _ in
-                self.commitPredicate = NSPredicate(
-                    format: "NOT message BEGINSWITH 'Merge pull request'"
+                self.loadSavedDataIntoView(
+                    NSPredicate(format: "NOT message BEGINSWITH 'Merge pull request'")
                 )
-                self.loadSavedDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(
@@ -104,16 +100,13 @@ class MasterViewController: UITableViewController {
             style: .Default,
             handler: { [unowned self] _ in
                 let twelveHoursAgo = NSDate().dateByAddingTimeInterval(-43200)
-                self.commitPredicate = NSPredicate(format: "date > %@", twelveHoursAgo)
-                self.loadSavedDataIntoView()
+                self.loadSavedDataIntoView(NSPredicate(format: "date > %@", twelveHoursAgo))
         }))
 
         ac.addAction(UIAlertAction(
             title: "Show all commits",
             style: .Default,
-            handler: { [unowned self] _ in
-                self.commitPredicate = nil
-                self.loadSavedDataIntoView()
+            handler: { [unowned self] _ in self.loadSavedDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
