@@ -15,6 +15,9 @@ class MasterViewController: UITableViewController {
     var objects = [AnyObject]()
     var managedObjectContext: NSManagedObjectContext!
 
+    let dataURL = "https://api.github.com/repos/apple/swift/commits?per_page=100"
+    let dateFormatISO8601 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +32,7 @@ class MasterViewController: UITableViewController {
         }
 
         startCoreData()
+        performSelectorInBackground(#selector(MasterViewController.fetchCommits), withObject: nil)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -41,7 +45,47 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Core Data
+    // MARK: - Data fetching
+
+    func fetchCommits() {
+        print("Attempting to fetch new commits.")
+        guard let data = NSData(contentsOfURL: NSURL(string: dataURL)!) else {
+            print("Could not fetch new commits.")
+            return
+        }
+        let jsonCommits = JSON(data: data)
+        let jsonCommitArray = jsonCommits.arrayValue
+
+        print("Received \(jsonCommitArray.count) new commits.")
+
+        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+            for jsonCommit in jsonCommitArray {
+                if let commit = NSEntityDescription.insertNewObjectForEntityForName(
+                    "Commit",
+                    inManagedObjectContext: self.managedObjectContext
+                ) as? Commit {
+                    self.configureCommit(commit, usingJSON: jsonCommit)
+                }
+            }
+
+            self.saveContext()
+        }
+    }
+
+    func configureCommit(commit: Commit, usingJSON json: JSON) {
+        commit.sha = json["sha"].stringValue
+        commit.message = json["commit"]["message"].stringValue
+        commit.url = json["html_url"].stringValue
+
+        let formatter = NSDateFormatter()
+        formatter.timeZone = NSTimeZone(name: "UTC")
+        formatter.dateFormat = dateFormatISO8601
+        commit.date = formatter.dateFromString(
+            json["commit"]["committer"]["date"].stringValue
+        ) ?? NSDate()
+    }
+
+    // MARK: - Core Data persistence
 
     // initialize core data functionality
     func startCoreData() {
