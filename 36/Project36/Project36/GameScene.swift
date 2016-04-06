@@ -6,17 +6,39 @@
 //  Copyright (c) 2016 Mike. All rights reserved.
 //
 
+import GameplayKit
 import SpriteKit
 
 class GameScene: SKScene {
 
     var player: SKSpriteNode!
+    var scoreLabel: SKLabelNode!
+
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "SCORE: \(score)"
+        }
+    }
 
     override func didMoveToView(view: SKView) {
         createPlayer()
         createSky()
         createBackground()
         createGround()
+        initRocks()
+        createScore()
+    }
+
+    func initRocks() {
+        let create = SKAction.runBlock { [unowned self] in
+            self.createRocks()
+        }
+
+        let wait = SKAction.waitForDuration(3)
+        let sequence = SKAction.sequence([create, wait])
+        let repeatForever = SKAction.repeatActionForever(sequence)
+
+        runAction(repeatForever)
     }
 
     func createPlayer() {
@@ -101,6 +123,68 @@ class GameScene: SKScene {
 
             ground.runAction(moveForever)
         }
+    }
+
+    func createRocks() {
+        // create two opposing rocks
+        let rockTexture = SKTexture(imageNamed: "rock")
+        let topRock = SKSpriteNode(texture: rockTexture)
+        topRock.zRotation = CGFloat(M_PI)
+        topRock.xScale = -1.0
+        topRock.zPosition = -20
+        let bottomRock = SKSpriteNode(texture: rockTexture)
+        bottomRock.zPosition = -20
+
+
+        // create a window for collision detection
+        let rockCollision = SKSpriteNode(
+            color: UIColor.redColor(),
+            size: CGSize(width: 32, height: frame.height)
+        )
+        rockCollision.name = "scoreDetect"
+
+        addChild(topRock)
+        addChild(bottomRock)
+        addChild(rockCollision)
+
+        // set the position of the window randomly
+        let xPosition = frame.width + topRock.frame.width
+        let max = Int(frame.height / 3)
+        let rand = GKRandomDistribution(lowestValue: -100, highestValue: max)
+        let yPosition = CGFloat(rand.nextInt())
+
+        // this next value affects the width of the gap between rocks
+        // make it smaller to make your game harder – if you're feeling evil!
+        let rockDistance: CGFloat = 70
+
+        // animate the objects and remove when offscreen
+        topRock.position = CGPoint(x: xPosition, y: yPosition + topRock.size.height + rockDistance)
+        bottomRock.position = CGPoint(x: xPosition, y: yPosition - rockDistance)
+        rockCollision.position = CGPoint(
+            x: xPosition + (rockCollision.size.width * 2),
+            y: CGRectGetMidY(frame)
+        )
+
+        let endPosition = frame.width + (topRock.frame.width * 2)
+
+        let moveAction = SKAction.moveByX(-endPosition, y: 0, duration: 5.8)
+        let moveSequence = SKAction.sequence([moveAction, SKAction.removeFromParent()])
+        topRock.runAction(moveSequence)
+        bottomRock.runAction(moveSequence)
+        rockCollision.runAction(moveSequence)
+    }
+
+    func createScore() {
+        let fontName = UIFont.systemFontOfSize(24, weight: UIFontWeightBold).fontName
+        scoreLabel = SKLabelNode(fontNamed: fontName)
+        scoreLabel.fontSize = 24
+
+        scoreLabel.position = CGPoint(x: CGRectGetMaxX(frame) - 20, y: CGRectGetMaxY(frame) - 40)
+        scoreLabel.horizontalAlignmentMode = .Right
+        scoreLabel.text = "Score: 0"
+        scoreLabel.fontColor = UIColor.blackColor()
+
+        addChild(scoreLabel)
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
