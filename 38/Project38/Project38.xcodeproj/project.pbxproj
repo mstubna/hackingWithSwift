@@ -14,6 +14,7 @@
 		276DB60F1CB54610000659BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DB60E1CB54610000659BD /* Assets.xcassets */; };
 		276DB6121CB54610000659BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276DB6101CB54610000659BD /* LaunchScreen.storyboard */; };
 		276DB61D1CB549AA000659BD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DB61C1CB549AA000659BD /* SwiftyJSON.swift */; };
+		276DB6201CB551BA000659BD /* Project38.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 276DB61E1CB551BA000659BD /* Project38.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		276DB6111CB54610000659BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276DB6131CB54610000659BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276DB61C1CB549AA000659BD /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		276DB61F1CB551BA000659BD /* Project38.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project38.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				276DB6051CB54610000659BD /* AppDelegate.swift */,
 				276DB6071CB54610000659BD /* MasterViewController.swift */,
+				276DB61E1CB551BA000659BD /* Project38.xcdatamodeld */,
 				276DB6091CB54610000659BD /* DetailViewController.swift */,
 				276DB60B1CB54610000659BD /* Main.storyboard */,
 				276DB60E1CB54610000659BD /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				276DB60A1CB54610000659BD /* DetailViewController.swift in Sources */,
+				276DB6201CB551BA000659BD /* Project38.xcdatamodeld in Sources */,
 				276DB6081CB54610000659BD /* MasterViewController.swift in Sources */,
 				276DB6061CB54610000659BD /* AppDelegate.swift in Sources */,
 				276DB61D1CB549AA000659BD /* SwiftyJSON.swift in Sources */,
@@ -316,6 +320,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		276DB61E1CB551BA000659BD /* Project38.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				276DB61F1CB551BA000659BD /* Project38.xcdatamodel */,
+			);
+			currentVersion = 276DB61F1CB551BA000659BD /* Project38.xcdatamodel */;
+			path = Project38.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 276DB5FA1CB54610000659BD /* Project object */;
 }
