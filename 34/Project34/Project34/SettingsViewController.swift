@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         playerModeButton.on = sharedUserSettings.twoPlayerMode
     }
 
-    //MARK -Picker Delegates and DataSource
+    //MARK: Picker Delegates and DataSource
 
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 && row != sharedUserSettings.player2Color {

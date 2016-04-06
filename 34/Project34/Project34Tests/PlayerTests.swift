@@ -31,13 +31,11 @@ class PlayerTests: XCTestCase {
     }
 
     func testNameColorShouldMatchChipColor() {
-        XCTAssert(
-            Player(chipColor: .Red).name == "Red",
-            "name should return 'Red'"
-        )
-        XCTAssert(
-            Player(chipColor: .Black).name == "Black",
-            "name should return 'Black'"
-        )
+        for (index, name) in Player.names.enumerate() {
+            XCTAssert(
+                Player(chipColor: ChipColor(rawValue: index)!).name == name,
+                "player.name should return \(name)"
+            )
+        }
     }
 }
