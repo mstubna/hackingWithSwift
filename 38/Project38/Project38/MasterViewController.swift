@@ -12,11 +12,12 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [AnyObject]()
+    var objects = [Commit]()
     var managedObjectContext: NSManagedObjectContext!
 
     let dataURL = "https://api.github.com/repos/apple/swift/commits?per_page=100"
     let dateFormatISO8601 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    let dateFormatter = NSDateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,11 @@ class MasterViewController: UITableViewController {
                 DetailViewController
         }
 
+        dateFormatter.dateStyle = .MediumStyle
+        dateFormatter.timeStyle = .MediumStyle
+
         startCoreData()
+        loadSavedDataIntoView()
         performSelectorInBackground(#selector(MasterViewController.fetchCommits), withObject: nil)
     }
 
@@ -45,7 +50,23 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Data fetching
+    func loadSavedDataIntoView() {
+        let fetch = NSFetchRequest(entityName: "Commit")
+        let sort = NSSortDescriptor(key: "date", ascending: false)
+        fetch.sortDescriptors = [sort]
+
+        do {
+            if let commits = try managedObjectContext.executeFetchRequest(fetch) as? [Commit] {
+                print("Loaded \(commits.count) from memory.")
+                objects = commits
+                tableView.reloadData()
+            }
+        } catch {
+            print("Could not load commits from memory.")
+        }
+    }
+
+    // MARK: - Data fetching from API
 
     func fetchCommits() {
         print("Attempting to fetch new commits.")
@@ -69,6 +90,7 @@ class MasterViewController: UITableViewController {
             }
 
             self.saveContext()
+            self.loadSavedDataIntoView()
         }
     }
 
@@ -141,7 +163,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier != "showDetail" { return }
         guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
-        guard let object = objects[indexPath.row] as? NSDate else { return }
+        let object = objects[indexPath.row]
         guard let navigationController = segue.destinationViewController as? UINavigationController
             else { return }
         guard let controller = navigationController.topViewController as? DetailViewController
@@ -168,9 +190,10 @@ class MasterViewController: UITableViewController {
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        if let object = objects[indexPath.row] as? NSDate {
-            cell.textLabel!.text = object.description
-        }
+        let object = objects[indexPath.row]
+        cell.textLabel!.text = object.message
+        cell.detailTextLabel!.text = dateFormatter.stringFromDate(object.date)
+
         return cell
     }
 
