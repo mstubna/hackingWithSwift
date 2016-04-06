@@ -15,6 +15,8 @@ class MasterViewController: UITableViewController {
     var objects = [Commit]()
     var managedObjectContext: NSManagedObjectContext!
 
+    var commitPredicate: NSPredicate?
+
     let dataURL = "https://api.github.com/repos/apple/swift/commits?per_page=100"
     let dateFormatISO8601 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     let dateFormatter = NSDateFormatter()
@@ -38,6 +40,13 @@ class MasterViewController: UITableViewController {
         startCoreData()
         loadSavedDataIntoView()
         performSelectorInBackground(#selector(MasterViewController.fetchCommits), withObject: nil)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Filter",
+            style: .Plain,
+            target: self,
+            action: #selector(MasterViewController.changeFilter)
+        )
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -47,13 +56,13 @@ class MasterViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func loadSavedDataIntoView() {
         let fetch = NSFetchRequest(entityName: "Commit")
         let sort = NSSortDescriptor(key: "date", ascending: false)
         fetch.sortDescriptors = [sort]
+        fetch.predicate = commitPredicate
 
         do {
             if let commits = try managedObjectContext.executeFetchRequest(fetch) as? [Commit] {
@@ -64,6 +73,51 @@ class MasterViewController: UITableViewController {
         } catch {
             print("Could not load commits from memory.")
         }
+    }
+
+    func changeFilter() {
+        let ac = UIAlertController(
+            title: "Filter commits…", message: nil, preferredStyle: .ActionSheet
+        )
+
+
+        ac.addAction(UIAlertAction(
+            title: "Show only fixes",
+            style: .Default,
+            handler: { [unowned self] _ in
+                self.commitPredicate = NSPredicate(format: "message CONTAINS[c] 'fix'")
+                self.loadSavedDataIntoView()
+        }))
+
+        ac.addAction(UIAlertAction(
+            title: "Ignore Pull Requests",
+            style: .Default,
+            handler: { [unowned self] _ in
+                self.commitPredicate = NSPredicate(
+                    format: "NOT message BEGINSWITH 'Merge pull request'"
+                )
+                self.loadSavedDataIntoView()
+        }))
+
+        ac.addAction(UIAlertAction(
+            title: "Show only recent",
+            style: .Default,
+            handler: { [unowned self] _ in
+                let twelveHoursAgo = NSDate().dateByAddingTimeInterval(-43200)
+                self.commitPredicate = NSPredicate(format: "date > %@", twelveHoursAgo)
+                self.loadSavedDataIntoView()
+        }))
+
+        ac.addAction(UIAlertAction(
+            title: "Show all commits",
+            style: .Default,
+            handler: { [unowned self] _ in
+                self.commitPredicate = nil
+                self.loadSavedDataIntoView()
+        }))
+
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
     }
 
     // MARK: - Data fetching from API
