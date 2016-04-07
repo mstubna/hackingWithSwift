@@ -1,5 +1,5 @@
 //
-//  Commit+CoreDataProperties.swift
+//  Author+CoreDataProperties.swift
 //  Project38
 //
 //  Created by Mike Stubna on 4/6/16.
@@ -12,12 +12,10 @@
 import Foundation
 import CoreData
 
-extension Commit {
+extension Author {
 
-    @NSManaged var date: NSDate
-    @NSManaged var message: String
-    @NSManaged var sha: String
-    @NSManaged var url: String
-    @NSManaged var author: Author
+    @NSManaged var email: String
+    @NSManaged var name: String
+    @NSManaged var commits: NSSet
 
 }

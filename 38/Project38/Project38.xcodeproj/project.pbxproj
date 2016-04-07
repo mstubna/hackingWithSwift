@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270A8A321CB5B20D00D97973 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A8A301CB5B20D00D97973 /* Author+CoreDataProperties.swift */; };
+		270A8A331CB5B20D00D97973 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A8A311CB5B20D00D97973 /* Author.swift */; };
 		276DB6061CB54610000659BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DB6051CB54610000659BD /* AppDelegate.swift */; };
 		276DB6081CB54610000659BD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DB6071CB54610000659BD /* MasterViewController.swift */; };
 		276DB60A1CB54610000659BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DB6091CB54610000659BD /* DetailViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270A8A301CB5B20D00D97973 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		270A8A311CB5B20D00D97973 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		276DB6021CB54610000659BD /* Project38.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project38.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276DB6051CB54610000659BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276DB6071CB54610000659BD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		276DB6041CB54610000659BD /* Project38 */ = {
 			isa = PBXGroup;
 			children = (
+				270A8A301CB5B20D00D97973 /* Author+CoreDataProperties.swift */,
+				270A8A311CB5B20D00D97973 /* Author.swift */,
 				276DB6211CB55C45000659BD /* Commit+CoreDataProperties.swift */,
 				276DB6221CB55C45000659BD /* Commit.swift */,
 				276DB6051CB54610000659BD /* AppDelegate.swift */,
@@ -168,8 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270A8A321CB5B20D00D97973 /* Author+CoreDataProperties.swift in Sources */,
 				276DB60A1CB54610000659BD /* DetailViewController.swift in Sources */,
 				276DB6201CB551BA000659BD /* Project38.xcdatamodeld in Sources */,
+				270A8A331CB5B20D00D97973 /* Author.swift in Sources */,
 				276DB6241CB55C45000659BD /* Commit.swift in Sources */,
 				276DB6081CB54610000659BD /* MasterViewController.swift in Sources */,
 				276DB6061CB54610000659BD /* AppDelegate.swift in Sources */,
@@ -326,6 +334,7 @@
 				276DB6181CB54610000659BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
