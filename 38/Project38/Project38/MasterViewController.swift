@@ -9,11 +9,11 @@
 import CoreData
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Commit]()
     var managedObjectContext: NSManagedObjectContext!
+    var fetchedResultsController: NSFetchedResultsController!
 
     let dataURL = "https://api.github.com/repos/apple/swift/commits?per_page=100"
     let dateFormatISO8601 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
@@ -21,8 +21,6 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -57,19 +55,28 @@ class MasterViewController: UITableViewController {
     }
 
     func loadSavedDataIntoView(commitPredicate: NSPredicate? = nil) {
-        let fetch = NSFetchRequest(entityName: "Commit")
-        let sort = NSSortDescriptor(key: "date", ascending: false)
-        fetch.sortDescriptors = [sort]
-        fetch.predicate = commitPredicate
+        if fetchedResultsController == nil {
+            let fetch = NSFetchRequest(entityName: "Commit")
+            let sort = NSSortDescriptor(key: "date", ascending: false)
+            fetch.sortDescriptors = [sort]
+            fetch.fetchBatchSize = 20
+
+            fetchedResultsController = NSFetchedResultsController(
+                fetchRequest: fetch,
+                managedObjectContext: managedObjectContext,
+                sectionNameKeyPath: nil,
+                cacheName: nil
+            )
+            fetchedResultsController.delegate = self
+        }
+
+        fetchedResultsController.fetchRequest.predicate = commitPredicate
 
         do {
-            if let commits = try managedObjectContext.executeFetchRequest(fetch) as? [Commit] {
-                print("Loaded \(commits.count) from memory.")
-                objects = commits
-                tableView.reloadData()
-            }
+            try fetchedResultsController.performFetch()
+            tableView.reloadData()
         } catch {
-            print("Could not load commits from memory.")
+            print("Fetch failed")
         }
     }
 
@@ -77,7 +84,6 @@ class MasterViewController: UITableViewController {
         let ac = UIAlertController(
             title: "Filter commits…", message: nil, preferredStyle: .ActionSheet
         )
-
 
         ac.addAction(UIAlertAction(
             title: "Show only fixes",
@@ -104,16 +110,16 @@ class MasterViewController: UITableViewController {
         }))
 
         ac.addAction(UIAlertAction(
-            title: "Show all commits",
-            style: .Default,
-            handler: { [unowned self] _ in self.loadSavedDataIntoView()
-        }))
-
-        ac.addAction(UIAlertAction(
             title: "Show only Durian commits",
             style: .Default,
             handler: { [unowned self] _ in
                 self.loadSavedDataIntoView(NSPredicate(format: "author.name == 'Joe Groff'"))
+        }))
+
+        ac.addAction(UIAlertAction(
+            title: "Show all commits",
+            style: .Default,
+            handler: { [unowned self] _ in self.loadSavedDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
@@ -254,7 +260,8 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier != "showDetail" { return }
         guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
-        let object = objects[indexPath.row]
+        guard let object = fetchedResultsController.objectAtIndexPath(indexPath) as? Commit
+            else { return }
         guard let navigationController = segue.destinationViewController as? UINavigationController
             else { return }
         guard let controller = navigationController.topViewController as? DetailViewController
@@ -268,11 +275,12 @@ class MasterViewController: UITableViewController {
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return fetchedResultsController.sections?.count ?? 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        let sectionInfo = fetchedResultsController.sections![section]
+        return sectionInfo.numberOfObjects
     }
 
     override func tableView(
@@ -280,8 +288,8 @@ class MasterViewController: UITableViewController {
         cellForRowAtIndexPath indexPath: NSIndexPath
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
-        let object = objects[indexPath.row]
+        guard let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as? Commit
+            else { return cell }
         cell.textLabel!.text = object.message
         let text = "By \(object.author.name) on \(dateFormatter.stringFromDate(object.date))"
         cell.detailTextLabel!.text = text
@@ -295,19 +303,5 @@ class MasterViewController: UITableViewController {
     ) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-
-    override func tableView(
-        tableView: UITableView,
-        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-        forRowAtIndexPath indexPath: NSIndexPath
-    ) {
-        if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array,
-            // and add a new row to the table view.
-        }
     }
 }
