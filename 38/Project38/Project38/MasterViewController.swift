@@ -57,14 +57,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func loadSavedDataIntoView(commitPredicate: NSPredicate? = nil) {
         if fetchedResultsController == nil {
             let fetch = NSFetchRequest(entityName: "Commit")
-            let sort = NSSortDescriptor(key: "date", ascending: false)
-            fetch.sortDescriptors = [sort]
+            fetch.sortDescriptors = [
+                NSSortDescriptor(key: "author.name", ascending: true),
+                NSSortDescriptor(key: "date", ascending: false)
+            ]
             fetch.fetchBatchSize = 20
 
             fetchedResultsController = NSFetchedResultsController(
                 fetchRequest: fetch,
                 managedObjectContext: managedObjectContext,
-                sectionNameKeyPath: nil,
+                sectionNameKeyPath: "author.name",
                 cacheName: nil
             )
             fetchedResultsController.delegate = self
@@ -303,5 +305,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     ) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
+    }
+
+    override func tableView(
+        tableView: UITableView,
+        titleForHeaderInSection section: Int
+    ) -> String? {
+        return fetchedResultsController.sections![section].name
     }
 }
