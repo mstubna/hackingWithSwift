@@ -8,20 +8,21 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIWebViewDelegate {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet var webView: UIWebView!
 
-    var detailItem: Commit? {
-        didSet {
-            self.configureView()
-        }
+    var detailItem: Commit?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        webView.delegate = self
+
+        configureView()
     }
 
     func configureView() {
         guard let commit = self.detailItem else { return }
-        guard let label = self.detailDescriptionLabel else { return }
-        label.text = commit.message
         let index = commit.author.indexOfCommit(commit) ?? -1
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Commit \(index+1)/\(commit.author.commits.count)",
@@ -29,15 +30,14 @@ class DetailViewController: UIViewController {
             target: self,
             action: #selector(DetailViewController.showAuthorCommits)
         )
+
+        if let url = NSURL(string: commit.url) {
+            let request = NSURLRequest(URL: url)
+            webView.loadRequest(request)
+        }
     }
 
     func showAuthorCommits() {
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {
