@@ -109,6 +109,13 @@ class MasterViewController: UITableViewController {
             handler: { [unowned self] _ in self.loadSavedDataIntoView()
         }))
 
+        ac.addAction(UIAlertAction(
+            title: "Show only Durian commits",
+            style: .Default,
+            handler: { [unowned self] _ in
+                self.loadSavedDataIntoView(NSPredicate(format: "author.name == 'Joe Groff'"))
+        }))
+
         ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
     }
@@ -152,6 +159,36 @@ class MasterViewController: UITableViewController {
         commit.date = formatter.dateFromString(
             json["commit"]["committer"]["date"].stringValue
         ) ?? NSDate()
+
+        var commitAuthor: Author!
+
+        // see if this author already exists
+        let authorFetchRequest = NSFetchRequest(entityName: "Author")
+        authorFetchRequest.predicate = NSPredicate(
+            format: "name == %@",
+            json["commit"]["committer"]["name"].stringValue
+        )
+
+        let result = try? managedObjectContext.executeFetchRequest(authorFetchRequest)
+        if let authors = result as? [Author] {
+            if authors.count > 0 { commitAuthor = authors[0] }
+        }
+
+        // a saved author wasn't found so create a new one
+        if commitAuthor == nil {
+            let result = NSEntityDescription.insertNewObjectForEntityForName(
+                "Author",
+                inManagedObjectContext: managedObjectContext
+            )
+            if let author = result as? Author {
+                author.name = json["commit"]["committer"]["name"].stringValue
+                author.email = json["commit"]["committer"]["email"].stringValue
+                commitAuthor = author
+            }
+        }
+
+        // set the commit author
+        commit.author = commitAuthor
     }
 
     // MARK: - Core Data persistence
@@ -171,7 +208,13 @@ class MasterViewController: UITableViewController {
         do {
             // load db into persistent store coordinator
             try coordinator.addPersistentStoreWithType(
-                NSSQLiteStoreType, configuration: nil, URL: url, options: nil
+                NSSQLiteStoreType,
+                configuration: nil,
+                URL: url,
+                options: [
+                    NSMigratePersistentStoresAutomaticallyOption: true,
+                    NSInferMappingModelAutomaticallyOption: true
+                ]
             )
 
             // create managed object context
@@ -240,7 +283,8 @@ class MasterViewController: UITableViewController {
 
         let object = objects[indexPath.row]
         cell.textLabel!.text = object.message
-        cell.detailTextLabel!.text = dateFormatter.stringFromDate(object.date)
+        let text = "By \(object.author.name) on \(dateFormatter.stringFromDate(object.date))"
+        cell.detailTextLabel!.text = text
 
         return cell
     }

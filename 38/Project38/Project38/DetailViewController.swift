@@ -12,20 +12,26 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    var detailItem: AnyObject? {
+    var detailItem: Commit? {
         didSet {
-            // Update the view.
             self.configureView()
         }
     }
 
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
+        guard let commit = self.detailItem else { return }
+        guard let label = self.detailDescriptionLabel else { return }
+        label.text = commit.message
+        let index = commit.author.indexOfCommit(commit) ?? -1
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Commit \(index+1)/\(commit.author.commits.count)",
+            style: .Plain,
+            target: self,
+            action: #selector(DetailViewController.showAuthorCommits)
+        )
+    }
+
+    func showAuthorCommits() {
     }
 
     override func viewDidLoad() {
