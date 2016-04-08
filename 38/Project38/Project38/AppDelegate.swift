@@ -12,12 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
+    var networkController: NetworkController!
 
     func application(
         application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
     ) -> Bool {
         // Override point for customization after application launch.
+        networkController = NetworkController()
         guard let splitViewController = self.window!.rootViewController as? UISplitViewController
             else { return false }
         guard let navigationController = splitViewController

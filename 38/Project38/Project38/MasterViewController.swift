@@ -12,12 +12,10 @@ import UIKit
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
-    var managedObjectContext: NSManagedObjectContext!
+    var networkController: NetworkController!
     var fetchedResultsController: NSFetchedResultsController!
-
-    let dataURL = "https://api.github.com/repos/apple/swift/commits?per_page=100"
-    let dateFormatISO8601 = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-    let dateFormatter = NSDateFormatter()
+    var commitPredicate: NSPredicate?
+    var dateFormatter: NSDateFormatter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +28,29 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 DetailViewController
         }
 
+        // obtain a reference to the networkController
+        if let delegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+            networkController = delegate.networkController
+        }
+
+        // configure date formatting
+        dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .MediumStyle
         dateFormatter.timeStyle = .MediumStyle
 
-        startCoreData()
-        loadSavedDataIntoView()
-        performSelectorInBackground(#selector(MasterViewController.fetchCommits), withObject: nil)
+        // load data into the view
+        loadDataIntoView()
 
+        // request a data refresh
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(MasterViewController.loadDataIntoView),
+            name: "dataRefreshed",
+            object: nil
+        )
+        networkController.refreshData()
+
+        // add the filter button
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Filter",
             style: .Plain,
@@ -54,31 +68,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.didReceiveMemoryWarning()
     }
 
-    func loadSavedDataIntoView(commitPredicate: NSPredicate? = nil) {
-        if fetchedResultsController == nil {
-            let fetch = NSFetchRequest(entityName: "Commit")
-            fetch.sortDescriptors = [
-                NSSortDescriptor(key: "author.name", ascending: true),
-                NSSortDescriptor(key: "date", ascending: false)
-            ]
-            fetch.fetchBatchSize = 20
-
-            fetchedResultsController = NSFetchedResultsController(
-                fetchRequest: fetch,
-                managedObjectContext: managedObjectContext,
-                sectionNameKeyPath: "author.name",
-                cacheName: nil
-            )
-            fetchedResultsController.delegate = self
-        }
-
+    func loadDataIntoView() {
+        fetchedResultsController = networkController.getCommits()
+        fetchedResultsController.delegate = self
         fetchedResultsController.fetchRequest.predicate = commitPredicate
 
         do {
             try fetchedResultsController.performFetch()
             tableView.reloadData()
         } catch {
-            print("Fetch failed")
+            print("fetchedResultsController.performFetch() failed")
         }
     }
 
@@ -91,16 +90,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             title: "Show only fixes",
             style: .Default,
             handler: { [unowned self] _ in
-                self.loadSavedDataIntoView(NSPredicate(format: "message CONTAINS[c] 'fix'"))
+                self.commitPredicate = NSPredicate(format: "message CONTAINS[c] 'fix'")
+                self.loadDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(
             title: "Ignore Pull Requests",
             style: .Default,
             handler: { [unowned self] _ in
-                self.loadSavedDataIntoView(
-                    NSPredicate(format: "NOT message BEGINSWITH 'Merge pull request'")
+                self.commitPredicate = NSPredicate(
+                    format: "NOT message BEGINSWITH 'Merge pull request'"
                 )
+                self.loadDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(
@@ -108,153 +109,28 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             style: .Default,
             handler: { [unowned self] _ in
                 let twelveHoursAgo = NSDate().dateByAddingTimeInterval(-43200)
-                self.loadSavedDataIntoView(NSPredicate(format: "date > %@", twelveHoursAgo))
+                self.commitPredicate = NSPredicate(format: "date > %@", twelveHoursAgo)
+                self.loadDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(
             title: "Show only Durian commits",
             style: .Default,
             handler: { [unowned self] _ in
-                self.loadSavedDataIntoView(NSPredicate(format: "author.name == 'Joe Groff'"))
+                self.commitPredicate = NSPredicate(format: "author.name == 'Joe Groff'")
+                self.loadDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(
             title: "Show all commits",
             style: .Default,
-            handler: { [unowned self] _ in self.loadSavedDataIntoView()
+            handler: { [unowned self] _ in
+                self.commitPredicate = nil
+                self.loadDataIntoView()
         }))
 
         ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
-    }
-
-    // MARK: - Data fetching from API
-
-    func fetchCommits() {
-        print("Attempting to fetch new commits.")
-        guard let data = NSData(contentsOfURL: NSURL(string: dataURL)!) else {
-            print("Could not fetch new commits.")
-            return
-        }
-        let jsonCommits = JSON(data: data)
-        let jsonCommitArray = jsonCommits.arrayValue
-
-        print("Received \(jsonCommitArray.count) new commits.")
-
-        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-            for jsonCommit in jsonCommitArray {
-                if let commit = NSEntityDescription.insertNewObjectForEntityForName(
-                    "Commit",
-                    inManagedObjectContext: self.managedObjectContext
-                ) as? Commit {
-                    self.configureCommit(commit, usingJSON: jsonCommit)
-                }
-            }
-
-            self.saveContext()
-            self.loadSavedDataIntoView()
-        }
-    }
-
-    func configureCommit(commit: Commit, usingJSON json: JSON) {
-        commit.sha = json["sha"].stringValue
-        commit.message = json["commit"]["message"].stringValue
-        commit.url = json["html_url"].stringValue
-
-        let formatter = NSDateFormatter()
-        formatter.timeZone = NSTimeZone(name: "UTC")
-        formatter.dateFormat = dateFormatISO8601
-        commit.date = formatter.dateFromString(
-            json["commit"]["committer"]["date"].stringValue
-        ) ?? NSDate()
-
-        var commitAuthor: Author!
-
-        // see if this author already exists
-        let authorFetchRequest = NSFetchRequest(entityName: "Author")
-        authorFetchRequest.predicate = NSPredicate(
-            format: "name == %@",
-            json["commit"]["committer"]["name"].stringValue
-        )
-
-        let result = try? managedObjectContext.executeFetchRequest(authorFetchRequest)
-        if let authors = result as? [Author] {
-            if authors.count > 0 { commitAuthor = authors[0] }
-        }
-
-        // a saved author wasn't found so create a new one
-        if commitAuthor == nil {
-            let result = NSEntityDescription.insertNewObjectForEntityForName(
-                "Author",
-                inManagedObjectContext: managedObjectContext
-            )
-            if let author = result as? Author {
-                author.name = json["commit"]["committer"]["name"].stringValue
-                author.email = json["commit"]["committer"]["email"].stringValue
-                commitAuthor = author
-            }
-        }
-
-        // set the commit author
-        commit.author = commitAuthor
-    }
-
-    // MARK: - Core Data persistence
-
-    // initialize core data functionality
-    func startCoreData() {
-        // load the data model
-        let modelURL = NSBundle.mainBundle().URLForResource("Project38", withExtension: "momd")!
-        let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
-
-        // create the persistent store coordinator
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
-
-        // fetch location of db
-        let url = getDocumentsDirectory().URLByAppendingPathComponent("Project38.sqlite")
-
-        do {
-            // load db into persistent store coordinator
-            try coordinator.addPersistentStoreWithType(
-                NSSQLiteStoreType,
-                configuration: nil,
-                URL: url,
-                options: [
-                    NSMigratePersistentStoresAutomaticallyOption: true,
-                    NSInferMappingModelAutomaticallyOption: true
-                ]
-            )
-
-            // create managed object context
-            managedObjectContext = NSManagedObjectContext(
-                concurrencyType: .MainQueueConcurrencyType
-            )
-            managedObjectContext.persistentStoreCoordinator = coordinator
-            managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-
-        } catch {
-            print("Failed to initialize the application's saved data")
-            return
-        }
-    }
-
-    // attempt to persist changed data
-    func saveContext() {
-        if managedObjectContext.hasChanges {
-            do {
-                try managedObjectContext.save()
-            } catch {
-                print("An error occurred while saving: \(error)")
-            }
-        }
-    }
-
-    // helper function to find the user's documents directory
-    func getDocumentsDirectory() -> NSURL {
-        let urls = NSFileManager.defaultManager().URLsForDirectory(
-            .DocumentDirectory, inDomains: .UserDomainMask
-        )
-        return urls[0]
     }
 
     // MARK: - Segues
