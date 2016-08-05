@@ -13,10 +13,10 @@ class RoundRectButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear()
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
-        self.layer.borderColor = self.tintColor.CGColor
+        self.layer.borderColor = self.tintColor.cgColor
         self.titleEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
     }
 }

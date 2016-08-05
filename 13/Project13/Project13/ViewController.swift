@@ -23,66 +23,71 @@ UINavigationControllerDelegate {
     var currentImage: UIImage!
     var context: CIContext!
 
-    let filters = ["CIBumpDistortion": "Bump", "CIGaussianBlur": "Blur",
-    "CIPixellate": "Pixellate", "CISepiaTone": "Sepia", "CITwirlDistortion": "Swirl",
-    "CIUnsharpMask": "Unsharp", "CIVignette": "Vignette"]
+    let filters = [
+        "CIBumpDistortion": "Bump",
+        "CIGaussianBlur": "Blur",
+        "CIPixellate": "Pixellate",
+        "CISepiaTone": "Sepia",
+        "CITwirlDistortion": "Swirl",
+        "CIUnsharpMask": "Unsharp",
+        "CIVignette": "Vignette"
+    ]
 
     var currentFilter: CIFilter! {
         didSet {
             changeFilterButton.setTitle(
                 filters[currentFilter.name],
-                forState: UIControlState.Normal
+                for: UIControlState()
             )
         }
     }
 
-    @IBAction func changeFilter(sender: UIButton) {
+    @IBAction func changeFilter(_ sender: UIButton) {
         let ac = UIAlertController(
             title: "Choose filter",
             message: nil,
-            preferredStyle: .ActionSheet
+            preferredStyle: .actionSheet
         )
         for (name, title) in filters {
             ac.addAction(UIAlertAction(
                 title: title,
-                style: .Default,
+                style: .default,
                 handler: { [unowned self] (action: UIAlertAction) in
                     self.setFilter(name)
-                }
-            ))
+            }))
         }
-        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        presentViewController(ac, animated: true, completion: nil)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated: true, completion: nil)
     }
 
-    @IBAction func save(sender: UIButton) {
+    @IBAction func save(_ sender: UIButton) {
         guard currentImage != nil else { return }
         UIImageWriteToSavedPhotosAlbum(
             imageView.image!,
             self,
-            "image:didFinishSavingWithError:contextInfo:",
+            #selector(ViewController.image(_:didFinishSavingWithError:contextInfo:)),
             nil
         )
     }
 
-    @IBAction func intensityChanges(sender: UISlider) {
+    @IBAction func intensityChanges(_ sender: UISlider) {
         applyProcessing()
     }
 
-    @IBAction func scaleChanged(sender: UISlider) {
+    @IBAction func scaleChanged(_ sender: UISlider) {
         applyProcessing()
     }
 
-    @IBAction func radius(sender: UISlider) {
+    @IBAction func radius(_ sender: UISlider) {
         applyProcessing()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Instafilter"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add,
-            target: self, action: "importPicture")
+        title = "FilterApp"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+            target: self, action: #selector(ViewController.importPicture))
 
         context = CIContext(options: nil)
         currentFilter = CIFilter(name: "CISepiaTone")
@@ -93,11 +98,11 @@ UINavigationControllerDelegate {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
-        presentViewController(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
     }
 
     func imagePickerController(
-        picker: UIImagePickerController,
+        _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]
     ) {
         var newImage: UIImage
@@ -110,7 +115,7 @@ UINavigationControllerDelegate {
             return
         }
 
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
 
         currentImage = newImage
 
@@ -120,8 +125,8 @@ UINavigationControllerDelegate {
         applyProcessing()
     }
 
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 
     func applyProcessing() {
@@ -150,12 +155,12 @@ UINavigationControllerDelegate {
 
         let cgimg = context.createCGImage(
             currentFilter.outputImage!,
-            fromRect: currentFilter.outputImage!.extent
+            from: currentFilter.outputImage!.extent
         )
-        self.imageView.image = UIImage(CGImage: cgimg)
+        self.imageView.image = UIImage(cgImage: cgimg!)
     }
 
-    func setFilter(name: String) {
+    func setFilter(_ name: String) {
         currentFilter = CIFilter(name: name)
 
         if currentImage != nil {
@@ -169,31 +174,31 @@ UINavigationControllerDelegate {
     func updateControls() {
         let inputKeys = currentFilter.inputKeys
 
-        intensityView.hidden = !inputKeys.contains(kCIInputIntensityKey)
-        scaleView.hidden = !inputKeys.contains(kCIInputScaleKey)
-        radiusView.hidden = !inputKeys.contains(kCIInputRadiusKey)
+        intensityView.isHidden = !inputKeys.contains(kCIInputIntensityKey)
+        scaleView.isHidden = !inputKeys.contains(kCIInputScaleKey)
+        radiusView.isHidden = !inputKeys.contains(kCIInputRadiusKey)
     }
 
     func image(
-        image: UIImage,
+        _ image: UIImage,
         didFinishSavingWithError error: NSError?,
-        contextInfo:UnsafePointer<Void>
+        contextInfo: UnsafePointer<Void>
     ) {
         if error == nil {
             let ac = UIAlertController(
                 title: "Saved!",
                 message: "Your altered image has been saved to your photos.",
-                preferredStyle: .Alert
+                preferredStyle: .alert
             )
-            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            presentViewController(ac, animated: true, completion: nil)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true, completion: nil)
         } else {
             let ac = UIAlertController(
                 title: "Save error", message: error?.localizedDescription,
-                preferredStyle: .Alert
+                preferredStyle: .alert
             )
-            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            presentViewController(ac, animated: true, completion: nil)
+            ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(ac, animated: true, completion: nil)
         }
     }
 
