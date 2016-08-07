@@ -16,19 +16,21 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let option = navigationController?.tabBarItem.tag == 0 ? 0 : 1
-        
+
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { [unowned self] in
             if let results = self.dataLoader.run(loadLiveData: true, option: option) {
                 self.parseJSON(results)
-                dispatch_async(dispatch_get_main_queue()) { [unowned self] in self.tableView.reloadData() }
+                dispatch_async(dispatch_get_main_queue()) {
+                    [unowned self] in self.tableView.reloadData()
+                }
             } else {
                 dispatch_async(dispatch_get_main_queue()) { [unowned self] in self.showError() }
             }
         }
     }
-    
+
     func parseJSON(results: [JSON]) {
         for result in results {
             objects.append([
@@ -41,11 +43,15 @@ class MasterViewController: UITableViewController {
     }
 
     func showError() {
-        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .Alert)
+        let ac = UIAlertController(
+            title: "Loading error",
+            message: "There was a problem loading the feed; please check your connection.",
+            preferredStyle: .Alert
+        )
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
@@ -62,9 +68,13 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row]
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                guard let navController = segue.destinationViewController as? UINavigationController
+                    else { return }
+                guard let controller = navController.topViewController as? DetailViewController
+                    else { return }
                 controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftBarButtonItem =
+                    self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
@@ -80,7 +90,10 @@ class MasterViewController: UITableViewController {
         return objects.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(
+        tableView: UITableView,
+        cellForRowAtIndexPath indexPath: NSIndexPath
+    ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let object = objects[indexPath.row]
@@ -88,6 +101,4 @@ class MasterViewController: UITableViewController {
         cell.detailTextLabel!.text = object["body"]
         return cell
     }
-
 }
-

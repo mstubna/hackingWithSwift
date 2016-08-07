@@ -14,15 +14,26 @@ class DetailViewController: UIViewController {
     var detailItem: [String: String]!
     let numberFormatter = NSNumberFormatter()
     let dateFormatter = NSDateFormatter()
-    
+
     override func loadView() {
         webView = WKWebView()
         view = webView
     }
-    
+
+    func doneButtonTapped() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Done",
+            style: .Plain,
+            target: self,
+            action: #selector(doneButtonTapped)
+        )
+
         guard detailItem != nil else { return }
         let body = detailItem["body"] ?? "none"
         let title = detailItem["title"] ?? "None"
@@ -31,7 +42,9 @@ class DetailViewController: UIViewController {
         let sigCount = numberFormatter.stringFromNumber(Int(detailItem["sigs"] ?? "0")!)!
 
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        let createdDate = dateFormatter.stringFromDate(NSDate(timeIntervalSince1970: Double(detailItem["created"] ?? "0")!))
+        let createdDate = dateFormatter.stringFromDate(
+            NSDate(timeIntervalSince1970: Double(detailItem["created"] ?? "0")!)
+        )
 
         var html = "<html>"
         html += "<head>"

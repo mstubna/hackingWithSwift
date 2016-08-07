@@ -19,9 +19,20 @@ class DetailViewController: UIViewController {
         webView = WKWebView()
         view = webView
     }
-    
+
+    func cancelButton() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Cancel",
+            style: .Plain,
+            target: self,
+            action: #selector(cancelButton)
+        )
         
         guard detailItem != nil else { return }
         let body = detailItem["body"] ?? "none"
